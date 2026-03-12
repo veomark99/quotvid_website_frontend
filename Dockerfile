@@ -11,5 +11,5 @@ RUN npm install -g serve
 COPY --from=build /app/dist ./dist
 
 EXPOSE 3000
-# Railway injects PORT; bind to 0.0.0.0 for external access. Shell required for $PORT.
-CMD serve -s dist -l tcp://0.0.0.0:${PORT:-3000}
+# Railway injects PORT. Never use 5432 (Postgres port). Shell required for $PORT expansion.
+CMD ["sh", "-c", "port=${PORT:-3000}; [ \"$port\" = \"5432\" ] && port=3000; exec serve -s dist -l tcp://0.0.0.0:$port --no-request-logging"]
