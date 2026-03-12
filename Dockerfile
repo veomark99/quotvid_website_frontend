@@ -11,4 +11,5 @@ RUN npm install -g serve
 COPY --from=build /app/dist ./dist
 
 EXPOSE 3000
-CMD ["sh", "-c", "serve -s dist -l ${PORT:-3000}"]
+# Railway injects PORT; bind to 0.0.0.0 for external access. Shell required for $PORT.
+CMD serve -s dist -l tcp://0.0.0.0:${PORT:-3000}
