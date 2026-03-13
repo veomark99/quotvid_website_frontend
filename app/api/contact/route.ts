@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: "QuotVid Contact <noreply@quotvid.com>",
       to: "hello@quotvid.com",
-      replyTo: email,
+      reply_to: email,
       subject: `[Contact] ${subject} — ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
     });
