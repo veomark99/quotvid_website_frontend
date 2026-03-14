@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/home/FinalCTA";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Features — AI Quote Video Generation, Templates & Multi-Language Support",
@@ -10,6 +11,12 @@ export const metadata: Metadata = {
     "Explore QuotVid features: AI quote generation, 9 video templates, 20 languages, social media auto-posting, daily scheduling, brand kit, and bulk video generation.",
   keywords: ["quote video features", "AI content generation", "social media automation", "video templates", "multilingual content"],
   alternates: { canonical: "https://www.quotvid.com/features" },
+  openGraph: {
+    title: "Features — AI Quote Video Generation, Templates & Multi-Language Support",
+    description: "Explore QuotVid features: AI quote generation, 9 video templates, 20 languages, social media auto-posting, daily scheduling, brand kit, and bulk video generation.",
+    url: "https://www.quotvid.com/features",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Features" }],
+  },
 };
 
 const featureSections = [
@@ -77,6 +84,7 @@ const badgeColor: Record<string, string> = {
 export default function FeaturesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Features", url: "https://www.quotvid.com/features" }]} />
       <Navbar />
       <main>
         {/* Hero */}

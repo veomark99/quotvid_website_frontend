@@ -1,17 +1,25 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "About QuotVid — Our Mission & Story",
   description:
     "QuotVid was built to make daily content creation effortless for creators worldwide. Learn about our mission, what we built, and why multilingual creators are our priority.",
   alternates: { canonical: "https://www.quotvid.com/about" },
+  openGraph: {
+    title: "About QuotVid — Our Mission & Story",
+    description: "QuotVid was built to make daily content creation effortless for creators worldwide. Learn about our mission, what we built, and why multilingual creators are our priority.",
+    url: "https://www.quotvid.com/about",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About QuotVid" }],
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "About", url: "https://www.quotvid.com/about" }]} />
       <Navbar />
       <main>
         <section className="bg-section-dark pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28">

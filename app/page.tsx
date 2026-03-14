@@ -12,7 +12,7 @@ import ProductPreview from "@/components/home/ProductPreview";
 import FinalCTA from "@/components/home/FinalCTA";
 import FAQ from "@/components/home/FAQ";
 import ComingSoon from "@/components/home/ComingSoon";
-import { WebsiteJsonLd } from "@/components/JsonLd";
+import { WebsiteJsonLd, HomeFaqJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "QuotVid — AI Quote Video Generator for TikTok, Reels & YouTube Shorts",
@@ -32,6 +32,7 @@ export default function HomePage() {
   return (
     <>
       <WebsiteJsonLd />
+      <HomeFaqJsonLd />
       <Navbar />
       <main>
         <Hero />

@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   description:
     "Learn how to grow on TikTok, Instagram Reels, and YouTube Shorts with daily quote videos. Creator guides, video tips, and content strategy from the QuotVid team.",
   alternates: { canonical: "https://www.quotvid.com/blog" },
+  openGraph: {
+    title: "Blog — QuotVid Tips, Guides & Creator Resources",
+    description: "Learn how to grow on TikTok, Instagram Reels, and YouTube Shorts with daily quote videos. Creator guides, video tips, and content strategy from the QuotVid team.",
+    url: "https://www.quotvid.com/blog",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Blog" }],
+  },
 };
 
 export default function BlogPage() {

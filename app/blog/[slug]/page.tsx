@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ArticleJsonLd } from "@/components/JsonLd";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
@@ -35,6 +35,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} />
+      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Blog", url: "https://www.quotvid.com/blog" }, { name: post.title, url: `https://www.quotvid.com/blog/${post.slug}` }]} />
       <Navbar />
       <main>
         <section className="bg-section-dark pt-28 pb-10 sm:pt-32 sm:pb-12 md:pt-40">

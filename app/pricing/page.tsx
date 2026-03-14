@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { PricingJsonLd } from "@/components/JsonLd";
+import { PricingJsonLd, PricingFaqJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pricing — Free, Monthly, Annual & Lifetime",
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
     "QuotVid pricing: Free plan with 5 videos, no credit card needed. Monthly $10, Annual $99/year, Lifetime $269 one-time. Start free, upgrade when you're ready.",
   keywords: ["QuotVid pricing", "quote video price", "AI video generator pricing", "content creator subscription"],
   alternates: { canonical: "https://www.quotvid.com/pricing" },
+  openGraph: {
+    title: "Pricing — Free, Monthly, Annual & Lifetime",
+    description: "QuotVid pricing: Free plan with 5 videos, no credit card needed. Monthly $10, Annual $99/year, Lifetime $269 one-time. Start free, upgrade when you're ready.",
+    url: "https://www.quotvid.com/pricing",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Pricing Plans" }],
+  },
 };
 
 const plans = [
@@ -91,6 +97,8 @@ export default function PricingPage() {
   return (
     <>
       <PricingJsonLd />
+      <PricingFaqJsonLd />
+      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Pricing", url: "https://www.quotvid.com/pricing" }]} />
       <Navbar />
       <main>
         {/* Hero */}

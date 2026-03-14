@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description:
     "Get in touch with the QuotVid team. We reply to all support, billing, and partnership inquiries within 24–48 hours.",
   alternates: { canonical: "https://www.quotvid.com/contact" },
+  openGraph: {
+    title: "Contact Us — QuotVid Support & Inquiries",
+    description: "Get in touch with the QuotVid team. We reply to all support, billing, and partnership inquiries within 24–48 hours.",
+    url: "https://www.quotvid.com/contact",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Contact QuotVid" }],
+  },
 };
 
 export default function ContactPage() {
