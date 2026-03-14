@@ -7,7 +7,7 @@ const comingFeatures = [
 
 export default function ComingSoon() {
   return (
-    <section className="bg-section-dark py-14 sm:py-20 md:py-28 border-t border-primary/10">
+    <section className="bg-section-dark py-14 sm:py-20 md:py-28 border-t border-primary/20">
       <div className="container mx-auto px-3 sm:px-4 md:px-8 max-w-4xl">
         <div className="text-center mb-8 sm:mb-12">
           <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">

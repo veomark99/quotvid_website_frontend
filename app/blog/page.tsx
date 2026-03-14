@@ -40,7 +40,7 @@ export default function BlogPage() {
             ) : (
               <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 sm:p-6 transition-all hover:border-primary/30 hover:shadow-lg">
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6 transition-all hover:border-primary/30 hover:shadow-lg">
                     <div className="mb-3 flex flex-wrap gap-1.5">
                       {post.tags.slice(0, 2).map((tag) => (
                         <span key={tag} className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">{tag}</span>

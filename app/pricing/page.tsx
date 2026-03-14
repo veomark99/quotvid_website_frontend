@@ -182,7 +182,7 @@ export default function PricingPage() {
                 { metric: "$0.017", label: "Cost per video on the monthly plan" },
                 { metric: "0 minutes", label: "Production time once your persona is set" },
               ].map((item) => (
-                <div key={item.metric} className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 text-center">
+                <div key={item.metric} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 text-center">
                   <p className="text-xl sm:text-2xl font-extrabold text-gradient-gold mb-1">{item.metric}</p>
                   <p className="text-xs sm:text-sm text-light-body">{item.label}</p>
                 </div>

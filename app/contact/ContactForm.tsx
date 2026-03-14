@@ -32,7 +32,7 @@ export default function ContactForm() {
     );
   }
 
-  const inputClass = "w-full rounded-lg border border-primary/10 bg-foreground/[0.02] px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-light-heading outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/20";
+  const inputClass = "w-full rounded-lg border border-primary/20 bg-foreground/[0.02] px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-light-heading outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/20";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">

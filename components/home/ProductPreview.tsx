@@ -40,7 +40,7 @@ export default function ProductPreview() {
         {/* Creator photo strip */}
         <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4 mb-10 sm:mb-16">
           {examples.map((ex) => (
-            <div key={ex.label} className="group relative overflow-hidden rounded-2xl aspect-[9/16] shadow-lg border border-primary/10">
+            <div key={ex.label} className="group relative overflow-hidden rounded-2xl aspect-[9/16] shadow-lg border border-primary/20">
               <Image
                 src={ex.img}
                 alt={ex.imgAlt}
@@ -59,7 +59,7 @@ export default function ProductPreview() {
         </div>
 
         {/* Wide creator lifestyle image */}
-        <div className="relative overflow-hidden rounded-2xl border border-primary/10 shadow-xl">
+        <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-xl">
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80&auto=format&fit=crop"

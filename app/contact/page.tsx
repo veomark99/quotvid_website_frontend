@@ -39,7 +39,7 @@ export default function ContactPage() {
                 { label: "Support Inquiries", desc: "Account issues, billing, or technical problems", email: "support@quotvid.com" },
                 { label: "General & Partnerships", desc: "Press, partnerships, or general questions", email: "hello@quotvid.com" },
               ].map((c) => (
-                <div key={c.email} className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 sm:p-8">
+                <div key={c.email} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-8">
                   <h3 className="mb-2 text-base sm:text-lg font-bold text-light-heading">{c.label}</h3>
                   <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-light-body">{c.desc}</p>
                   <a href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-primary hover:underline break-all">

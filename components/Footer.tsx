@@ -84,7 +84,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-8 sm:mt-12 border-t border-primary/10 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-12 border-t border-primary/20 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
           © 2026 QuotVid. All rights reserved. · Made for creators worldwide
         </div>
       </div>

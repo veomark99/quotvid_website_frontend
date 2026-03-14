@@ -33,7 +33,7 @@ export default function HowItWorks() {
         </h2>
         <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {steps.map((s) => (
-            <div key={s.num} className="overflow-hidden rounded-xl border border-primary/10 bg-foreground/[0.02] transition-shadow hover:shadow-lg">
+            <div key={s.num} className="overflow-hidden rounded-xl border border-primary/20 bg-foreground/[0.02] transition-shadow hover:shadow-lg">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src={s.img}

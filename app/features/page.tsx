@@ -120,7 +120,7 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="relative overflow-hidden rounded-2xl border border-primary/10 shadow-lg aspect-[4/3]">
+                <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-[4/3]">
                   <Image
                     src={f.img}
                     alt={f.imgAlt}
@@ -219,7 +219,7 @@ export default function FeaturesPage() {
                   desc: "You want to launch a new quote page but are not sure which niche will resonate. Free plan lets you test 5 videos across different niches before committing.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 sm:p-6">
+                <div key={item.title} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6">
                   <h3 className="mb-2 text-sm sm:text-base font-bold text-light-heading">{item.title}</h3>
                   <p className="text-xs sm:text-sm text-light-body leading-relaxed">{item.desc}</p>
                 </div>

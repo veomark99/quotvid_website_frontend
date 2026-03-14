@@ -23,7 +23,7 @@ export default function FAQ() {
         </h2>
         <div className="space-y-3">
           {faqs.map((f, i) => (
-            <div key={i} className="rounded-xl border border-primary/10 bg-foreground/[0.02] px-4 sm:px-6">
+            <div key={i} className="rounded-xl border border-primary/20 bg-foreground/[0.02] px-4 sm:px-6">
               <button
                 className="flex w-full items-center justify-between py-4 text-left text-xs sm:text-sm font-semibold text-light-heading"
                 onClick={() => setOpen(open === i ? null : i)}

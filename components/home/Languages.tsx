@@ -15,7 +15,7 @@ export default function Languages() {
         {[row1, row2].map((row, i) => (
           <div key={i} className="mb-3 sm:mb-4 flex flex-wrap justify-center gap-2 sm:gap-3">
             {row.map((lang) => (
-              <span key={lang} className="rounded-lg border border-primary/10 bg-foreground/[0.03] px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-sm font-medium text-light-heading">
+              <span key={lang} className="rounded-lg border border-primary/20 bg-foreground/[0.03] px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-sm font-medium text-light-heading">
                 {lang}
               </span>
             ))}

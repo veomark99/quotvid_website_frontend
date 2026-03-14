@@ -127,7 +127,7 @@ export default function HelpPage() {
               {popularArticles.map((a) => (
                 <div
                   key={a.slug}
-                  className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-4 sm:p-5 hover:border-primary/30 hover:shadow-md transition-all"
+                  className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-4 sm:p-5 hover:border-primary/30 hover:shadow-md transition-all"
                 >
                   <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-primary">{a.category}</p>
                   <p className="text-xs sm:text-sm font-medium text-light-heading">{a.title}</p>
@@ -143,7 +143,7 @@ export default function HelpPage() {
             <h2 className="mb-6 sm:mb-10 text-lg sm:text-xl font-bold text-light-heading">Browse by Topic</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {categories.map((cat) => (
-                <div key={cat.title} className="rounded-2xl border border-primary/10 bg-foreground/[0.02] p-5 sm:p-6">
+                <div key={cat.title} className="rounded-2xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <span className="text-2xl">{cat.icon}</span>
                     <div>
