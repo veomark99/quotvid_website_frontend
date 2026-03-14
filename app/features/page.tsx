@@ -188,6 +188,90 @@ export default function FeaturesPage() {
           </div>
         </section>
 
+        {/* Who is QuotVid for? */}
+        <section className="bg-section-light py-14 sm:py-20">
+          <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8">
+            <h2 className="mb-10 text-center text-2xl sm:text-3xl font-bold text-light-heading">Who Is QuotVid For?</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "Daily Quote Page Owners",
+                  desc: "You run a TikTok or Instagram page in stoic, discipline, mindset, sigma, or motivational content. You need a new high-quality video every day. QuotVid generates it automatically.",
+                },
+                {
+                  title: "Urdu & Arabic Creators",
+                  desc: "You create Urdu poetry videos or Arabic quote content and every video tool you have tried renders the text incorrectly. QuotVid supports Nastaliq, Naskh, and RTL rendering natively.",
+                },
+                {
+                  title: "Multilingual Page Managers",
+                  desc: "You manage pages in multiple languages — one in English, one in Urdu, one in Arabic. Create a separate persona for each. Each generates correctly in its language.",
+                },
+                {
+                  title: "Social Media Managers",
+                  desc: "You manage content for multiple clients or brands. Bulk generation and multiple persona support lets you produce daily content for several accounts from one dashboard.",
+                },
+                {
+                  title: "Creators Who Want to Post, Not Edit",
+                  desc: "You have content ideas. You know your niche. You just do not want to spend 45 minutes in a video editor every evening. Set your persona once. Wake up to a ready video.",
+                },
+                {
+                  title: "Creators Testing a New Niche",
+                  desc: "You want to launch a new quote page but are not sure which niche will resonate. Free plan lets you test 5 videos across different niches before committing.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 sm:p-6">
+                  <h3 className="mb-2 text-sm sm:text-base font-bold text-light-heading">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-light-body leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* QuotVid vs alternatives */}
+        <section className="bg-section-dark py-14 sm:py-20">
+          <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8">
+            <h2 className="mb-4 text-center text-2xl sm:text-3xl font-bold">QuotVid vs Alternatives</h2>
+            <p className="mb-10 text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+              How QuotVid compares to Canva, CapCut, and manual production for the daily quote video workflow.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs sm:text-sm">
+                <thead>
+                  <tr className="border-b border-primary/20">
+                    <th className="py-3 text-left text-muted-foreground font-medium">Capability</th>
+                    <th className="py-3 text-center font-semibold text-primary">QuotVid</th>
+                    <th className="py-3 text-center font-semibold">Canva</th>
+                    <th className="py-3 text-center font-semibold">CapCut</th>
+                    <th className="py-3 text-center font-semibold">Manual</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-primary/10">
+                  {[
+                    ["AI writes the quote", "✓", "—", "—", "—"],
+                    ["1080×1920 video output", "✓", "✓", "✓", "✓"],
+                    ["Daily automation", "✓", "—", "—", "—"],
+                    ["Auto-post to TikTok/Instagram", "✓ (paid)", "—", "—", "—"],
+                    ["Urdu Nastaliq rendering", "✓", "Partial", "—", "Manual"],
+                    ["Arabic RTL support", "✓", "Partial", "Partial", "Manual"],
+                    ["Music library included", "✓", "✓ (limited)", "✓", "Separate"],
+                    ["Production time per video", "0 min", "20–40 min", "15–30 min", "30–60 min"],
+                    ["No credit card to start", "✓", "✓", "✓", "N/A"],
+                  ].map(([feature, quotvid, canva, capcut, manual]) => (
+                    <tr key={feature}>
+                      <td className="py-3 text-muted-foreground">{feature}</td>
+                      <td className="py-3 text-center text-primary font-semibold">{quotvid}</td>
+                      <td className="py-3 text-center">{canva}</td>
+                      <td className="py-3 text-center">{capcut}</td>
+                      <td className="py-3 text-center">{manual}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <FinalCTA />
       </main>
       <Footer />

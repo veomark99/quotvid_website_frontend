@@ -86,7 +86,7 @@ const plans = [
 
 const faqs = [
   { q: "Can I cancel anytime?", a: "Yes. Cancel your subscription at any time from your billing settings. You retain access until the end of your billing period." },
-  { q: "Is the free plan really free forever?", a: "Yes — the Free plan has no time limit. You get 5 videos per day with no credit card required, forever." },
+  { q: "Is the free plan really free forever?", a: "Yes — the Free plan gives you 5 videos total with no time limit and no credit card required. They are yours to generate whenever you want." },
   { q: "Do you offer a refund?", a: "Yes. We offer a 7-day money-back guarantee on all paid plans. Email hello@quotvid.com within 7 days of payment." },
   { q: "Can I upgrade or downgrade later?", a: "Yes. You can upgrade, downgrade, or cancel at any time from your account settings." },
   { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
@@ -163,6 +163,47 @@ export default function PricingPage() {
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Is QuotVid worth it? */}
+        <section className="bg-section-light py-14 sm:py-20">
+          <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
+            <h2 className="mb-6 text-xl sm:text-2xl font-bold text-light-heading text-center">Is QuotVid Worth It?</h2>
+            <p className="mb-8 text-sm sm:text-base text-light-body leading-relaxed text-center max-w-2xl mx-auto">
+              Here is the real math: creating one quote video manually takes 30–45 minutes — writing the quote, designing the frame,
+              animating text, adding music, exporting. At $10/month and 20 videos per day, QuotVid costs less than
+              one dollar per week. The 15–30 hours of production time you reclaim per month is the actual value.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3 mb-8">
+              {[
+                { metric: "30–45 min", label: "Saved per video vs. manual production" },
+                { metric: "$0.017", label: "Cost per video on the monthly plan" },
+                { metric: "0 minutes", label: "Production time once your persona is set" },
+              ].map((item) => (
+                <div key={item.metric} className="rounded-xl border border-primary/10 bg-foreground/[0.02] p-5 text-center">
+                  <p className="text-xl sm:text-2xl font-extrabold text-gradient-gold mb-1">{item.metric}</p>
+                  <p className="text-xs sm:text-sm text-light-body">{item.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4 text-sm sm:text-base text-light-body leading-relaxed">
+              <p>
+                <strong className="text-light-heading">For daily posters:</strong> the monthly plan at $10 is straightforward.
+                You post every day, which means 300+ videos per month. The cost per video is a rounding error.
+              </p>
+              <p>
+                <strong className="text-light-heading">For committed creators:</strong> the annual plan at $99/year saves 18%
+                and adds unlimited video history — useful if you want to reference or repost older content.
+              </p>
+              <p>
+                <strong className="text-light-heading">For long-term builders:</strong> the lifetime plan at $269 pays for itself
+                in 27 months vs monthly. If you are building a serious content operation, the math on lifetime is clear.
+              </p>
+              <p>
+                Not sure yet? The free plan gives you 5 videos to evaluate the output quality with zero financial commitment.
+              </p>
             </div>
           </div>
         </section>
