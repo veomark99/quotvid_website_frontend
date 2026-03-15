@@ -17,7 +17,7 @@ import { WebsiteJsonLd, HomeFaqJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "QuotVid — AI Quote Video Generator for TikTok, Reels & YouTube Shorts",
   description:
-    "Turn quotes into viral short-form videos daily. AI-powered generator for content creators. 20 languages, 9 niches, zero editing. Start free — no credit card required.",
+    "QuotVid is the AI quote video generator built for content creators. Use YouTube videos as backgrounds, generate in 20 languages, post daily automatically. Free to start.",
   keywords: ["quote video generator", "AI video maker", "TikTok content creator", "Instagram Reels automation", "YouTube Shorts generator"],
   alternates: { canonical: "https://www.quotvid.com" },
   openGraph: {

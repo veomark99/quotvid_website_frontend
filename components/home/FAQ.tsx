@@ -9,6 +9,7 @@ const faqs = [
   { q: "Do I need design or video editing skills?", a: "None at all. Set your persona once (language, niche, template, music), and QuotVid generates everything. Videos are ready to download and post." },
   { q: "Can I change my content style after signing up?", a: "Yes, any time. Visit your Persona Settings page to update your category, language, template, background, or music preferences." },
   { q: "Is there really a free plan with no card required?", a: "Yes — get 5 videos completely free, no credit card required, no time limit. You see exactly what QuotVid produces for your niche before deciding anything." },
+  { q: "Can I use YouTube videos as backgrounds?", a: "Yes — on paid plans. Paste any YouTube, TikTok, Instagram, or Vimeo URL, choose a clip (up to 60 seconds), and QuotVid downloads and stores it in the cloud. It persists permanently — no re-uploading after server restarts." },
   { q: "Who is QuotVid best for?", a: "QuotVid is best for social media content creators, personal brand builders, poetry page owners, and anyone who wants to post consistently on TikTok, Instagram, or YouTube Shorts without spending hours on content creation." },
 ];
 

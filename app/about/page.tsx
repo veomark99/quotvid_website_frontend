@@ -116,8 +116,8 @@ export default function AboutPage() {
                     <p className="mt-1 text-xs sm:text-sm text-light-body">Languages supported at launch</p>
                   </div>
                   <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
-                    <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">9</p>
-                    <p className="mt-1 text-xs sm:text-sm text-light-body">Content niches out of the box</p>
+                    <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">1000+</p>
+                    <p className="mt-1 text-xs sm:text-sm text-light-body">Video platforms for background sourcing via yt-dlp</p>
                   </div>
                   <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
                     <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">$0</p>

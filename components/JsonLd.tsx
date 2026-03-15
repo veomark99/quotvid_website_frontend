@@ -57,12 +57,16 @@ export function WebsiteJsonLd() {
               url: "https://app.quotvid.com",
               screenshot: "https://www.quotvid.com/hero-phones.png",
               featureList: [
-                "AI quote generation in 9 content niches",
-                "9 professional video templates",
-                "20 language support with RTL",
-                "Social media auto-posting",
-                "Daily video automation",
-                "1080×1920 vertical format",
+                "AI Quote Generation",
+                "YouTube Video Backgrounds",
+                "Social Media Video Backgrounds",
+                "20 Language Support",
+                "Auto-posting to TikTok",
+                "Auto-posting to Instagram Reels",
+                "Auto-posting to YouTube Shorts",
+                "Daily Automation",
+                "9+ Professional Templates",
+                "Custom Watermarks",
               ],
               offers: {
                 "@type": "AggregateOffer",
@@ -107,6 +111,10 @@ export function HomeFaqJsonLd() {
     {
       q: "Is there really a free plan with no card required?",
       a: "Yes — get 5 videos completely free, no credit card required, no time limit. You see exactly what QuotVid produces for your niche before deciding anything.",
+    },
+    {
+      q: "Can I use YouTube videos as backgrounds?",
+      a: "Yes — on paid plans. Paste any YouTube, TikTok, Instagram, or Vimeo URL, choose a clip (up to 60 seconds), and QuotVid downloads and stores it permanently in the cloud.",
     },
     {
       q: "Who is QuotVid best for?",

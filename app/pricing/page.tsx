@@ -47,6 +47,7 @@ const plans = [
       "Up to 20 videos per day",
       "All content categories",
       "All video styles & backgrounds",
+      "YouTube & video URL backgrounds",
       "No watermark",
       "Priority generation",
     ],
@@ -91,6 +92,7 @@ const faqs = [
   { q: "Can I upgrade or downgrade later?", a: "Yes. You can upgrade, downgrade, or cancel at any time from your account settings." },
   { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
   { q: "Is there an annual plan?", a: "Yes — the QuotVid Annual plan is $99/year and saves 18% vs monthly. It includes everything in Monthly plus unlimited video history, early access to new features, and priority support." },
+  { q: "Can I use YouTube videos as video backgrounds?", a: "Yes — on all paid plans. Paste any YouTube, TikTok, Instagram, Vimeo, or Facebook URL, choose your clip (up to 60 seconds), and QuotVid downloads and stores it in the cloud. Your background persists across all future videos without re-uploading." },
 ];
 
 export default function PricingPage() {

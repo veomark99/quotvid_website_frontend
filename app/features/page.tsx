@@ -8,12 +8,12 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Features — AI Quote Video Generation, Templates & Multi-Language Support",
   description:
-    "Explore QuotVid features: AI quote generation, 9 video templates, 20 languages, social media auto-posting, daily scheduling, brand kit, and bulk video generation.",
-  keywords: ["quote video features", "AI content generation", "social media automation", "video templates", "multilingual content"],
+    "QuotVid features: AI quote generation, YouTube video backgrounds, 20 languages, 9+ templates, daily auto-posting to TikTok, Instagram and YouTube Shorts.",
+  keywords: ["quote video features", "AI content generation", "YouTube video background", "social media automation", "video templates", "multilingual content"],
   alternates: { canonical: "https://www.quotvid.com/features" },
   openGraph: {
     title: "Features — AI Quote Video Generation, Templates & Multi-Language Support",
-    description: "Explore QuotVid features: AI quote generation, 9 video templates, 20 languages, social media auto-posting, daily scheduling, brand kit, and bulk video generation.",
+    description: "QuotVid features: AI quote generation, YouTube video backgrounds, 20 languages, 9+ templates, daily auto-posting to TikTok, Instagram and YouTube Shorts.",
     url: "https://www.quotvid.com/features",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Features" }],
   },
@@ -64,6 +64,15 @@ const featureSections = [
     points: ["Generate up to 20 videos at once", "Background processing", "Download as batch", "Queue management"],
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80&auto=format&fit=crop",
     imgAlt: "Content analytics dashboard showing multiple content pieces",
+  },
+  {
+    icon: "▶️",
+    badge: "Paid",
+    title: "YouTube & Video URL Backgrounds",
+    desc: "Paste any YouTube, TikTok, Instagram, or Vimeo URL as your video background. QuotVid downloads a clip (up to 60 seconds), processes it, and stores it in the cloud — so your background stays the same across every video you generate, even after server restarts.",
+    points: ["YouTube, TikTok, Vimeo, Instagram, Facebook", "Choose start time & clip duration (up to 60s)", "Stored permanently in cloud (Cloudflare R2)", "No re-uploading after server restarts"],
+    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "YouTube video playing on laptop — video background for quote content",
   },
   {
     icon: "🏷️",
@@ -158,6 +167,7 @@ export default function FeaturesPage() {
                     ["Video styles", "10+", "All", "All", "All"],
                     ["Download MP4", "✓", "✓", "✓", "✓"],
                     ["Watermark", "QuotVid", "None", "None", "None"],
+                    ["YouTube / video URL backgrounds", "—", "✓", "✓", "✓"],
                     ["Social auto-posting", "—", "✓", "✓", "✓"],
                     ["Daily auto-schedule & bulk", "—", "✓", "✓", "✓"],
                     ["Brand kit", "—", "✓", "✓", "✓"],
@@ -249,6 +259,7 @@ export default function FeaturesPage() {
                 <tbody className="divide-y divide-primary/10">
                   {[
                     ["AI writes the quote", "✓", "—", "—", "—"],
+                    ["YouTube video as background", "✓ (paid)", "—", "Manual", "—"],
                     ["1080×1920 video output", "✓", "✓", "✓", "✓"],
                     ["Daily automation", "✓", "—", "—", "—"],
                     ["Auto-post to TikTok/Instagram", "✓ (paid)", "—", "—", "—"],
