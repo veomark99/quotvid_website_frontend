@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -15,12 +17,27 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const linkClass = (href: string) =>
+    `text-sm transition-colors ${
+      pathname === href || (href !== "/" && pathname.startsWith(href))
+        ? "text-foreground font-semibold"
+        : "text-muted-foreground hover:text-foreground"
+    }`;
+
+  const mobileLinkClass = (href: string) =>
+    `block text-sm py-1 transition-colors ${
+      pathname === href || (href !== "/" && pathname.startsWith(href))
+        ? "text-primary font-semibold"
+        : "text-muted-foreground hover:text-foreground"
+    }`;
 
   return (
     <nav
@@ -36,7 +53,7 @@ export default function Navbar() {
         {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link key={l.href} href={l.href} className={linkClass(l.href)}>
               {l.label}
             </Link>
           ))}
@@ -59,21 +76,28 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border px-3 sm:px-4 pb-6 pt-2 space-y-4">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border px-3 sm:px-4 pb-6 pt-2 space-y-1">
           {navLinks.map((l) => (
-            <Link key={l.href} href={l.href} className="block text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>
+            <Link key={l.href} href={l.href} className={mobileLinkClass(l.href)} onClick={() => setMobileOpen(false)}>
               {l.label}
             </Link>
           ))}
-          <a href="https://app.quotvid.com/auth/signin" className="block text-sm text-muted-foreground hover:text-foreground">
-            Sign In
-          </a>
-          <a
-            href="https://app.quotvid.com/auth/signup"
-            className="block rounded-lg bg-gradient-gold px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground"
-          >
-            Get Started Free
-          </a>
+          <div className="pt-2 space-y-3 border-t border-border/40 mt-2">
+            <a
+              href="https://app.quotvid.com/auth/signin"
+              className="block text-sm text-muted-foreground hover:text-foreground py-1"
+              onClick={() => setMobileOpen(false)}
+            >
+              Sign In
+            </a>
+            <a
+              href="https://app.quotvid.com/auth/signup"
+              className="block rounded-lg bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-primary-foreground min-h-[44px] flex items-center justify-center"
+              onClick={() => setMobileOpen(false)}
+            >
+              Get Started Free
+            </a>
+          </div>
         </div>
       )}
     </nav>

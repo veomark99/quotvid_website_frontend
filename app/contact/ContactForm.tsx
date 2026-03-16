@@ -50,7 +50,7 @@ export default function ContactForm() {
         <label className="mb-2 block text-xs sm:text-sm font-medium text-light-heading">Subject</label>
         <select value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} className={inputClass}>
           {["General Question", "Billing", "Bug Report", "Partnership", "Other"].map((o) => (
-            <option key={o}>{o}</option>
+            <option key={o} style={{ backgroundColor: "#f5f7fa", color: "#1b2540" }}>{o}</option>
           ))}
         </select>
       </div>

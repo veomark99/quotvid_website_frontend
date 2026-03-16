@@ -68,9 +68,10 @@
 
   .glow-gold { box-shadow: 0 0 40px hsl(39 76% 52% / 0.25); }
   .border-gold { border-color: hsl(39 76% 52% / 0.3); }
-  .text-light-muted { color: hsl(220 9% 66%); }
+  .text-light-muted { color: hsl(220 9% 55%); }
   .text-light-heading { color: hsl(222 47% 11%); }
-  .text-light-body { color: hsl(215 16% 47%); }
+  /* Darkened from 47% to 36% lightness: contrast ~6.2:1 on bg-section-light, passes WCAG AA */
+  .text-light-body { color: hsl(215 18% 36%); }
 }
 
 @keyframes fadeInUp {
