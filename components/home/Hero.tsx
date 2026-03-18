@@ -8,23 +8,23 @@ export default function Hero() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-primary/20 bg-secondary px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-muted-foreground">
-              ⚡ AI-Powered · 20 Languages · Daily Automation · 9 Content Niches
+              ⚡ AI-Powered · 20+ Categories · Custom Studio · Live Preview
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-              Turn Quotes Into{" "}
-              <span className="text-gradient-gold">Viral</span> Videos.
+              Your AI Quote Video{" "}
+              <span className="text-gradient-gold">Studio.</span>
               <br />
-              Daily. Automatically.
+              Built for Creators.
             </h1>
             <p className="mb-6 sm:mb-8 text-sm sm:text-lg leading-relaxed text-muted-foreground">
-              QuotVid is the AI quote video generator built for content creators who want to post every day — without spending hours editing. Set your niche, your language, your style. Get professional videos every morning.
+              QuotVid generates professional short-form quote videos for TikTok, Instagram Reels, and YouTube Shorts — automatically, every day. Set your brand once. Watch the content flow.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
                 href="https://app.quotvid.com/auth/signup"
                 className="animate-pulse-soft rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground text-center transition-transform hover:scale-105"
               >
-                Start Creating Free →
+                Start Free — No Credit Card →
               </a>
               <a
                 href="#how-it-works"
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end">
             <Image
               src="/hero-phones.png"
-              alt="QuotVid phone mockups showing AI-generated quote videos"
+              alt="QuotVid AI quote video generator — phone mockups showing branded short-form videos"
               width={480}
               height={600}
               className="animate-float w-full max-w-xs sm:max-w-md drop-shadow-2xl"

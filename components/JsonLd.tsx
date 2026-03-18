@@ -53,20 +53,22 @@ export function WebsiteJsonLd() {
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Web",
               description:
-                "AI-powered quote video generator. Creates 1080×1920 vertical videos for TikTok, Instagram Reels, and YouTube Shorts in 20 languages.",
-              url: "https://app.quotvid.com",
+                "AI-powered quote video generator for TikTok, Instagram Reels, and YouTube Shorts. Custom Studio with live preview, YouTube background picker, watermark system, and automated daily content generation.",
+              url: "https://www.quotvid.com",
               screenshot: "https://www.quotvid.com/hero-phones.png",
               featureList: [
-                "AI Quote Generation",
-                "YouTube Video Backgrounds",
-                "Social Media Video Backgrounds",
-                "20 Language Support",
-                "Auto-posting to TikTok",
-                "Auto-posting to Instagram Reels",
-                "Auto-posting to YouTube Shorts",
-                "Daily Automation",
-                "9+ Professional Templates",
-                "Custom Watermarks",
+                "AI Persona Mode — Fully Automatic Daily Video Generation",
+                "Custom Studio with Live Phone Preview",
+                "YouTube Background Picker — Paste URL, Pick 30-Second Clip",
+                "Upload Custom Image and Video Backgrounds",
+                "Logo Watermark System — Position, Size, Opacity Control",
+                "Channel Name Badge Overlay",
+                "Background Music Library + Custom Upload",
+                "20+ Content Categories",
+                "6 Animation Templates",
+                "1080×1920 Vertical Format for TikTok, Reels, Shorts",
+                "20 Language Support with RTL",
+                "Cloudflare R2 Cloud Storage",
               ],
               offers: {
                 "@type": "AggregateOffer",
@@ -75,10 +77,10 @@ export function WebsiteJsonLd() {
                 highPrice: "269",
                 offerCount: 4,
                 offers: [
-                  { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-                  { "@type": "Offer", name: "Monthly", price: "10", priceCurrency: "USD", billingIncrement: "month" },
-                  { "@type": "Offer", name: "Annual", price: "99", priceCurrency: "USD", billingIncrement: "year" },
-                  { "@type": "Offer", name: "Lifetime", price: "269", priceCurrency: "USD" },
+                  { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", description: "5 videos total, watermark on all videos, AI Persona mode" },
+                  { "@type": "Offer", name: "Monthly", price: "10", priceCurrency: "USD", billingIncrement: "month", description: "20 videos per day, no watermark, Custom Studio, YouTube backgrounds" },
+                  { "@type": "Offer", name: "Annual", price: "99", priceCurrency: "USD", billingIncrement: "year", description: "Everything in Monthly plus unlimited history and priority support" },
+                  { "@type": "Offer", name: "Lifetime", price: "269", priceCurrency: "USD", description: "One-time payment, all features forever, no recurring charges" },
                 ],
               },
             },
@@ -98,23 +100,27 @@ export function HomeFaqJsonLd() {
     },
     {
       q: "How many videos do I get?",
-      a: "Free plan users get 5 videos total — no credit card required, no time limit. Paid plan users get up to 20 videos per day.",
+      a: "Free plan users get 5 videos total — no credit card required, no time limit. Paid plan users (Monthly, Annual, Lifetime) get up to 20 videos per day.",
     },
     {
-      q: "Which languages are supported?",
-      a: "QuotVid supports 20 languages including English, Urdu, Arabic, Spanish, Hindi, Persian, French, German, Russian, Chinese, Japanese, Korean, Turkish, and Indonesian. Arabic, Urdu, and Persian include full right-to-left text rendering.",
+      q: "Do I need video editing skills?",
+      a: "No. QuotVid handles everything automatically. Set your persona once and videos are generated and ready to download. No design tools, no timelines, no rendering software.",
     },
     {
-      q: "Do I need design or video editing skills?",
-      a: "None at all. Set your persona once (language, niche, template, music), and QuotVid generates everything automatically.",
+      q: "What is the Custom Studio?",
+      a: "Custom Studio is a full-width two-column interface where you control every aspect of your video: background (upload, YouTube URL, or personal library), watermark and logo, background music, and animation style. Everything updates a live phone preview before you generate.",
+    },
+    {
+      q: "What is the YouTube background feature?",
+      a: "Paste any YouTube URL into the Custom Studio. The video loads right in the studio — watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically. No downloading required.",
+    },
+    {
+      q: "Can I use my own logo and branding?",
+      a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. All paid plans include full branding control previewed live before generating.",
     },
     {
       q: "Is there really a free plan with no card required?",
       a: "Yes — get 5 videos completely free, no credit card required, no time limit. You see exactly what QuotVid produces for your niche before deciding anything.",
-    },
-    {
-      q: "Can I use YouTube videos as backgrounds?",
-      a: "Yes — on paid plans. Paste any YouTube, TikTok, Instagram, or Vimeo URL, choose a clip (up to 60 seconds), and QuotVid downloads and stores it permanently in the cloud.",
     },
     {
       q: "Who is QuotVid best for?",
@@ -202,12 +208,13 @@ export function PricingJsonLd() {
 // Pricing page FAQ
 export function PricingFaqJsonLd() {
   const faqs = [
-    { q: "Can I cancel anytime?", a: "Yes. Cancel your subscription at any time from your billing settings. You retain access until the end of your billing period." },
-    { q: "Is the free plan really free forever?", a: "Yes — the Free plan has no time limit. You get 5 videos with no credit card required, forever." },
-    { q: "Do you offer a refund?", a: "Yes. We offer a 7-day money-back guarantee on all paid plans. Email hello@quotvid.com within 7 days of payment." },
-    { q: "Can I upgrade or downgrade later?", a: "Yes. You can upgrade, downgrade, or cancel at any time from your account settings." },
+    { q: "Do I need video editing skills?", a: "No. QuotVid handles everything automatically. Set your persona once and videos are generated and ready to download." },
+    { q: "What platforms are the videos made for?", a: "TikTok, Instagram Reels, and YouTube Shorts. All videos are 1080×1920 vertical format." },
+    { q: "Can I use my own logo and branding?", a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. All paid plans include full branding control." },
+    { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. Watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically." },
+    { q: "Is there a free trial?", a: "Yes — the free plan lets you generate your first 5 videos with no credit card needed. The full pipeline runs: AI quote writing, video render, music, MP4 export." },
+    { q: "Can I cancel anytime?", a: "Yes. Monthly plans cancel anytime from your billing settings. Annual plans include a 7-day money-back guarantee." },
     { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
-    { q: "Is there an annual plan?", a: "Yes — the QuotVid Annual plan is $99/year and saves 18% vs monthly. It includes everything in Monthly plus unlimited video history, early access to new features, and priority support." },
   ];
 
   return (

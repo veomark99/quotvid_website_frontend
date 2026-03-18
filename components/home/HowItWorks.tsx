@@ -3,24 +3,24 @@ import Image from "next/image";
 const steps = [
   {
     num: "01",
-    title: "Set Your Persona",
-    desc: "Choose your content category, language, and video style. Takes 2 minutes. Set it once and never touch it again.",
+    title: "Set Up Your Persona",
+    desc: "Choose AI Persona mode for hands-off daily generation, or open Custom Studio for full brand control. Takes 2 minutes either way.",
     img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Person setting up their content persona on a mobile phone",
+    imgAlt: "Person setting up AI quote video persona on a mobile phone",
   },
   {
     num: "02",
-    title: "AI Does Everything",
-    desc: "Our AI writes unique quotes, designs your 1080×1920 video, adds background music, and renders a professional result — automatically, every day.",
+    title: "Customize Your Style",
+    desc: "Pick your background (or paste a YouTube URL), upload your watermark, choose background music, and pick your animation style. Preview everything live on a phone mockup before generating.",
     img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "AI automation generating video content",
+    imgAlt: "Customizing brand style in AI video studio with live preview",
   },
   {
     num: "03",
-    title: "Download & Post",
-    desc: "Videos are ready in your dashboard every morning. Download and post to TikTok, Instagram Reels, or YouTube Shorts instantly.",
+    title: "Generate and Download",
+    desc: "Click generate. Videos are ready in minutes. Download and post to TikTok, Instagram Reels, or YouTube Shorts — all in the perfect 1080×1920 format.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Content creator sharing video on social media from phone",
+    imgAlt: "Downloading AI-generated quote video and posting to social media",
   },
 ];
 

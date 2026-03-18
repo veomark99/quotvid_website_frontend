@@ -2,46 +2,46 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "🌍",
-    title: "20 Languages, Zero Compromise",
-    desc: "Post in English, Urdu, Arabic, Spanish, Hindi, Persian, and 14 more. Full RTL support built in.",
-    img: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "World map showing global language support",
-  },
-  {
-    icon: "🎨",
-    title: "9 Professional Video Templates",
-    desc: "Pure, Structured, Cinematic, Poetry, Gradient and more. Every template looks professionally designed.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Professional video design templates",
-  },
-  {
     icon: "🤖",
-    title: "AI Quote Writer That Never Repeats",
-    desc: "Powered by advanced LLMs. Every quote is original, unique, never duplicated.",
+    title: "AI Persona — Set It and Forget It",
+    desc: "Choose your niche, language, and style. QuotVid generates fresh quote videos every day without you lifting a finger. Supports 20+ content categories.",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "AI generating unique quote content",
+    imgAlt: "AI generating automated daily quote videos",
+  },
+  {
+    icon: "🎬",
+    title: "Custom Studio — Your Brand, Your Control",
+    desc: "Upload your logo, pick a YouTube background, set your watermark position — and see it all live on a phone preview before generating a single video.",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Custom video studio interface with live phone preview",
+  },
+  {
+    icon: "▶️",
+    title: "YouTube Backgrounds in One Click",
+    desc: "Paste any YouTube URL. Watch it right in the studio. Pick your perfect 30-second clip. That's your background — extracted and saved automatically.",
+    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "YouTube video used as quote video background",
+  },
+  {
+    icon: "🏷️",
+    title: "Watermark & Branding System",
+    desc: "Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge — all previewed live before you generate.",
+    img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Logo watermark overlay on branded quote video",
   },
   {
     icon: "🎵",
-    title: "Curated Background Music",
-    desc: "Cinematic, calm, epic, melancholic — choose your mood or let QuotVid pick automatically.",
+    title: "Built-In Music Library + Upload Your Own",
+    desc: "Choose from curated preset tracks or upload your own music on paid plans. Preview audio before selecting — no surprises in the final video.",
     img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Music waveform representing curated background music",
-  },
-  {
-    icon: "⚡",
-    title: "Set Once, Run Forever",
-    desc: "Configure your persona once. QuotVid generates daily videos on autopilot. No buttons to press.",
-    img: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Automated scheduling on phone",
+    imgAlt: "Background music library for quote videos",
   },
   {
     icon: "📐",
-    title: "Platform-Perfect Format",
-    desc: "1080×1920 vertical format. Sized for TikTok, Reels, and YouTube Shorts.",
+    title: "Download and Post Anywhere",
+    desc: "Every video is 1080×1920 — the standard vertical format, ready for TikTok, Instagram Reels, and YouTube Shorts. Download individually or in bulk.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Vertical video format on mobile phone for social media",
+    imgAlt: "Vertical 1080x1920 video format for TikTok Instagram YouTube Shorts",
   },
 ];
 
@@ -50,8 +50,8 @@ export default function Features() {
     <section id="features" className="bg-section-light py-14 sm:py-20 md:py-28">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <h2 className="mb-10 sm:mb-16 text-center text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
-          Everything You Need to Dominate{" "}
-          <span className="text-gradient-gold">Short-Form Content</span>
+          Every Tool You Need to{" "}
+          <span className="text-gradient-gold">Automate Your Content</span>
         </h2>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
