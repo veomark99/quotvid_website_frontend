@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 import { PricingJsonLd, PricingFaqJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "QuotVid Pricing — Start Free, Upgrade When Ready",
+  title: "QuotVid Pricing — Free Plan, $20/mo, $149/yr, $269 Lifetime",
   description:
-    "QuotVid starts free. Upgrade to Monthly ($10), Annual ($99), or Lifetime ($269) for unlimited daily videos, custom branding, and YouTube backgrounds.",
-  keywords: ["affordable AI video generator pricing", "QuotVid pricing", "quote video price", "AI video generator pricing", "content creator subscription"],
+    "QuotVid starts free — 5 videos, no card. Upgrade to Monthly ($20), Annual ($149), or Lifetime ($269) for 20 videos/day, Custom Studio with live preview, YouTube backgrounds, accent colors, background library, and 25 languages.",
+  keywords: ["QuotVid pricing", "AI quote video generator price", "quote video subscription", "custom video studio pricing", "content creator subscription", "TikTok video maker price"],
   alternates: { canonical: "https://www.quotvid.com/pricing" },
   openGraph: {
-    title: "QuotVid Pricing — Start Free, Upgrade When Ready",
-    description: "QuotVid starts free. Upgrade to Monthly ($10), Annual ($99), or Lifetime ($269) for unlimited daily videos, custom branding, and YouTube backgrounds.",
+    title: "QuotVid Pricing — Free Plan, $20/mo, $149/yr, $269 Lifetime",
+    description: "Start free with 5 videos. Upgrade for 20 videos/day, Custom Studio, live preview, YouTube backgrounds, accent colors, and 25 languages.",
     url: "https://www.quotvid.com/pricing",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Pricing Plans" }],
   },
@@ -29,16 +29,17 @@ const plans = [
     highlight: false,
     features: [
       "5 videos total",
-      "Watermark on all videos",
-      "AI Persona mode only",
-      "All content categories",
-      "6 animation templates",
+      "QuotVid watermark on all videos",
+      "AI Persona mode",
+      "20 content categories",
+      "17 animation templates",
+      "25 languages + RTL support",
       "Download in MP4",
     ],
   },
   {
     name: "QuotVid Monthly",
-    price: "$10",
+    price: "$20",
     period: "/ month",
     billing: "Billed monthly. Cancel anytime.",
     desc: "Daily videos, no watermark, full Custom Studio access.",
@@ -49,26 +50,27 @@ const plans = [
       "20 videos per day",
       "No watermark",
       "AI Persona + Custom Studio",
-      "YouTube background feature",
+      "Live phone preview before generating",
+      "YouTube background picker",
+      "Personal background library",
       "Upload custom backgrounds",
       "Upload custom music",
-      "Logo watermark + channel name",
-      "Priority support",
+      "Custom accent colors + font size",
+      "Logo watermark + channel name badge",
+      "25 languages · 20 categories · 17 templates",
     ],
   },
   {
     name: "QuotVid Annual",
-    price: "$99",
+    price: "$149",
     period: "/ year",
-    billing: "Billed annually. Save $21 vs monthly.",
+    billing: "Billed annually. Save $91 vs monthly.",
     desc: "Everything in Monthly — best value for committed creators.",
     cta: "Start Annual Plan",
     ctaHref: "https://app.quotvid.com/auth/signup?plan=annual",
     highlight: true,
     features: [
       "Everything in Monthly",
-      "Unlimited video history",
-      "Early access to new features",
       "Priority support",
     ],
   },
@@ -95,6 +97,11 @@ const faqs = [
   { q: "What platforms are the videos made for?", a: "TikTok, Instagram Reels, and YouTube Shorts. All videos are 1080×1920 vertical format — the standard for every major short-form platform." },
   { q: "Can I use my own logo and branding?", a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. All paid plans include full branding control. Everything previews live on a phone mockup before you generate." },
   { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. The video loads right in the studio — watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically. No downloading required." },
+  { q: "What is the live phone preview?", a: "Custom Studio shows a real-time phone mockup that updates as you edit. Change your background, watermark position, accent colors, font size, or quote text — the preview reflects each change instantly. You see exactly how your final video will look before you generate it." },
+  { q: "Can I set custom colors for my quote text?", a: "Yes. Paid plans include an accent color system where you can set up to 4 brand colors applied to your quote text. You can also set a text shadow color for readability on bright backgrounds. All changes are visible in the live preview." },
+  { q: "What is the background library?", a: "Every background you upload or extract from a YouTube video is saved to your personal background library. On your next video, pick from your saved clips instead of uploading again. Clips are stored in the cloud with no expiry — instant reuse across AI Persona and Custom Studio." },
+  { q: "Can I upload my own background music?", a: "Yes, on paid plans. Upload your own audio file in Custom Studio. You can also choose from the curated built-in music library. The in-app audio player lets you preview tracks before selecting." },
+  { q: "How many categories and templates are there?", a: "QuotVid has 20 content categories — Stoic, Discipline, Business, Psychology, Sigma, Urdu Poetry, Mindfulness, Faith, Humor, Fitness, and more. There are 17 animation templates, and the studio automatically recommends the best-matching templates for your category." },
   { q: "Is there a free trial?", a: "Yes — the free plan lets you generate your first 5 videos with no credit card needed. The full pipeline runs — AI quote writing, video render, music, MP4 export. You see exactly what paid users get, in smaller quantity." },
   { q: "Can I cancel anytime?", a: "Yes. Monthly plans cancel anytime from your billing settings. You retain access until the end of your billing period. Annual plans include a 7-day money-back guarantee." },
   { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
@@ -181,13 +188,13 @@ export default function PricingPage() {
             <h2 className="mb-6 text-xl sm:text-2xl font-bold text-light-heading text-center">Is QuotVid Worth It?</h2>
             <p className="mb-8 text-sm sm:text-base text-light-body leading-relaxed text-center max-w-2xl mx-auto">
               Here is the real math: creating one quote video manually takes 30–45 minutes — writing the quote, designing the frame,
-              animating text, adding music, exporting. At $10/month and 20 videos per day, QuotVid costs less than
-              one dollar per week. The 15–30 hours of production time you reclaim per month is the actual value.
+              animating text, adding music, exporting. At $20/month and 20 videos per day, QuotVid costs less than
+              fifty cents per day. The 15–30 hours of production time you reclaim per month is the actual value.
             </p>
             <div className="grid gap-4 sm:grid-cols-3 mb-8">
               {[
                 { metric: "30–45 min", label: "Saved per video vs. manual production" },
-                { metric: "$0.017", label: "Cost per video on the monthly plan" },
+                { metric: "$0.033", label: "Cost per video on the monthly plan" },
                 { metric: "0 minutes", label: "Production time once your persona is set" },
               ].map((item) => (
                 <div key={item.metric} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 text-center">
@@ -198,16 +205,16 @@ export default function PricingPage() {
             </div>
             <div className="space-y-4 text-sm sm:text-base text-light-body leading-relaxed">
               <p>
-                <strong className="text-light-heading">For daily posters:</strong> the monthly plan at $10 is straightforward.
-                You post every day, which means 300+ videos per month. The cost per video is a rounding error.
+                <strong className="text-light-heading">For daily posters:</strong> the monthly plan at $20 is straightforward.
+                You post every day, which means 600+ videos per month. The cost per video is negligible.
               </p>
               <p>
-                <strong className="text-light-heading">For committed creators:</strong> the annual plan at $99/year saves 18%
-                and adds unlimited video history — useful if you want to reference or repost older content.
+                <strong className="text-light-heading">For committed creators:</strong> the annual plan at $149/year saves $91
+                vs monthly — and includes priority support for faster help when you need it.
               </p>
               <p>
                 <strong className="text-light-heading">For long-term builders:</strong> the lifetime plan at $269 pays for itself
-                in 27 months vs monthly. If you are building a serious content operation, the math on lifetime is clear.
+                in under 14 months vs monthly. If you are building a serious content operation, the math on lifetime is clear.
               </p>
               <p>
                 Not sure yet? The free plan gives you 5 videos to evaluate the output quality with zero financial commitment.

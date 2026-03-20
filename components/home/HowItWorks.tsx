@@ -3,22 +3,29 @@ import Image from "next/image";
 const steps = [
   {
     num: "01",
-    title: "Set Up Your Persona",
-    desc: "Choose AI Persona mode for hands-off daily generation, or open Custom Studio for full brand control. Takes 2 minutes either way.",
+    title: "Pick Your Mode",
+    desc: "Choose AI Persona for hands-off daily generation across 20 categories, or open Custom Studio for full brand control with a live phone preview. Takes 2 minutes either way.",
     img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Person setting up AI quote video persona on a mobile phone",
   },
   {
     num: "02",
-    title: "Customize Your Style",
-    desc: "Pick your background (or paste a YouTube URL), upload your watermark, choose background music, and pick your animation style. Preview everything live on a phone mockup before generating.",
+    title: "Set Your Brand",
+    desc: "Upload your logo, paste a YouTube URL for your background, set your watermark, choose background music, pick your accent colors and font size. All saved to your profile.",
     img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Customizing brand style in AI video studio with live preview",
   },
   {
     num: "03",
+    title: "Preview Live on Your Phone",
+    desc: "Every setting instantly updates a live phone mockup — see exactly how your video will look, with your background, colors, watermark, and typography, before you generate a single frame.",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Live phone preview of quote video in Custom Studio",
+  },
+  {
+    num: "04",
     title: "Generate and Download",
-    desc: "Click generate. Videos are ready in minutes. Download and post to TikTok, Instagram Reels, or YouTube Shorts — all in the perfect 1080×1920 format.",
+    desc: "Click generate. Videos are ready in minutes in 1080×1920 format — perfect for TikTok, Instagram Reels, and YouTube Shorts. Download with a custom file name and post instantly.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Downloading AI-generated quote video and posting to social media",
   },
@@ -29,9 +36,9 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-section-light py-14 sm:py-20 md:py-28">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <h2 className="mb-10 sm:mb-16 text-center text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
-          From Idea to <span className="text-gradient-gold">Viral Video</span> in 3 Simple Steps
+          From Idea to <span className="text-gradient-gold">Viral Video</span> in 4 Simple Steps
         </h2>
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <div key={s.num} className="overflow-hidden rounded-xl border border-primary/20 bg-foreground/[0.02] transition-shadow hover:shadow-lg">
               <div className="relative h-48 w-full overflow-hidden">

@@ -8,16 +8,16 @@ export default function Hero() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-primary/20 bg-secondary px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-muted-foreground">
-              ⚡ AI-Powered · 20+ Categories · Custom Studio · Live Preview
+              ⚡ AI-Powered · 20 Categories · 17 Templates · Custom Studio · Live Preview
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Your AI Quote Video{" "}
               <span className="text-gradient-gold">Studio.</span>
               <br />
-              Built for Creators.
+              See It Before You Generate It.
             </h1>
             <p className="mb-6 sm:mb-8 text-sm sm:text-lg leading-relaxed text-muted-foreground">
-              QuotVid generates professional short-form quote videos for TikTok, Instagram Reels, and YouTube Shorts — automatically, every day. Set your brand once. Watch the content flow.
+              QuotVid generates professional 1080×1920 quote videos for TikTok, Instagram Reels, and YouTube Shorts. Set your brand once — logo, colors, background, music. Watch it live on a phone preview. Then generate.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
@@ -34,14 +34,14 @@ export default function Hero() {
               </a>
             </div>
             <p className="mt-4 sm:mt-6 text-xs text-muted-foreground">
-              No credit card required · 2-minute setup · Your first videos are free
+              No credit card required · 2-minute setup · Your first 5 videos are free
             </p>
           </div>
 
           <div className="flex justify-center lg:justify-end">
             <Image
               src="/hero-phones.png"
-              alt="QuotVid AI quote video generator — phone mockups showing branded short-form videos"
+              alt="QuotVid AI quote video generator — phone mockups showing branded short-form videos with live preview"
               width={480}
               height={600}
               className="animate-float w-full max-w-xs sm:max-w-md drop-shadow-2xl"

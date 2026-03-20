@@ -6,14 +6,27 @@ import FinalCTA from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "QuotVid Features — Custom Studio, YouTube Backgrounds & Live Preview",
+  title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 17 Templates",
   description:
-    "Explore QuotVid's full feature set: AI persona mode, Custom Studio with live preview, YouTube background picker, watermark system, and background music library.",
-  keywords: ["quote video maker for TikTok Instagram Reels YouTube Shorts", "custom video branding tool", "quote video studio", "YouTube video background", "automated quote video generator", "add watermark to video automatically", "AI content creator tool"],
+    "Everything in QuotVid: two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size, custom watermark, 25 languages, 17 templates, and cloud video storage.",
+  keywords: [
+    "AI quote video generator features",
+    "custom quote video studio",
+    "live video preview",
+    "YouTube background picker",
+    "quote video templates",
+    "multilingual quote video",
+    "automated TikTok video maker",
+    "Instagram Reels automation",
+    "YouTube Shorts generator",
+    "custom watermark video",
+    "accent colors quote video",
+  ],
   alternates: { canonical: "https://www.quotvid.com/features" },
   openGraph: {
-    title: "QuotVid Features — Custom Studio, YouTube Backgrounds & Live Preview",
-    description: "Explore QuotVid's full feature set: AI persona mode, Custom Studio with live preview, YouTube background picker, watermark system, and background music library.",
+    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 17 Templates",
+    description:
+      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 17 templates, accent colors, background library, and more.",
     url: "https://www.quotvid.com/features",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Features" }],
   },
@@ -21,58 +34,130 @@ export const metadata: Metadata = {
 
 const featureSections = [
   {
-    icon: "🤖",
+    icon: "🔀",
     badge: "Free + Paid",
-    title: "Fully Automatic Daily Video Generation",
-    desc: "AI Persona mode is the hands-off way to post every day. Set your content category, language, and animation style once. QuotVid's AI writes a fresh original quote, renders your 1080×1920 video, adds background music, and queues it for download — automatically, every day. No buttons. No editing. Just content. Powered by Groq LLM for fast, reliable quote generation across 20+ content categories including Stoic, Discipline, Business, Psychology, Mindset, and more.",
-    points: ["20+ content categories", "AI quote generation — never repeated", "Daily automated generation", "6 animation styles"],
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80&auto=format&fit=crop",
-    imgAlt: "Automated daily AI quote video generation for content creators",
+    title: "Two Persona Modes — AI Persona and Custom Studio",
+    desc: "QuotVid gives you two distinct ways to create. AI Persona is the hands-off mode: pick your category, language, and style once, and QuotVid generates fresh branded videos every day automatically. Custom Studio is the full-control mode: a two-column workspace where you control every detail of a single video in real time. You can switch between modes at any time — or use both. Each mode has its own persona profile so your brand settings are always separate.",
+    points: [
+      "AI Persona — automated daily generation",
+      "Custom Studio — manual per-video control",
+      "Switch between modes at any time",
+      "Separate brand profile per mode",
+    ],
+    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Two persona modes in QuotVid AI quote video generator",
   },
   {
     icon: "🎬",
     badge: "Paid",
-    title: "The Custom Studio — Your Brand in Full Control",
-    desc: "Custom Studio is a full-width two-column interface purpose-built for brand-focused creators. On the left, you control every aspect of your video: background source, watermark, music, animation style, and quote content. On the right, a live phone mockup updates in real time so you see exactly what your video looks like before generating. No more wasted generations — no more trial and error. What you see is what you get.",
-    points: ["Two-column studio layout", "Live phone preview — updates as you edit", "Full background, watermark, and music controls", "6 video animation templates"],
+    title: "Custom Studio — Full Brand Control with Live Phone Preview",
+    desc: "Custom Studio is a full-width two-column interface built for brand-focused creators. On the left, you control everything: background source, watermark, background music, accent colors, font size, text shadow, and the quote itself. On the right, a live phone mockup updates in real time — every change you make reflects instantly. See exactly how your video looks before generating. No wasted generations, no guesswork.",
+    points: [
+      "Real-time phone mockup — updates as you edit",
+      "Full two-column studio layout",
+      "Control: background, watermark, colors, font, music, quote",
+      "What you see is what you get",
+    ],
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
     imgAlt: "Custom video studio interface with live phone preview for quote videos",
   },
   {
     icon: "▶️",
     badge: "Paid",
-    title: "Use Any YouTube Video as Your Background",
-    desc: "Paste any YouTube URL directly into Custom Studio. The video loads in an iframe preview right inside the studio — watch it, scrub through, and pick your perfect 30-second clip. QuotVid extracts that exact clip and saves it to your personal background library in Cloudflare R2 cloud storage. It persists permanently — no re-uploading, no link expiry, no broken backgrounds. This is the fastest way to find engaging motion backgrounds without downloading anything yourself.",
-    points: ["Paste YouTube URL → preview in studio", "Pick exact 30-second clip", "One-click extraction — no downloading", "Saved permanently to your background library"],
+    title: "YouTube Background Picker — In-Studio Video Preview",
+    desc: "Paste any YouTube URL directly into the studio. The video loads right there — watch it, scrub through it, and pick your perfect 30-second clip. QuotVid extracts that exact clip and saves it to your personal background library automatically. No downloading, no re-uploading. You get full motion video backgrounds from any YouTube source in seconds.",
+    points: [
+      "Paste YouTube URL → preview plays inside studio",
+      "Pick any 30-second clip precisely",
+      "One-click extraction — no external tools needed",
+      "Saved permanently to your background library",
+    ],
     img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80&auto=format&fit=crop",
     imgAlt: "YouTube video background picker for quote video maker",
   },
   {
     icon: "🏷️",
     badge: "Paid",
-    title: "Your Logo. Your Position. Your Opacity.",
-    desc: "The watermark system in Custom Studio gives you precise control over your brand identity on every video. Upload your logo (PNG recommended for transparency), choose its corner position, set its size as a percentage of the frame, and adjust opacity from subtle to bold. Add a channel name text badge as an alternative or complement to your logo. Every adjustment reflects instantly in the live phone preview — so you dial in your brand before generating a single video.",
-    points: ["Upload your logo (PNG with transparency)", "4 corner position options", "Size control (5–30% of frame)", "Opacity control (10–100%) + channel name badge"],
+    title: "Watermark & Branding — Logo, Position, Opacity, Channel Badge",
+    desc: "Upload your logo (PNG with transparency recommended), choose its corner position, set its size as a percentage of the frame, and adjust opacity from subtle watermark to bold overlay. Add a channel name text badge as a complement or alternative to your logo. Every change reflects in the live phone preview. Your brand appears exactly the same on every video — consistent, professional, unmistakable.",
+    points: [
+      "Upload logo (PNG with transparency)",
+      "4 corner positions",
+      "Size control (5–30% of frame) + opacity (10–100%)",
+      "Optional channel name text badge",
+    ],
     img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&q=80&auto=format&fit=crop",
     imgAlt: "Logo watermark overlay on branded short-form video",
   },
   {
-    icon: "🎵",
-    badge: "Free + Paid",
-    title: "Built-In Music Library + Upload Your Own",
-    desc: "Every QuotVid video includes background music. Choose from a library of curated preset tracks — cinematic, calm, epic, melancholic — each with an audio player preview so you hear exactly what you are selecting. Paid plan users can upload their own audio files for a fully custom sound that matches their brand. The audio player lets you preview before confirming — no more generating a video only to discover the music doesn't fit.",
-    points: ["Curated preset music library", "Audio player preview before selecting", "Upload your own music (paid plans)", "Mood categories: cinematic, calm, epic, melancholic"],
-    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700&q=80&auto=format&fit=crop",
-    imgAlt: "Background music library for automated quote video generator",
+    icon: "🗂️",
+    badge: "Paid",
+    title: "Background Library — Reuse Clips Without Re-Uploading",
+    desc: "Every background you upload or extract from YouTube is saved to your personal background library in cloud storage. On any future video — whether in AI Persona or Custom Studio — pick from your library instead of uploading again. Clips persist indefinitely. No expiry, no broken links, no re-uploading the same clip repeatedly. Your library grows with every video you make.",
+    points: [
+      "All uploaded and extracted clips saved automatically",
+      "Reuse instantly across AI Persona and Custom Studio",
+      "Stored in Cloudflare R2 — no expiry",
+      "Thumbnail gallery for easy browsing",
+    ],
+    img: "https://images.unsplash.com/photo-1536240478700-b869ad10e128?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Background video library for reusing clips in quote video maker",
   },
   {
-    icon: "📐",
+    icon: "🎵",
     badge: "Free + Paid",
-    title: "Perfect for Every Short-Form Platform",
-    desc: "Every video QuotVid generates is 1080×1920 — the vertical format that TikTok, Instagram Reels, and YouTube Shorts are built for. Six animation templates give you variety across your content: from clean minimal typography to dynamic kinetic text and cinematic overlay styles. All videos are rendered with FFmpeg and MoviePy for professional-quality output that looks like you spent hours in a video editor.",
-    points: ["1080×1920 — TikTok, Reels, Shorts ready", "6 animation templates", "FFmpeg + MoviePy rendering", "MP4 download, no extra conversion needed"],
-    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=80&auto=format&fit=crop",
-    imgAlt: "Vertical 1080x1920 short-form video format for TikTok Instagram YouTube",
+    title: "Music Library + Upload Your Own Custom Audio",
+    desc: "Every video includes background music. Choose from a curated library of preset tracks — cinematic, calm, epic, melancholic — each with an in-app audio player so you hear it before you select it. On paid plans, upload your own audio file for a fully branded sound. Music is mixed into the final video automatically at the right level — no post-processing needed.",
+    points: [
+      "Curated preset music library",
+      "In-app audio preview before selecting",
+      "Upload your own music (paid plans)",
+      "Auto-mixed into final video at correct level",
+    ],
+    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Background music library and custom audio upload for quote videos",
+  },
+  {
+    icon: "🎨",
+    badge: "Free + Paid",
+    title: "Accent Colors, Font Size & Text Shadow Control",
+    desc: "Set up to 4 custom accent colors for your quote text — your brand palette applied to every video automatically. Choose from 5 font size presets (Auto, Small, Medium, Large, X-Large) for the right visual weight on your background. Add a custom text shadow color to ensure readability on bright or complex backgrounds. All color and typography settings are previewed live in the phone mockup.",
+    points: [
+      "Up to 4 custom accent colors",
+      "5 font size presets",
+      "Custom text shadow color for readability",
+      "All settings previewed live",
+    ],
+    img: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Accent colors and font size control for branded quote videos",
+  },
+  {
+    icon: "📂",
+    badge: "Free + Paid",
+    title: "20 Categories, 17 Templates — Matched Automatically",
+    desc: "Choose from 20 content categories — Stoic, Discipline, Business, Psychology, Mindset, Urdu Poetry, Humor, Faith, Fitness, Family, Creativity, Leadership, and more. QuotVid automatically recommends the best-matching templates for your category, so you never choose a template that clashes with your content style. 17 animation templates give you a full range from clean minimal text to dynamic kinetic motion and cinematic styles.",
+    points: [
+      "20 content categories",
+      "17 animation templates",
+      "Category → template matching built in",
+      "Unique AI-generated quotes per category",
+    ],
+    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "20 content categories and 17 video templates in QuotVid",
+  },
+  {
+    icon: "🌍",
+    badge: "Free + Paid",
+    title: "25 Languages — Including Full RTL Support",
+    desc: "Generate quote videos in 25 languages: English, Urdu, Arabic, Hindi, Spanish, Persian, French, German, Russian, Chinese, Japanese, Korean, Turkish, Indonesian, Swahili, Bengali, Punjabi, Tamil, and more. Arabic, Urdu, and Persian render with full right-to-left text layout using Nastaliq and Naskh fonts — a capability most video tools do not support at all. All generated videos are ready to download with a custom file name for easy organization.",
+    points: [
+      "25 languages supported",
+      "Full RTL rendering for Arabic, Urdu, Persian",
+      "Nastaliq and Naskh font support",
+      "Download with custom file name",
+    ],
+    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Multilingual quote video generation in 25 languages with RTL support",
   },
 ];
 
@@ -92,11 +177,11 @@ export default function FeaturesPage() {
         <section className="bg-section-dark pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 text-center md:px-8">
             <h1 className="mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight md:text-5xl">
-              Everything You Need to{" "}
-              <span className="text-gradient-gold">Automate Your Quote Video Content</span>
+              Every Feature You Need to{" "}
+              <span className="text-gradient-gold">Create, Brand, and Automate</span>
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
-              AI Persona mode for hands-off daily generation. Custom Studio for full brand control. YouTube backgrounds, live preview, watermark system, and more — all in one quote video maker for TikTok, Instagram Reels, and YouTube Shorts.
+              Two persona modes. Live phone preview. YouTube background picker. Background library. Accent colors. 25 languages. 20 categories. 17 templates. Custom audio. Cloud storage. Everything built into one quote video studio for TikTok, Instagram Reels, and YouTube Shorts.
             </p>
           </div>
         </section>
@@ -146,8 +231,8 @@ export default function FeaturesPage() {
                   <tr className="border-b border-primary/20">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
                     <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$10/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$99/yr</span></th>
+                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$20/mo</span></th>
+                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$149/yr</span></th>
                     <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
                   </tr>
                 </thead>
@@ -155,17 +240,18 @@ export default function FeaturesPage() {
                   {[
                     ["Videos", "5 total", "20/day", "20/day", "20/day"],
                     ["AI quote generation", "✓", "✓", "✓", "✓"],
-                    ["20+ content categories", "✓", "✓", "✓", "✓"],
-                    ["6 animation templates", "✓", "✓", "✓", "✓"],
-                    ["Download MP4", "✓", "✓", "✓", "✓"],
+                    ["20 categories · 17 templates", "✓", "✓", "✓", "✓"],
+                    ["25 languages + RTL", "✓", "✓", "✓", "✓"],
+                    ["Download MP4 with custom name", "✓", "✓", "✓", "✓"],
                     ["Watermark", "QuotVid", "None", "None", "None"],
                     ["Custom Studio + live preview", "—", "✓", "✓", "✓"],
                     ["YouTube background picker", "—", "✓", "✓", "✓"],
+                    ["Background library", "—", "✓", "✓", "✓"],
                     ["Upload own backgrounds", "—", "✓", "✓", "✓"],
+                    ["Custom accent colors + font size", "—", "✓", "✓", "✓"],
                     ["Upload own music", "—", "✓", "✓", "✓"],
-                    ["Logo watermark + channel name", "—", "✓", "✓", "✓"],
-                    ["Unlimited video history", "—", "—", "✓", "✓"],
-                    ["Early access to new features", "—", "—", "✓", "✓"],
+                    ["Logo watermark + channel name badge", "—", "✓", "✓", "✓"],
+                    ["Cloud video storage", "—", "✓", "✓", "✓"],
                     ["Priority support", "—", "—", "✓", "✓"],
                   ].map(([feature, free, monthly, annual, lifetime]) => (
                     <tr key={feature}>
@@ -202,11 +288,11 @@ export default function FeaturesPage() {
                 },
                 {
                   title: "Urdu & Arabic Creators",
-                  desc: "You create Urdu poetry videos or Arabic quote content and every video tool you have tried renders the text incorrectly. QuotVid supports Nastaliq, Naskh, and RTL rendering natively.",
+                  desc: "You create Urdu poetry videos or Arabic quote content and every video tool you have tried renders the text incorrectly. QuotVid supports Nastaliq, Naskh, and full RTL rendering natively.",
                 },
                 {
                   title: "Multilingual Page Managers",
-                  desc: "You manage pages in multiple languages — one in English, one in Urdu, one in Arabic. Create a separate persona for each. Each generates correctly in its language.",
+                  desc: "You manage pages in multiple languages — one in English, one in Urdu, one in Arabic. Create a separate persona for each. Each generates correctly in its language with the right font.",
                 },
                 {
                   title: "Social Media Managers",
@@ -214,11 +300,11 @@ export default function FeaturesPage() {
                 },
                 {
                   title: "Creators Who Want to Post, Not Edit",
-                  desc: "You have content ideas. You know your niche. You just do not want to spend 45 minutes in a video editor every evening. Set your persona once. Wake up to a ready video.",
+                  desc: "You have content ideas and know your niche. You just do not want to spend 45 minutes in a video editor every evening. Set your persona once. Wake up to a ready video.",
                 },
                 {
                   title: "Creators Testing a New Niche",
-                  desc: "You want to launch a new quote page but are not sure which niche will resonate. Free plan lets you test 5 videos across different niches before committing.",
+                  desc: "You want to launch a new quote page but are not sure which niche will resonate. The free plan gives you 5 videos to test across different categories before committing.",
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6">
@@ -252,12 +338,14 @@ export default function FeaturesPage() {
                   {[
                     ["AI writes the quote", "✓", "—", "—", "—"],
                     ["YouTube video as background", "✓ (paid)", "—", "Manual", "—"],
+                    ["Live phone preview before generate", "✓", "—", "—", "—"],
                     ["1080×1920 video output", "✓", "✓", "✓", "✓"],
                     ["Daily automation", "✓", "—", "—", "—"],
-                    ["Auto-post to TikTok/Instagram", "✓ (paid)", "—", "—", "—"],
-                    ["Urdu Nastaliq rendering", "✓", "Partial", "—", "Manual"],
-                    ["Arabic RTL support", "✓", "Partial", "Partial", "Manual"],
+                    ["25 languages + RTL", "✓", "Partial", "Partial", "Manual"],
+                    ["Custom accent colors", "✓ (paid)", "✓", "Limited", "Manual"],
+                    ["Background library", "✓ (paid)", "—", "—", "—"],
                     ["Music library included", "✓", "✓ (limited)", "✓", "Separate"],
+                    ["Upload own music", "✓ (paid)", "✓ (paid)", "✓", "—"],
                     ["Production time per video", "0 min", "20–40 min", "15–30 min", "30–60 min"],
                     ["No credit card to start", "✓", "✓", "✓", "N/A"],
                   ].map(([feature, quotvid, canva, capcut, manual]) => (

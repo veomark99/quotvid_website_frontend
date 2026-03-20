@@ -15,14 +15,14 @@ import ComingSoon from "@/components/home/ComingSoon";
 import { WebsiteJsonLd, HomeFaqJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "QuotVid — AI Quote Video Generator for TikTok, Instagram & YouTube Shorts",
+  title: "QuotVid — AI Quote Video Studio for TikTok, Instagram & YouTube Shorts",
   description:
-    "Generate professional quote videos automatically every day. Upload your logo, pick YouTube backgrounds, and preview your brand live. Free to start.",
-  keywords: ["AI quote video generator for social media", "quote video generator", "AI video maker", "TikTok content creator", "Instagram Reels automation", "YouTube Shorts generator", "custom video studio", "automated quote videos"],
+    "Generate professional 1080×1920 quote videos with live phone preview. 20 categories, 17 templates, 25 languages. Set your brand once — logo, colors, background, music. Free to start.",
+  keywords: ["AI quote video generator", "quote video studio", "live video preview", "AI video maker", "TikTok content creator", "Instagram Reels automation", "YouTube Shorts generator", "custom video studio", "automated quote videos", "quote video templates"],
   alternates: { canonical: "https://www.quotvid.com" },
   openGraph: {
-    title: "QuotVid — AI Quote Video Generator for TikTok, Instagram & YouTube Shorts",
-    description: "Generate professional quote videos automatically every day. Upload your logo, pick YouTube backgrounds, preview live. Free to start.",
+    title: "QuotVid — AI Quote Video Studio for TikTok, Instagram & YouTube Shorts",
+    description: "Generate professional 1080×1920 quote videos with live phone preview. 20 categories, 17 templates, 25 languages. Free to start.",
     url: "https://www.quotvid.com",
     images: [{ url: "https://www.quotvid.com/og-image.png", width: 1200, height: 630 }],
   },

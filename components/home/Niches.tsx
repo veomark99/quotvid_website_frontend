@@ -7,6 +7,18 @@ const niches = [
   { icon: "🌱", label: "Growth Mindset" },
   { icon: "✍️", label: "Urdu Poetry" },
   { icon: "🌙", label: "Arabic & Persian" },
+  { icon: "🧘", label: "Mindfulness & Calm" },
+  { icon: "❤️", label: "Love & Relationships" },
+  { icon: "🙏", label: "Faith & Spirituality" },
+  { icon: "😂", label: "Humor & Wit" },
+  { icon: "📚", label: "Education & Wisdom" },
+  { icon: "🏆", label: "Fitness & Health" },
+  { icon: "💡", label: "Leadership & Vision" },
+  { icon: "🎨", label: "Creativity & Art" },
+  { icon: "👨‍👩‍👧", label: "Family & Parenting" },
+  { icon: "🌍", label: "Social Impact" },
+  { icon: "🎓", label: "Student Life" },
+  { icon: "🕊️", label: "Peace & Healing" },
 ];
 
 export default function Niches() {
