@@ -54,7 +54,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <section className="bg-section-light py-12 sm:py-16">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
-            <article className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-primary">
+            <article className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-primary prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold">
               <MDXRemote source={post.content} />
             </article>
 

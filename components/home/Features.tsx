@@ -4,7 +4,7 @@ const features = [
   {
     icon: "🤖",
     title: "AI Persona — Daily Videos on Autopilot",
-    desc: "Pick from 20 categories and 17 templates. Set your accent colors, font size, background, and music. QuotVid generates fresh branded videos every day — no editing required.",
+    desc: "Pick from 20 categories and 10+ video styles. Set your accent colors, font size, background, and music. QuotVid generates fresh branded videos every day — no editing required.",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&auto=format&fit=crop",
     imgAlt: "AI generating automated daily quote videos",
   },

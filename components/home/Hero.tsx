@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-primary/20 bg-secondary px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-muted-foreground">
-              ⚡ AI-Powered · 20 Categories · 17 Templates · Custom Studio · Live Preview
+              ⚡ AI-Powered · 20 Categories · 10+ Video Styles · Custom Studio · Live Preview
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Your AI Quote Video{" "}

@@ -6,9 +6,9 @@ import FinalCTA from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 17 Templates",
+  title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
   description:
-    "Everything in QuotVid: two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size, custom watermark, 25 languages, 17 templates, and cloud video storage.",
+    "Everything in QuotVid: two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size, custom watermark, 25 languages, 10+ video styles, and cloud video storage.",
   keywords: [
     "AI quote video generator features",
     "custom quote video studio",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.quotvid.com/features" },
   openGraph: {
-    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 17 Templates",
+    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
     description:
-      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 17 templates, accent colors, background library, and more.",
+      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, accent colors, background library, and more.",
     url: "https://www.quotvid.com/features",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Features" }],
   },
@@ -134,16 +134,16 @@ const featureSections = [
   {
     icon: "📂",
     badge: "Free + Paid",
-    title: "20 Categories, 17 Templates — Matched Automatically",
-    desc: "Choose from 20 content categories — Stoic, Discipline, Business, Psychology, Mindset, Urdu Poetry, Humor, Faith, Fitness, Family, Creativity, Leadership, and more. QuotVid automatically recommends the best-matching templates for your category, so you never choose a template that clashes with your content style. 17 animation templates give you a full range from clean minimal text to dynamic kinetic motion and cinematic styles.",
+    title: "20 Categories, 10+ Video Styles — Matched Automatically",
+    desc: "Choose from 20 content categories — Stoic, Discipline, Business, Psychology, Mindset, Urdu Poetry, Humor, Faith, Fitness, Family, Creativity, Leadership, and more. QuotVid automatically recommends the best-matching styles for your category, so you never choose a look that clashes with your content. 10+ video styles give you a full range from clean minimal text to dynamic kinetic motion and cinematic looks.",
     points: [
       "20 content categories",
-      "17 animation templates",
-      "Category → template matching built in",
+      "10+ video styles",
+      "Category → style matching built in",
       "Unique AI-generated quotes per category",
     ],
     img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80&auto=format&fit=crop",
-    imgAlt: "20 content categories and 17 video templates in QuotVid",
+    imgAlt: "20 content categories and 10+ video styles in QuotVid",
   },
   {
     icon: "🌍",
@@ -181,7 +181,7 @@ export default function FeaturesPage() {
               <span className="text-gradient-gold">Create, Brand, and Automate</span>
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
-              Two persona modes. Live phone preview. YouTube background picker. Background library. Accent colors. 25 languages. 20 categories. 17 templates. Custom audio. Cloud storage. Everything built into one quote video studio for TikTok, Instagram Reels, and YouTube Shorts.
+              Two persona modes. Live phone preview. YouTube background picker. Background library. Accent colors. 25 languages. 20 categories. 10+ video styles. Custom audio. Cloud storage. Everything built into one quote video studio for TikTok, Instagram Reels, and YouTube Shorts.
             </p>
           </div>
         </section>
@@ -231,8 +231,8 @@ export default function FeaturesPage() {
                   <tr className="border-b border-primary/20">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
                     <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$20/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$149/yr</span></th>
+                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$10/mo</span></th>
+                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$99/yr</span></th>
                     <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
                   </tr>
                 </thead>
@@ -240,7 +240,7 @@ export default function FeaturesPage() {
                   {[
                     ["Videos", "5 total", "20/day", "20/day", "20/day"],
                     ["AI quote generation", "✓", "✓", "✓", "✓"],
-                    ["20 categories · 17 templates", "✓", "✓", "✓", "✓"],
+                    ["20 categories · 10+ video styles", "✓", "✓", "✓", "✓"],
                     ["25 languages + RTL", "✓", "✓", "✓", "✓"],
                     ["Download MP4 with custom name", "✓", "✓", "✓", "✓"],
                     ["Watermark", "QuotVid", "None", "None", "None"],

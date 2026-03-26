@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const faqs = [
   { q: "What type of videos does QuotVid create?", a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for TikTok, Instagram Reels, and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template." },
-  { q: "How many videos do I get?", a: "Free plan users get 5 videos total — no credit card required, no time limit. Paid plan users (Monthly, Annual, Lifetime) get up to 20 videos per day." },
+  { q: "How many videos do I get?", a: "Free plan users get 5 videos total — no credit card required, no time limit. Paid plan users (Monthly, Annual, Lifetime) get unlimited videos per day." },
   { q: "Do I need video editing skills?", a: "No. QuotVid handles everything automatically. Set your persona once and videos are generated and ready to download. No design tools, no timelines, no rendering software." },
   { q: "What is the Custom Studio?", a: "Custom Studio is a full-width two-column interface where you control every aspect of your video: background (upload, YouTube URL, or personal library), watermark and logo, background music, accent colors, font size, and animation style. Everything updates a live phone preview before you generate." },
   { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. The video loads right in the studio — watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically. No downloading required." },

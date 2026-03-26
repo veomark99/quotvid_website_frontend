@@ -29,7 +29,7 @@ export default function Niches() {
           Built For <span className="text-gradient-gold">Every Type</span> of Creator
         </h2>
         <p className="mx-auto mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base text-muted-foreground">
-          Whether you run a motivational page, share Urdu poetry, or build a business brand — QuotVid was built for your niche.
+          Whether you run a motivational page, a poetry channel, or a business brand, QuotVid fits your niche.
         </p>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           {niches.map((n) => (

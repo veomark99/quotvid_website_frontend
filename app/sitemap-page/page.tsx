@@ -38,12 +38,12 @@ const sections = [
   {
     title: "Help Center",
     links: [
-      { label: "How to Create Your First Video", href: "/help" },
-      { label: "Setting Up Your Content Persona", href: "/help" },
-      { label: "Free Plan — What's Included", href: "/help" },
-      { label: "RTL Support for Arabic, Urdu & Persian", href: "/help" },
-      { label: "Connecting TikTok & Instagram", href: "/help" },
-      { label: "Daily Auto-Schedule Guide", href: "/help" },
+      { label: "How to Create Your First Video", href: "/help#create-first-video" },
+      { label: "Setting Up Your Content Persona", href: "/help#setup-persona" },
+      { label: "What the Free Plan Includes", href: "/help#free-plan" },
+      { label: "RTL Languages (Arabic, Persian, and similar)", href: "/help#rtl-languages" },
+      { label: "Connecting TikTok", href: "/help#connect-tiktok" },
+      { label: "Daily Auto-Schedule", href: "/help#auto-schedule" },
     ],
   },
   {
