@@ -17,7 +17,7 @@ export default function Hero() {
               See It Before You Generate It.
             </h1>
             <p className="mb-6 sm:mb-8 text-sm sm:text-lg leading-relaxed text-muted-foreground">
-              QuotVid generates professional 1080×1920 quote videos for TikTok, Instagram Reels, and YouTube Shorts. Set your brand once — logo, colors, background, music. Watch it live on a phone preview. Then generate.
+              Turn quotes into video in one workflow: QuotVid generates professional 1080×1920 clips for TikTok, Instagram Reels, and YouTube Shorts. Set your brand once — logo, colors, background, music. Watch it live on a phone preview, then generate.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a

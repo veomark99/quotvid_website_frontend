@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SEO_LANDING_PAGES, solutionPath } from "@/lib/seo-landing-pages";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sitemap — QuotVid",
   description: "Browse all pages on QuotVid — the AI quote video generator for TikTok, Reels, and YouTube Shorts.",
-  alternates: { canonical: "https://www.quotvid.com/sitemap-page" },
+  alternates: { canonical: `${SITE_URL}/sitemap-page` },
 };
 
 const sections = [
@@ -17,6 +19,13 @@ const sections = [
       { label: "Features", href: "/features" },
       { label: "Pricing", href: "/pricing" },
       { label: "About", href: "/about" },
+    ],
+  },
+  {
+    title: "Solutions",
+    links: [
+      { label: "Solutions overview", href: "/solutions" },
+      ...SEO_LANDING_PAGES.map((p) => ({ label: p.h1, href: solutionPath(p.slug) })),
     ],
   },
   {

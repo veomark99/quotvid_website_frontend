@@ -1,3 +1,6 @@
+import { APP_URL, SITE_URL, absoluteUrl } from "@/lib/site";
+import { solutionAbsoluteUrl, type SeoLandingPage } from "@/lib/seo-landing-pages";
+
 // Homepage — WebSite + Organization + SoftwareApplication
 export function WebsiteJsonLd() {
   return (
@@ -9,28 +12,21 @@ export function WebsiteJsonLd() {
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://www.quotvid.com/#website",
-              url: "https://www.quotvid.com",
+              "@id": `${SITE_URL}/#website`,
+              url: SITE_URL,
               name: "QuotVid",
               description: "AI-powered quote video generator for content creators",
               inLanguage: "en-US",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://www.quotvid.com/blog?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
+              publisher: { "@id": `${SITE_URL}/#organization` },
             },
             {
               "@type": "Organization",
-              "@id": "https://www.quotvid.com/#organization",
+              "@id": `${SITE_URL}/#organization`,
               name: "QuotVid",
-              url: "https://www.quotvid.com",
+              url: SITE_URL,
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.quotvid.com/quotvid_white_logo.svg",
+                url: absoluteUrl("/quotvid_white_logo.svg"),
                 width: 150,
                 height: 45,
               },
@@ -48,14 +44,14 @@ export function WebsiteJsonLd() {
             },
             {
               "@type": "SoftwareApplication",
-              "@id": "https://www.quotvid.com/#app",
+              "@id": `${SITE_URL}/#app`,
               name: "QuotVid",
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Web",
               description:
                 "AI quote video studio for TikTok, Instagram Reels, and YouTube Shorts. Two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size control, 25 languages with RTL support, 20 categories, 10+ video styles, and cloud video storage.",
-              url: "https://www.quotvid.com",
-              screenshot: "https://www.quotvid.com/hero-phones.png",
+              url: SITE_URL,
+              screenshot: absoluteUrl("/hero-phones.png"),
               featureList: [
                 "AI Persona Mode: automated daily video generation",
                 "Custom Studio with Live Phone Preview",
@@ -163,8 +159,8 @@ export function PricingJsonLd() {
           name: "QuotVid",
           description:
             "AI quote video studio for TikTok, Instagram Reels, and YouTube Shorts. Two persona modes, live phone preview, YouTube background picker, 25 languages, 20 categories, 10+ video styles, accent colors, background library, and cloud storage.",
-          url: "https://www.quotvid.com",
-          image: "https://www.quotvid.com/hero-phones.png",
+          url: SITE_URL,
+          image: absoluteUrl("/hero-phones.png"),
           brand: { "@type": "Brand", name: "QuotVid" },
           offers: [
             {
@@ -173,7 +169,7 @@ export function PricingJsonLd() {
               price: "0",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: "https://app.quotvid.com/auth/signup?plan=free",
+              url: `${APP_URL}/auth/signup?plan=free`,
               description: "5 videos free, no credit card required, forever. 20 categories, 10+ video styles, 25 languages.",
             },
             {
@@ -182,7 +178,7 @@ export function PricingJsonLd() {
               price: "10",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: "https://app.quotvid.com/auth/signup?plan=monthly",
+              url: `${APP_URL}/auth/signup?plan=monthly`,
               description: "Unlimited videos per day, no watermark, Custom Studio with live preview, YouTube backgrounds, background library, accent colors, font size control, custom audio upload. Billed monthly.",
             },
             {
@@ -191,7 +187,7 @@ export function PricingJsonLd() {
               price: "99",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: "https://app.quotvid.com/auth/signup?plan=annual",
+              url: `${APP_URL}/auth/signup?plan=annual`,
               description: "Everything in Monthly plus priority support. Billed annually. Saves about 17% vs 12 months at $10/mo ($99 vs $120).",
             },
             {
@@ -200,7 +196,7 @@ export function PricingJsonLd() {
               price: "269",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: "https://app.quotvid.com/auth/signup?plan=lifetime",
+              url: `${APP_URL}/auth/signup?plan=lifetime`,
               description: "One-time payment, lifetime access, all future features, no recurring charges.",
             },
           ],
@@ -267,22 +263,63 @@ export function ArticleJsonLd({
           author: {
             "@type": "Organization",
             name: "QuotVid",
-            url: "https://www.quotvid.com",
+            url: SITE_URL,
           },
           publisher: {
             "@type": "Organization",
             name: "QuotVid",
             logo: {
               "@type": "ImageObject",
-              url: "https://www.quotvid.com/quotvid_white_logo.svg",
+              url: absoluteUrl("/quotvid_white_logo.svg"),
             },
           },
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `https://www.quotvid.com/blog/${slug}`,
+            "@id": `${SITE_URL}/blog/${slug}`,
           },
-          url: `https://www.quotvid.com/blog/${slug}`,
-          image: "https://www.quotvid.com/og-image.png",
+          url: `${SITE_URL}/blog/${slug}`,
+          image: {
+            "@type": "ImageObject",
+            url: absoluteUrl("/og-image.png"),
+            width: 1200,
+            height: 630,
+          },
+        }),
+      }}
+    />
+  );
+}
+
+/** Programmatic SEO solution pages — WebPage + FAQPage in one graph */
+export function SolutionLandingJsonLd({ page }: { page: SeoLandingPage }) {
+  const pageUrl = solutionAbsoluteUrl(page.slug);
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `${pageUrl}#webpage`,
+              url: pageUrl,
+              name: page.h1,
+              description: page.description,
+              inLanguage: "en-US",
+              isPartOf: { "@id": `${SITE_URL}/#website` },
+              about: { "@id": `${SITE_URL}/#app` },
+            },
+            {
+              "@type": "FAQPage",
+              "@id": `${pageUrl}#faq`,
+              mainEntity: page.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ],
         }),
       }}
     />

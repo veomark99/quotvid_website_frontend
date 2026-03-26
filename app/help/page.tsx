@@ -3,12 +3,19 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { helpCategories } from "@/lib/help-center-content";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Help Center — QuotVid Support",
   description:
     "Step-by-step help for QuotVid: getting started, billing, video generation, social posting, branding, and troubleshooting.",
-  alternates: { canonical: "https://www.quotvid.com/help" },
+  alternates: { canonical: `${SITE_URL}/help` },
+  openGraph: {
+    title: "Help Center — QuotVid Support",
+    description:
+      "Step-by-step help for QuotVid: getting started, billing, video generation, social posting, branding, and troubleshooting.",
+    url: `${SITE_URL}/help`,
+  },
 };
 
 export default function HelpPage() {

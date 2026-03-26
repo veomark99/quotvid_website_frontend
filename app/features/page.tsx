@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
@@ -22,13 +23,21 @@ export const metadata: Metadata = {
     "custom watermark video",
     "accent colors quote video",
   ],
-  alternates: { canonical: "https://www.quotvid.com/features" },
+  alternates: { canonical: `${SITE_URL}/features` },
   openGraph: {
     title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
     description:
       "Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, accent colors, background library, and more.",
-    url: "https://www.quotvid.com/features",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Features" }],
+    url: `${SITE_URL}/features`,
+    images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "QuotVid Features" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@quotvid",
+    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
+    description:
+      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, accent colors, background library, and more.",
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 
@@ -170,7 +179,12 @@ const badgeColor: Record<string, string> = {
 export default function FeaturesPage() {
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Features", url: "https://www.quotvid.com/features" }]} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Features", url: `${SITE_URL}/features` },
+        ]}
+      />
       <Navbar />
       <main>
         {/* Hero */}

@@ -3,17 +3,26 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getAllPosts } from "@/lib/blog";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Blog — QuotVid Tips, Guides & Creator Resources",
   description:
     "Learn how to grow on TikTok, Instagram Reels, and YouTube Shorts with daily quote videos. Creator guides, video tips, and content strategy from the QuotVid team.",
-  alternates: { canonical: "https://www.quotvid.com/blog" },
+  alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
     title: "Blog — QuotVid Tips, Guides & Creator Resources",
     description: "Learn how to grow on TikTok, Instagram Reels, and YouTube Shorts with daily quote videos. Creator guides, video tips, and content strategy from the QuotVid team.",
-    url: "https://www.quotvid.com/blog",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Blog" }],
+    url: `${SITE_URL}/blog`,
+    images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "QuotVid Blog" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@quotvid",
+    title: "Blog — QuotVid Tips, Guides & Creator Resources",
+    description:
+      "Learn how to grow on TikTok, Instagram Reels, and YouTube Shorts with daily quote videos. Creator guides, video tips, and content strategy from the QuotVid team.",
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 

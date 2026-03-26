@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { buildMetadata } from "@/lib/metadata";
+import { SITE_URL } from "@/lib/site";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
@@ -13,17 +15,24 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
-  return {
+  const base = buildMetadata({
     title: post.title,
     description: post.description,
     keywords: post.tags,
-    alternates: { canonical: `https://www.quotvid.com/blog/${post.slug}` },
+    path: `/blog/${post.slug}`,
+  });
+  return {
+    ...base,
     openGraph: {
-      title: post.title,
-      description: post.description,
+      ...base.openGraph,
       type: "article",
       publishedTime: post.publishedAt,
-      url: `https://www.quotvid.com/blog/${post.slug}`,
+      modifiedTime: post.publishedAt,
+      url: `${SITE_URL}/blog/${post.slug}`,
+    },
+    twitter: {
+      ...base.twitter,
+      card: "summary_large_image",
     },
   };
 }
@@ -35,7 +44,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} />
-      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Blog", url: "https://www.quotvid.com/blog" }, { name: post.title, url: `https://www.quotvid.com/blog/${post.slug}` }]} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Blog", url: `${SITE_URL}/blog` },
+          { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
+        ]}
+      />
       <Navbar />
       <main>
         <section className="bg-section-dark pt-28 pb-10 sm:pt-32 sm:pb-12 md:pt-40">

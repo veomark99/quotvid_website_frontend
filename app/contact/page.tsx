@@ -2,17 +2,26 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "./ContactForm";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us — QuotVid Support & Inquiries",
   description:
     "Get in touch with the QuotVid team. We reply to all support, billing, and partnership inquiries within 24–48 hours.",
-  alternates: { canonical: "https://www.quotvid.com/contact" },
+  alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
     title: "Contact Us — QuotVid Support & Inquiries",
     description: "Get in touch with the QuotVid team. We reply to all support, billing, and partnership inquiries within 24–48 hours.",
-    url: "https://www.quotvid.com/contact",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Contact QuotVid" }],
+    url: `${SITE_URL}/contact`,
+    images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "Contact QuotVid" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@quotvid",
+    title: "Contact Us — QuotVid Support & Inquiries",
+    description:
+      "Get in touch with the QuotVid team. We reply to all support, billing, and partnership inquiries within 24–48 hours.",
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 

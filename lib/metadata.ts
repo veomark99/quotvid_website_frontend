@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import { APP_URL, OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.quotvid.com";
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.quotvid.com";
-const OG_IMAGE = `${SITE_URL}/og-image.png`;
+const OG_IMAGE = absoluteUrl(OG_IMAGE_PATH);
 
-export { SITE_URL, APP_URL };
+export { APP_URL, SITE_URL };
 
 export function buildMetadata({
   title,
@@ -39,6 +38,7 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: "@quotvid",
       title: fullTitle,
       description,
       images: [ogImage],

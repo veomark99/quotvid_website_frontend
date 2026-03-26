@@ -2,18 +2,27 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PricingJsonLd, PricingFaqJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "QuotVid Pricing — Free Plan, $10/mo, $99/yr, $269 Lifetime",
   description:
     "QuotVid starts free — 5 videos, no card. Upgrade to Monthly ($10), Annual ($99), or Lifetime ($269) for unlimited daily videos, Custom Studio with live preview, YouTube backgrounds, accent colors, background library, and 25 languages.",
   keywords: ["QuotVid pricing", "AI quote video generator price", "quote video subscription", "custom video studio pricing", "content creator subscription", "TikTok video maker price"],
-  alternates: { canonical: "https://www.quotvid.com/pricing" },
+  alternates: { canonical: `${SITE_URL}/pricing` },
   openGraph: {
     title: "QuotVid Pricing — Free Plan, $10/mo, $99/yr, $269 Lifetime",
     description: "Start free with 5 videos. Upgrade for unlimited daily videos, Custom Studio, live preview, YouTube backgrounds, accent colors, and 25 languages.",
-    url: "https://www.quotvid.com/pricing",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "QuotVid Pricing Plans" }],
+    url: `${SITE_URL}/pricing`,
+    images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "QuotVid Pricing Plans" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@quotvid",
+    title: "QuotVid Pricing — Free Plan, $10/mo, $99/yr, $269 Lifetime",
+    description:
+      "Start free with 5 videos. Upgrade for unlimited daily videos, Custom Studio, live preview, YouTube backgrounds, accent colors, and 25 languages.",
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 
@@ -116,7 +125,12 @@ export default function PricingPage() {
     <>
       <PricingJsonLd />
       <PricingFaqJsonLd />
-      <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.quotvid.com" }, { name: "Pricing", url: "https://www.quotvid.com/pricing" }]} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Pricing", url: `${SITE_URL}/pricing` },
+        ]}
+      />
       <Navbar />
       <main>
         {/* Hero */}

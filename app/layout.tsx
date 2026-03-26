@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.quotvid.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "QuotVid — AI Quote Video Generator",
     template: "%s | QuotVid",
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     "content creator tools",
     "AI content generation",
   ],
-  authors: [{ name: "QuotVid", url: "https://www.quotvid.com" }],
+  authors: [{ name: "QuotVid", url: SITE_URL }],
   creator: "QuotVid",
   publisher: "QuotVid",
   category: "technology",
@@ -39,13 +42,13 @@ export const metadata: Metadata = {
     siteName: "QuotVid",
     locale: "en_US",
     type: "website",
-    url: "https://www.quotvid.com",
+    url: SITE_URL,
     title: "QuotVid — AI Quote Video Generator",
     description:
       "Turn quotes into viral short-form videos daily. AI-powered. 20 languages. Start free.",
     images: [
       {
-        url: "/og-image.png",
+        url: absoluteUrl(OG_IMAGE_PATH),
         width: 1200,
         height: 630,
         alt: "QuotVid — AI Quote Video Generator for TikTok, Reels & YouTube Shorts",
@@ -58,15 +61,13 @@ export const metadata: Metadata = {
     creator: "@quotvid",
     title: "QuotVid — AI Quote Video Generator",
     description: "Turn quotes into viral short-form videos daily. 20 languages. Start free.",
-    images: ["/og-image.png"],
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
-  // ⚠️  Replace the value below with your Google Search Console verification code.
-  // Go to search.google.com/search-console → Add Property → HTML tag → copy the content="..." value.
-  verification: {
-    google: "REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE",
-  },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
   alternates: {
-    canonical: "https://www.quotvid.com",
+    canonical: SITE_URL,
   },
 };
 

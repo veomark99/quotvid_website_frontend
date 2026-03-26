@@ -3,18 +3,27 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About QuotVid — Built by a Solo Developer in 20 Days",
   description:
     "QuotVid was built by a mechanical engineer turned developer who got tired of spending hours creating daily social content. Learn the story, the mission, and why multilingual creators are at the center of everything we build.",
-  alternates: { canonical: "https://www.quotvid.com/about" },
+  alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: "About QuotVid — Built by a Solo Developer in 20 Days",
     description:
       "A mechanical engineer built QuotVid in 20 days to solve one real problem: daily content creation that doesn't eat your life. Learn the story behind the tool.",
-    url: "https://www.quotvid.com/about",
-    images: [{ url: "https://www.quotvid.com/og-image.png", width: 1200, height: 630, alt: "About QuotVid" }],
+    url: `${SITE_URL}/about`,
+    images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "About QuotVid" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@quotvid",
+    title: "About QuotVid — Built by a Solo Developer in 20 Days",
+    description:
+      "A mechanical engineer built QuotVid in 20 days to solve one real problem: daily content creation that doesn't eat your life. Learn the story behind the tool.",
+    images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 
@@ -42,8 +51,8 @@ export default function AboutPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://www.quotvid.com" },
-          { name: "About", url: "https://www.quotvid.com/about" },
+          { name: "Home", url: SITE_URL },
+          { name: "About", url: `${SITE_URL}/about` },
         ]}
       />
       <Navbar />

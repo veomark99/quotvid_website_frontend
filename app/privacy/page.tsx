@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "QuotVid Privacy Policy — how we collect, use, and protect your personal information.",
-  alternates: { canonical: "https://www.quotvid.com/privacy" },
-  robots: { index: true, follow: false },
+  alternates: { canonical: `${SITE_URL}/privacy` },
+  robots: { index: true, follow: true },
 };
 
 const sections = [

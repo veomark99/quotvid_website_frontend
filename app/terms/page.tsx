@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "QuotVid Terms of Service — rules and guidelines for using the QuotVid platform.",
-  alternates: { canonical: "https://www.quotvid.com/terms" },
-  robots: { index: true, follow: false },
+  alternates: { canonical: `${SITE_URL}/terms` },
+  robots: { index: true, follow: true },
 };
 
 const sections = [
