@@ -239,7 +239,7 @@ export default function IntegrationsPage() {
               </a>
               <Link
                 href="/features"
-                className="rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10 text-center"
+                className="rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10 text-center"
               >
                 See all features
               </Link>

@@ -243,10 +243,10 @@ export default function FeaturesPage() {
                   </ul>
                   {i === 0 && (
                     <div className="mt-6 flex flex-wrap gap-3">
-                      <Link href="/integrations" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-foreground transition-colors hover:bg-primary/10">
+                      <Link href="/integrations" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10">
                         Learn how each integration works →
                       </Link>
-                      <Link href="/pricing" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-foreground transition-colors hover:bg-primary/10">
+                      <Link href="/pricing" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10">
                         View pricing plans →
                       </Link>
                     </div>

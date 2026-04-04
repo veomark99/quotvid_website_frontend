@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getAllPosts } from "@/lib/blog";
 import { SEO_LANDING_PAGES, solutionPath } from "@/lib/seo-landing-pages";
 import { SITE_URL } from "@/lib/site";
 
@@ -17,6 +18,7 @@ const sections = [
     links: [
       { label: "Home", href: "/" },
       { label: "Features", href: "/features" },
+      { label: "Integrations", href: "/integrations" },
       { label: "Pricing", href: "/pricing" },
       { label: "About", href: "/about" },
     ],
@@ -38,11 +40,7 @@ const sections = [
   },
   {
     title: "Blog Posts",
-    links: [
-      { label: "Best Fonts for Quote Videos on TikTok and Instagram", href: "/blog/best-fonts-for-quote-videos" },
-      { label: "How to Grow TikTok with Quote Videos", href: "/blog/how-to-grow-tiktok-with-quote-videos" },
-      { label: "How to Make Quote Videos for Instagram", href: "/blog/how-to-make-quote-videos-for-instagram" },
-    ],
+    links: getAllPosts().map((p) => ({ label: p.title, href: `/blog/${p.slug}` })),
   },
   {
     title: "Help Center",
