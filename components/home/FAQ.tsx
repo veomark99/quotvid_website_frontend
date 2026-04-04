@@ -15,6 +15,9 @@ const faqs = [
   { q: "Is there really a free plan with no card required?", a: "Yes — get 5 videos completely free, no credit card required, no time limit. You see exactly what QuotVid produces for your niche before deciding anything." },
   { q: "Which languages are supported?", a: "QuotVid supports 25 languages including English, Urdu, Arabic, Spanish, Hindi, Persian, French, German, Russian, Chinese, Japanese, Korean, Turkish, and Indonesian. Arabic, Urdu, and Persian include full right-to-left text rendering with appropriate fonts." },
   { q: "Who is QuotVid best for?", a: "QuotVid is best for social media content creators, personal brand builders, poetry page owners, and anyone who wants to post consistently on TikTok, Instagram, or YouTube Shorts without spending hours on content creation." },
+  { q: "Which social platforms can QuotVid post to?", a: "QuotVid supports auto-posting to YouTube (Shorts), Instagram (Reels), TikTok, Pinterest (Video Pins), and Facebook Pages. You connect each platform once via a secure login, and QuotVid posts your videos automatically on your schedule. Auto-posting is available on all paid plans." },
+  { q: "Is it safe to connect my social media accounts?", a: "Yes. QuotVid connects to each platform using the platform's official login flow (OAuth 2.0) — the same system used by all major third-party social tools. We never see or store your password. Your connection tokens are encrypted with AES-256 and stored securely. You can disconnect any platform at any time from your dashboard." },
+  { q: "Can I post to different platforms at different times?", a: "Yes. You can set a separate posting time per platform — for example, YouTube at 9 AM, TikTok at 6 PM, Instagram at 2 PM — all in your own timezone. QuotVid handles the scheduling automatically." },
 ];
 
 export default function FAQ() {

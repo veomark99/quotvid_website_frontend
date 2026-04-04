@@ -36,32 +36,35 @@ const FAQ = dynamic(() => import("@/components/home/FAQ"), {
 const ComingSoon = dynamic(() => import("@/components/home/ComingSoon"), {
   loading: () => <div className="min-h-[80px]" aria-hidden />,
 });
+const AutoPosting = dynamic(() => import("@/components/home/AutoPosting"), {
+  loading: () => <div className="min-h-[200px]" aria-hidden />,
+});
 
 export const metadata: Metadata = {
   title: {
     absolute:
-      "QuotVid — AI Quote Video Studio for TikTok, Instagram & YouTube Shorts",
+      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
   },
   description:
-    "Generate professional 1080×1920 quote videos with live phone preview. 20 categories, 10+ video styles, 25 languages. Set your brand once — logo, colors, background, music. Free to start.",
+    "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Set your schedule once. 20 categories. 25 languages. Free trial.",
   keywords: [
     "AI quote video generator",
+    "auto-post quote videos",
     "quote video studio",
-    "live video preview",
-    "AI video maker",
-    "TikTok content creator",
+    "YouTube Shorts auto-posting",
     "Instagram Reels automation",
-    "YouTube Shorts generator",
-    "custom video studio",
+    "TikTok auto-posting",
+    "Pinterest video pins automation",
+    "Facebook Pages video posting",
     "automated quote videos",
     "quote video templates",
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     title:
-      "QuotVid — AI Quote Video Studio for TikTok, Instagram & YouTube Shorts",
+      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
     description:
-      "Generate professional 1080×1920 quote videos with live phone preview. 20 categories, 10+ video styles, 25 languages. Free to start.",
+      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Free to start.",
     url: SITE_URL,
     images: [
       {
@@ -76,9 +79,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@quotvid",
     title:
-      "QuotVid — AI Quote Video Studio for TikTok, Instagram & YouTube Shorts",
+      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
     description:
-      "Generate professional 1080×1920 quote videos with live phone preview. 20 categories, 10+ video styles, 25 languages. Free to start.",
+      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Free to start.",
     images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
@@ -94,6 +97,7 @@ export default function HomePage() {
         <StatsBar />
         <ProblemSolution />
         <HowItWorks />
+        <AutoPosting />
         <ProductPreview />
         <Features />
         <Niches />

@@ -148,6 +148,26 @@ export const helpCategories: HelpCategory[] = [
         title: "Bulk generation",
         body: "Batch or daily flows create multiple videos from your persona rules. Check how many runs are queued on the dashboard so you only generate what you intend.",
       },
+      {
+        slug: "connect-social-account",
+        title: "How to connect a social media account",
+        body: "Go to Dashboard → Integrations and click Connect next to the platform you want. You will be redirected to that platform's official login screen. Grant the requested permissions — for YouTube: upload videos and read channel name; for Instagram: account info, publish content, and read Page info; for TikTok: upload and publish videos, and read display name; for Pinterest: read boards, create pins, and read username; for Facebook: list managed Pages and post to selected Page. You will be returned to QuotVid with the account connected and your account or channel name displayed. To disconnect, click Disconnect — your token is immediately and permanently deleted and QuotVid loses all access to that account.",
+      },
+      {
+        slug: "posting-schedule",
+        title: "Setting your posting schedule",
+        body: "Go to Dashboard → AI Persona → Posting Preferences. Set your timezone in IANA format (for example Asia/Karachi or America/New_York). Set a posting time per connected platform — for example YouTube at 09:00, TikTok at 18:00, Instagram at 14:00. Choose your generation schedule: Daily, 3 times per week (Monday, Wednesday, Friday), or 5 times per week (Monday through Friday). Auto-posting is enabled by default when you connect a platform. To disable auto-posting for a platform without disconnecting it, toggle the Auto-post switch off in Posting Preferences. In Custom Studio: when you generate a video, a modal appears where you can choose which connected platforms to post to for that specific video.",
+      },
+      {
+        slug: "video-pipeline-tabs",
+        title: "Understanding the video pipeline: Generated, Scheduled, Published",
+        body: "Generated tab: shows all video generation jobs in any status. Active jobs (queued or processing) appear first, then completed, then failed. AI-generated videos show an expiry date — download them before they are auto-deleted after 7 days. Custom Studio videos show a green Studio badge and are never auto-deleted. Scheduled tab: shows videos with pending posting jobs. You can see a per-platform countdown to the scheduled post time. A Cancel button is available per platform for any post that has not yet gone live. Published tab: shows videos that have been successfully posted to at least one platform. Each entry shows the post link, the date it was posted, and which platforms received it. Deleting from the Published tab removes the record from QuotVid only — the post stays live on the platform.",
+      },
+      {
+        slug: "billing-plan-faq",
+        title: "Billing and plan frequently asked questions",
+        body: "What is included in the free trial? You get 5 free videos. No credit card is required. Auto-posting and all 5 platform integrations are available during the trial. What happens when my trial ends? Access is paused until you subscribe. Your data, videos, and platform connections are preserved. Can I cancel anytime? Yes. Cancel from Billing settings at any time. You keep access until your current paid period ends. Do you offer refunds? Yes — 7-day money-back guarantee. Email hello@quotvid.com within 7 days of payment. What is the difference between AI videos and Studio videos? AI-generated videos (from AI Persona mode) are automatically deleted after 7 days — the expiry date is shown in your Generated Videos list. Custom Studio videos are kept indefinitely until you delete them manually. What is included in Lifetime? Everything in the paid plans at the time of purchase, forever — including all 5 platform integrations, Custom Studio, background library, and brand kit. No recurring charges.",
+      },
     ],
   },
   {

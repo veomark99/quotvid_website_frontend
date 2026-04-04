@@ -25,7 +25,7 @@ const steps = [
   {
     num: "04",
     title: "Generate and Download",
-    desc: "Click generate. Videos are ready in minutes in 1080×1920 format — perfect for TikTok, Instagram Reels, and YouTube Shorts. Download with a custom file name and post instantly.",
+    desc: "Click generate. Your video is ready in minutes in 1080×1920 format. Download it anytime, or let QuotVid post it automatically — to TikTok, Instagram Reels, YouTube Shorts, Pinterest, and Facebook Pages — on your schedule, at your time, in your timezone.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Downloading AI-generated quote video and posting to social media",
   },

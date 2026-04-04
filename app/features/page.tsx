@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -7,41 +8,62 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
+  title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
   description:
-    "Everything in QuotVid: two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size, custom watermark, 25 languages, 10+ video styles, and cloud video storage.",
+    "QuotVid features: AI quote generation in 20 categories, 10+ video styles, auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook, per-platform scheduling, Custom Studio, brand kit, and bulk generation.",
   keywords: [
     "AI quote video generator features",
+    "social media auto-posting",
+    "YouTube Shorts auto-post",
+    "Instagram Reels automation",
+    "TikTok auto-posting",
+    "Pinterest video pins",
+    "Facebook pages video posting",
     "custom quote video studio",
     "live video preview",
     "YouTube background picker",
-    "quote video templates",
     "multilingual quote video",
-    "automated TikTok video maker",
-    "Instagram Reels automation",
-    "YouTube Shorts generator",
-    "custom watermark video",
-    "accent colors quote video",
   ],
   alternates: { canonical: `${SITE_URL}/features` },
   openGraph: {
-    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
+    title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
     description:
-      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, accent colors, background library, and more.",
+      "Auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
     url: `${SITE_URL}/features`,
     images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "QuotVid Features" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@quotvid",
-    title: "QuotVid Features — AI Studio, Live Preview, 20 Categories & 10+ Video Styles",
+    title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
     description:
-      "Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, accent colors, background library, and more.",
+      "Auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
     images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
 
 const featureSections = [
+  {
+    icon: "📲",
+    badge: "Paid",
+    title: "Social Media Auto-Posting — 5 Platforms, One Dashboard",
+    desc: "Connect your YouTube, Instagram, TikTok, Pinterest, and Facebook accounts to QuotVid and post directly — without ever leaving the app. Your video goes live on schedule, on every platform you choose, automatically. Connect each platform once using a secure login. Set your posting schedule — daily, three times a week, or five days a week. Set a posting time per platform in your local timezone. QuotVid handles everything else.",
+    points: [
+      "YouTube Shorts — uploaded with custom title, description, and hashtags to your YouTube channel",
+      "Instagram Reels — published directly to your Creator or Business account",
+      "TikTok — posted to your TikTok profile via TikTok's official publishing API",
+      "Pinterest Video Pins — pinned to any board you manage, with custom description",
+      "Facebook Pages — posted to any Facebook Page you manage",
+      "Post to all 5 platforms in one click, or choose per video which platforms to post to",
+      "Cancel any scheduled post before it goes live from the Scheduled tab",
+      "Custom posting time per platform (e.g. YouTube at 9 AM, TikTok at 6 PM)",
+      "Your timezone — QuotVid converts to UTC so posts land at your local time",
+      "Generation schedules: Daily, 3×/week (Mon-Wed-Fri), 5×/week (Mon-Fri)",
+      "Zero manual steps — wake up to published content",
+    ],
+    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=80&auto=format&fit=crop",
+    imgAlt: "Social media auto-posting dashboard showing YouTube, Instagram, TikTok, Pinterest and Facebook",
+  },
   {
     icon: "🔀",
     badge: "Free + Paid",
@@ -219,6 +241,16 @@ export default function FeaturesPage() {
                       </li>
                     ))}
                   </ul>
+                  {i === 0 && (
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Link href="/integrations" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-foreground transition-colors hover:bg-primary/10">
+                        Learn how each integration works →
+                      </Link>
+                      <Link href="/pricing" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-foreground transition-colors hover:bg-primary/10">
+                        View pricing plans →
+                      </Link>
+                    </div>
+                  )}
                 </div>
                 <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-[4/3]">
                   <Image
@@ -245,9 +277,9 @@ export default function FeaturesPage() {
                   <tr className="border-b border-primary/20">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
                     <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$10/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$99/yr</span></th>
-                    <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
+                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$9.99/mo</span></th>
+                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$79.99/yr</span></th>
+                    <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$199</span></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/10">
@@ -266,6 +298,11 @@ export default function FeaturesPage() {
                     ["Upload own music", "—", "✓", "✓", "✓"],
                     ["Logo watermark + channel name badge", "—", "✓", "✓", "✓"],
                     ["Cloud video storage", "—", "✓", "✓", "✓"],
+                    ["Social auto-posting (5 platforms: YouTube, Instagram, TikTok, Pinterest, Facebook)", "—", "✓", "✓", "✓"],
+                    ["Per-platform posting schedule", "—", "✓", "✓", "✓"],
+                    ["Timezone scheduling", "—", "✓", "✓", "✓"],
+                    ["AI video retention", "7 days", "7 days", "7 days", "7 days"],
+                    ["Studio video retention", "—", "Forever", "Forever", "Forever"],
                     ["Priority support", "—", "—", "✓", "✓"],
                   ].map(([feature, free, monthly, annual, lifetime]) => (
                     <tr key={feature}>
@@ -355,6 +392,7 @@ export default function FeaturesPage() {
                     ["Live phone preview before generate", "✓", "—", "—", "—"],
                     ["1080×1920 video output", "✓", "✓", "✓", "✓"],
                     ["Daily automation", "✓", "—", "—", "—"],
+                    ["Social auto-posting (5 platforms)", "✓ (paid)", "—", "—", "—"],
                     ["25 languages + RTL", "✓", "Partial", "Partial", "Manual"],
                     ["Custom accent colors", "✓ (paid)", "✓", "Limited", "Manual"],
                     ["Background library", "✓ (paid)", "—", "—", "—"],
