@@ -59,7 +59,7 @@ export default function AutoPosting() {
           <div className="text-center">
             <Link
               href="/integrations"
-              className="inline-block rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+              className="inline-block rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold  transition-colors hover:bg-primary/10"
             >
               See all platform integrations →
             </Link>
