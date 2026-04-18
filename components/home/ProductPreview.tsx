@@ -30,10 +30,10 @@ export default function ProductPreview() {
         <div className="mx-auto max-w-2xl text-center mb-10 sm:mb-16">
           <h2 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl">
             Real Videos. Real Creators.{" "}
-            <span className="text-gradient-gold">Real Growth.</span>
+            <span className="text-gradient-gold">Real Results.</span>
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground">
-            Every video is 1080×1920 — ready to post on TikTok, Instagram Reels, or YouTube Shorts the moment it renders.
+            Every video is 1080×1920 — the standard format for Pinterest, TikTok, Instagram Reels, and YouTube Shorts. Ready to post the moment it renders.
           </p>
         </div>
 
@@ -76,16 +76,16 @@ export default function ProductPreview() {
                 Built for Daily Creators
               </p>
               <h3 className="mb-4 text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight">
-                Post Every Day Without Burning Out
+                Post Every Day Without Burning Out.
               </h3>
               <p className="mb-6 text-xs sm:text-sm text-white/80 leading-relaxed">
-                QuotVid runs in the background while you live your life. Every morning, a fresh professional video is waiting in your dashboard — already designed, already rendered, already ready to post.
+                QuotVid runs in the background while you live your life. Every morning, a fresh professional video is waiting in your dashboard — already generated, already rendered, already posted to your platforms automatically.
               </p>
               <a
                 href="https://app.quotvid.com/auth/signup"
                 className="inline-block rounded-xl bg-gradient-gold px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
               >
-                Start Free — No Card →
+                Start Free Trial — No Card →
               </a>
             </div>
           </div>

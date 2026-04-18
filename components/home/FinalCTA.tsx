@@ -4,20 +4,20 @@ export default function FinalCTA() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(39_76%_52%/0.12),transparent_60%)]" />
       <div className="container relative mx-auto px-3 sm:px-4 text-center md:px-8">
         <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
-          Start Creating Today.{" "}
-          <span className="text-gradient-gold">Your First Videos Are Free.</span>
+          Your Content Should Work{" "}
+          <span className="text-gradient-gold">While You Sleep.</span>
         </h2>
         <p className="mx-auto mb-8 sm:mb-10 max-w-xl text-sm sm:text-base text-muted-foreground">
-          No credit card required. Set up in 2 minutes. See QuotVid generate videos for your exact niche before paying anything.
+          Stop uploading manually. Stop missing days. Stop watching consistent creators grow while you fall behind. QuotVid generates, renders, and posts your videos automatically — while you focus on everything else.
         </p>
         <a
           href="https://app.quotvid.com/auth/signup"
           className="animate-pulse-soft inline-block rounded-xl bg-gradient-gold px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-primary-foreground transition-transform hover:scale-105"
         >
-          Get Started Free →
+          Start Your Free Trial — No Credit Card Required →
         </a>
         <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-muted-foreground">
-          ✓ No credit card · ✓ Get started free · ✓ Cancel anytime
+          ✓ 7 days free · ✓ 5 platforms · ✓ Cancel anytime
         </p>
       </div>
     </section>

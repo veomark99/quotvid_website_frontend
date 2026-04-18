@@ -3,31 +3,31 @@ import Image from "next/image";
 const features = [
   {
     icon: "🤖",
-    title: "AI Persona — Daily Videos on Autopilot",
-    desc: "Pick from 20 categories and 10+ video styles. Set your accent colors, font size, background, and music. QuotVid generates fresh branded videos every day — no editing required.",
+    title: "AI Quote Generation — Daily, On Autopilot",
+    desc: "20 content categories. Quotes generated fresh every day — never repeated, never generic. Banned word filters and cliché detection built in. You never touch the content.",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&auto=format&fit=crop",
     imgAlt: "AI generating automated daily quote videos",
   },
   {
-    icon: "🎬",
-    title: "Custom Studio + Live Phone Preview",
-    desc: "Full-width two-column studio with a real-time phone mockup on the right. Every change — background, watermark, colors, font — updates the preview instantly. See it before you generate it.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Custom video studio interface with live phone preview",
+    icon: "📲",
+    title: "Auto-Post to 5 Platforms",
+    desc: "Pinterest, YouTube Shorts, Instagram Reels, TikTok, and Facebook Pages. Set a different posting time per platform. Your timezone. Your rules. Posts go live while you sleep.",
+    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Auto posting to 5 social media platforms",
   },
   {
-    icon: "▶️",
-    title: "YouTube Backgrounds + Background Library",
-    desc: "Paste any YouTube URL, watch it in-studio, and pick your 30-second clip. Or choose from your saved background library — clips you've already uploaded reuse instantly.",
-    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "YouTube video background picker in quote video studio",
+    icon: "🎨",
+    title: "Custom Studio + Live Phone Preview",
+    desc: "Write your own quote. Upload your background. Add your logo. Every change updates a live phone mockup instantly. See exactly what your video looks like before generating a single frame.",
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Custom video studio with live phone preview",
   },
   {
     icon: "🌍",
-    title: "25 Languages — Including RTL",
-    desc: "Generate in English, Urdu, Arabic, Hindi, Spanish, Persian, French, Russian, Chinese, Turkish, and 15 more. Arabic, Urdu, and Persian include full right-to-left rendering with proper fonts.",
+    title: "12 Languages + Full RTL Support",
+    desc: "English, Arabic, Urdu, Hindi, Spanish, French, Persian, Russian, Chinese, Japanese, and more. Arabic, Urdu, and Persian render right-to-left automatically with correct fonts.",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Multilingual quote video generation in 25 languages",
+    imgAlt: "Multilingual quote video generation",
   },
 ];
 
@@ -36,8 +36,8 @@ export default function Features() {
     <section id="features" className="bg-section-light py-14 sm:py-20 md:py-28">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <h2 className="mb-10 sm:mb-16 text-center text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
-          Every Tool You Need to{" "}
-          <span className="text-gradient-gold">Automate Your Content</span>
+          Everything You Need.{" "}
+          <span className="text-gradient-gold">Nothing You Don&apos;t.</span>
         </h2>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (

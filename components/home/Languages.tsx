@@ -1,5 +1,5 @@
-const row1 = ["🇬🇧 English", "🇵🇰 Urdu", "🇸🇦 Arabic", "🇪🇸 Spanish", "🇮🇳 Hindi", "🇮🇷 Persian", "🇧🇷 Portuguese", "🇫🇷 French"];
-const row2 = ["🇩🇪 German", "🇷🇺 Russian", "🇨🇳 Chinese", "🇯🇵 Japanese", "🇰🇷 Korean", "🇹🇷 Turkish", "🇮🇩 Indonesian", "🇻🇳 Vietnamese"];
+const row1 = ["🇬🇧 English", "🇵🇰 Urdu", "🇸🇦 Arabic", "🇪🇸 Spanish", "🇮🇳 Hindi", "🇮🇷 Persian"];
+const row2 = ["🇧🇷 Portuguese", "🇫🇷 French", "🇩🇪 German", "🇷🇺 Russian", "🇨🇳 Chinese", "🇯🇵 Japanese"];
 
 export default function Languages() {
   return (
@@ -10,7 +10,7 @@ export default function Languages() {
           <span className="text-gradient-gold">So Does QuotVid.</span>
         </h2>
         <p className="mx-auto mb-8 sm:mb-12 max-w-2xl text-sm sm:text-base text-light-body">
-          20 languages. Full RTL support for Arabic, Urdu, and Persian. Fonts automatically selected per language.
+          12 languages including full RTL support for Arabic, Urdu, and Persian. Fonts automatically selected per language. No manual formatting needed.
         </p>
         {[row1, row2].map((row, i) => (
           <div key={i} className="mb-3 sm:mb-4 flex flex-wrap justify-center gap-2 sm:gap-3">
@@ -22,7 +22,7 @@ export default function Languages() {
           </div>
         ))}
         <div className="mx-auto mt-6 sm:mt-8 max-w-md rounded-xl border border-primary/20 bg-primary/5 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-light-body">
-          ✦ Arabic, Urdu & Persian text flows naturally right-to-left — no manual formatting required.
+          ✦ Arabic, Urdu & Persian text flows naturally right-to-left — no manual formatting required. Verified and tested.
         </div>
       </div>
     </section>

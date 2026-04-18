@@ -3,23 +3,23 @@ import Link from "next/link";
 const platforms = [
   {
     name: "YouTube Shorts",
-    desc: "Uploaded to your channel as a Short, with custom title and description.",
+    desc: "Uploaded to your channel with custom title and description. Google-verified integration.",
   },
   {
     name: "Instagram Reels",
-    desc: "Published directly to your Professional/Creator account.",
+    desc: "Published directly to your Professional or Creator account via Meta's official API.",
   },
   {
     name: "TikTok",
-    desc: "Posted to your TikTok account. No app needed.",
+    desc: "Posted to your TikTok account via TikTok's official publishing API. No app needed.",
   },
   {
-    name: "Pinterest",
-    desc: "Published as a Video Pin to your chosen board.",
+    name: "Pinterest Video Pins",
+    desc: "Pinned to your chosen board automatically. Perfect for Etsy sellers and quote pages.",
   },
   {
     name: "Facebook Pages",
-    desc: "Posted as a video to any Page you manage.",
+    desc: "Posted as a video to any Facebook Page you manage. Full caption control.",
   },
 ];
 
@@ -32,10 +32,10 @@ export default function AutoPosting() {
           <div className="text-center mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
               Auto-Post to 5 Platforms —{" "}
-              <span className="text-gradient-gold">No Manual Uploading</span>
+              <span className="text-gradient-gold">No Manual Uploading. Ever.</span>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-light-body max-w-2xl mx-auto leading-relaxed">
-              Your video is done. Why manually upload it five times? Connect your YouTube, TikTok, Instagram, Pinterest, and Facebook accounts once — QuotVid posts your videos automatically on your schedule, in your timezone, to every platform at once.
+              Your video is done. Why upload it five times manually? Connect your accounts once — QuotVid posts your videos automatically on your schedule, in your timezone, to every platform at once. Cancel any scheduled post before it goes live.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function AutoPosting() {
           </div>
 
           <p className="text-center text-xs sm:text-sm text-muted-foreground italic mb-6">
-            Available on all paid plans. Connect your accounts from the Integrations screen in your dashboard.
+            Available on all paid plans. ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team.
           </p>
           <div className="text-center">
             <Link

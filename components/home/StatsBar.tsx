@@ -1,8 +1,8 @@
 const stats = [
-  { icon: "🎬", label: "5 Free Videos — No Card" },
-  { icon: "🌍", label: "25 Languages" },
-  { icon: "⚡", label: "2-Minute Setup" },
-  { icon: "🎯", label: "20 Categories · 10+ Video Styles" },
+  { icon: "📲", label: "5 Platforms — Auto-Posting" },
+  { icon: "🌍", label: "12 Languages + RTL" },
+  { icon: "⚡", label: "4-Minute Setup" },
+  { icon: "🎯", label: "20 Categories · 17 Video Styles" },
 ];
 
 export default function StatsBar() {

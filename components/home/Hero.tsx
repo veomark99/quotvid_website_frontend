@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-primary/20 bg-secondary px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-muted-foreground">
-              ⚡ AI-Powered · 20 Categories · 10+ Video Styles · Custom Studio · Live Preview
+              ⚡ YouTube-Verified · 5 Platforms · 20 Categories · Auto-Posting · Free Trial
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Post Quote Videos to Pinterest & YouTube.{" "}
@@ -22,7 +22,7 @@ export default function Hero() {
                 href="https://app.quotvid.com/auth/signup"
                 className="animate-pulse-soft rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground text-center transition-transform hover:scale-105"
               >
-                Start Free — No Credit Card →
+                Start Free Trial — No Credit Card →
               </a>
               <a
                 href="#how-it-works"
@@ -32,7 +32,7 @@ export default function Hero() {
               </a>
             </div>
             <p className="mt-4 sm:mt-6 text-xs text-muted-foreground">
-              No credit card required · 2-minute setup · Your first 5 videos are free
+              7-day free trial · 5 platforms · Takes 4 minutes to set up ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team
             </p>
           </div>
 

@@ -3,21 +3,42 @@
 import { useState } from "react";
 
 const faqs = [
-  { q: "What type of videos does QuotVid create?", a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for TikTok, Instagram Reels, and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template." },
-  { q: "How many videos do I get?", a: "Free plan users get 5 videos total — no credit card required, no time limit. Paid plan users (Monthly, Annual, Lifetime) get unlimited videos per day." },
-  { q: "Do I need video editing skills?", a: "No. QuotVid handles everything automatically. Set your persona once and videos are generated and ready to download. No design tools, no timelines, no rendering software." },
-  { q: "What is the Custom Studio?", a: "Custom Studio is a full-width two-column interface where you control every aspect of your video: background (upload, YouTube URL, or personal library), watermark and logo, background music, accent colors, font size, and animation style. Everything updates a live phone preview before you generate." },
-  { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. The video loads right in the studio — watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically. No downloading required." },
-  { q: "Can I use my own logo and branding?", a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. You can also set custom accent colors for your quote text and control font size. All paid plans include full branding control." },
-  { q: "Can I set custom colors for my quote text?", a: "Yes. The accent color system lets you pick multiple brand colors for your quote text. You can also set a custom text shadow color for readability on bright backgrounds. All color settings are previewed live before you generate." },
-  { q: "What is the background library?", a: "Every background video you upload or extract from YouTube is saved to your personal background library. On your next video, pick from your saved clips instead of uploading again — instant reuse across both AI Persona and Custom Studio modes." },
-  { q: "Can I upload my own background music?", a: "Yes, on paid plans. Upload your own audio file in Custom Studio. You can also choose from the built-in music library with curated tracks for different moods. Audio is previewed before you select." },
-  { q: "Is there really a free plan with no card required?", a: "Yes — get 5 videos completely free, no credit card required, no time limit. You see exactly what QuotVid produces for your niche before deciding anything." },
-  { q: "Which languages are supported?", a: "QuotVid supports 25 languages including English, Urdu, Arabic, Spanish, Hindi, Persian, French, German, Russian, Chinese, Japanese, Korean, Turkish, and Indonesian. Arabic, Urdu, and Persian include full right-to-left text rendering with appropriate fonts." },
-  { q: "Who is QuotVid best for?", a: "QuotVid is best for social media content creators, personal brand builders, poetry page owners, and anyone who wants to post consistently on TikTok, Instagram, or YouTube Shorts without spending hours on content creation." },
-  { q: "Which social platforms can QuotVid post to?", a: "QuotVid supports auto-posting to YouTube (Shorts), Instagram (Reels), TikTok, Pinterest (Video Pins), and Facebook Pages. You connect each platform once via a secure login, and QuotVid posts your videos automatically on your schedule. Auto-posting is available on all paid plans." },
-  { q: "Is it safe to connect my social media accounts?", a: "Yes. QuotVid connects to each platform using the platform's official login flow (OAuth 2.0) — the same system used by all major third-party social tools. We never see or store your password. Your connection tokens are encrypted with AES-256 and stored securely. You can disconnect any platform at any time from your dashboard." },
-  { q: "Can I post to different platforms at different times?", a: "Yes. You can set a separate posting time per platform — for example, YouTube at 9 AM, TikTok at 6 PM, Instagram at 2 PM — all in your own timezone. QuotVid handles the scheduling automatically." },
+  {
+    q: "Which platforms can QuotVid post to?",
+    a: "QuotVid auto-posts to YouTube Shorts, Instagram Reels, TikTok, Pinterest Video Pins, and Facebook Pages. Connect each platform once via secure OAuth login. Auto-posting is available on all paid plans.",
+  },
+  {
+    q: "Is it safe to connect my social media accounts?",
+    a: "Yes. QuotVid uses each platform's official OAuth 2.0 login — the same system used by Buffer, Hootsuite, and every major scheduling tool. We never see or store your password. Your tokens are encrypted with AES-256. Disconnect any platform instantly from your dashboard.",
+  },
+  {
+    q: "Can I post to different platforms at different times?",
+    a: "Yes. Set a separate posting time per platform in your local timezone. YouTube at 9am, TikTok at 6pm, Pinterest at 10am — QuotVid converts everything to UTC and handles the rest automatically.",
+  },
+  {
+    q: "What type of videos does QuotVid create?",
+    a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for Pinterest, TikTok, Instagram Reels, and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template.",
+  },
+  {
+    q: "Do I need video editing skills?",
+    a: "None. QuotVid generates and renders everything. Set your persona once — niche, language, style, platforms — and fresh videos are generated and posted automatically every day. No design tools, no timelines, no rendering software.",
+  },
+  {
+    q: "What is the Custom Studio?",
+    a: "Custom Studio lets you write your own quote, upload your own background image or video, add custom audio, drag your text anywhere on the canvas, and preview everything on a live phone mockup before generating. Studio videos are stored forever — never auto-deleted.",
+  },
+  {
+    q: "What happens to my videos after 7 days?",
+    a: "AI-generated videos auto-delete after 7 days to keep your storage clean. Download them anytime before then. Custom Studio videos are kept forever until you manually delete them.",
+  },
+  {
+    q: "What is the free trial?",
+    a: "7 days free. 5 videos per day. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Yes. Cancel from your billing settings in one click. You keep access until your current period ends. 7-day money-back guarantee on all paid plans — no questions asked. Email hello@quotvid.com.",
+  },
 ];
 
 export default function FAQ() {

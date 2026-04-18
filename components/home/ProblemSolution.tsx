@@ -1,15 +1,15 @@
 const pains = [
-  "Writing fresh quotes every day takes hours",
-  "Designing videos requires expensive tools or designers",
-  "Posting consistently burns out even serious creators",
-  "Managing content in multiple languages feels impossible",
+  "Creating videos manually takes 30–60 minutes every single day",
+  "Then you upload to Pinterest. Then YouTube. Then TikTok. Separately.",
+  "You miss a day. Then three days. The algorithm forgets you.",
+  "Competitors who post consistently are growing. You are not.",
 ];
 
 const solutions = [
-  "Tell QuotVid your niche and language once",
-  "AI writes original quotes, designs your video, adds music",
-  "A fresh professional video is ready every morning",
-  "Works in 20 languages — including Urdu, Arabic, and Persian",
+  "QuotVid generates your videos automatically — fresh every day",
+  "Connects to Pinterest, YouTube, Instagram, TikTok, and Facebook",
+  "Posts automatically on your schedule, in your timezone",
+  "You do nothing. You wake up to published content.",
 ];
 
 export default function ProblemSolution() {
@@ -17,8 +17,8 @@ export default function ProblemSolution() {
     <section className="bg-section-light py-14 sm:py-20 md:py-28">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <h2 className="mb-10 sm:mb-16 text-center text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
-          Creating Daily Content Is Exhausting.{" "}
-          <span className="text-gradient-gold">Until Now.</span>
+          Manual Posting Is Killing Your Growth.{" "}
+          <span className="text-gradient-gold">There Is a Better Way.</span>
         </h2>
         <div className="grid gap-8 sm:gap-12 md:grid-cols-2 md:gap-16">
           <div className="space-y-4 sm:space-y-5">

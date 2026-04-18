@@ -3,31 +3,31 @@ import Image from "next/image";
 const steps = [
   {
     num: "01",
-    title: "Pick Your Mode",
-    desc: "Choose AI Persona for hands-off daily generation across 20 categories, or open Custom Studio for full brand control with a live phone preview. Takes 2 minutes either way.",
+    title: "Pick Your Niche",
+    desc: "Choose from 20 content categories: stoic, business, psychology, finance, hustle, relationships, poetry, and more. Pick your language — 12 supported including Arabic and Urdu. Takes 60 seconds.",
     img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Person setting up AI quote video persona on a mobile phone",
+    imgAlt: "Choosing content niche for AI quote video generation",
   },
   {
     num: "02",
-    title: "Set Your Brand",
-    desc: "Upload your logo, paste a YouTube URL for your background, set your watermark, choose background music, pick your accent colors and font size. All saved to your profile.",
+    title: "Set Your Style",
+    desc: "Choose a video template, font, background, accent colors, and watermark. Upload your logo. Your brand. Your look. Saved permanently to your profile.",
     img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Customizing brand style in AI video studio with live preview",
+    imgAlt: "Setting brand style in AI video studio",
   },
   {
     num: "03",
-    title: "Preview Live on Your Phone",
-    desc: "Every setting instantly updates a live phone mockup — see exactly how your video will look, with your background, colors, watermark, and typography, before you generate a single frame.",
+    title: "Connect Your Platforms",
+    desc: "Link Pinterest, YouTube, Instagram, TikTok, and Facebook with one click each. Secure OAuth login — we never see your password. Disconnect any platform instantly from your dashboard.",
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Live phone preview of quote video in Custom Studio",
+    imgAlt: "Connecting social media platforms securely",
   },
   {
     num: "04",
-    title: "Generate and Download",
-    desc: "Click generate. Your video is ready in minutes in 1080×1920 format. Download it anytime, or let QuotVid post it automatically — to TikTok, Instagram Reels, YouTube Shorts, Pinterest, and Facebook Pages — on your schedule, at your time, in your timezone.",
+    title: "Set Your Schedule and Walk Away",
+    desc: "QuotVid generates your videos with AI and posts them automatically at your chosen time, in your timezone, every day. YouTube at 9am. TikTok at 6pm. Pinterest at 10am. You don't touch anything.",
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Downloading AI-generated quote video and posting to social media",
+    imgAlt: "Setting automated posting schedule by platform",
   },
 ];
 
@@ -36,7 +36,8 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-section-light py-14 sm:py-20 md:py-28">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <h2 className="mb-10 sm:mb-16 text-center text-2xl sm:text-3xl font-bold tracking-tight text-light-heading md:text-4xl">
-          From Idea to <span className="text-gradient-gold">Viral Video</span> in 4 Simple Steps
+          From Zero to Auto-Posting{" "}
+          <span className="text-gradient-gold">in 4 Minutes.</span>
         </h2>
         <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (

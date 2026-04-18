@@ -34,9 +34,6 @@ const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"), {
 const FAQ = dynamic(() => import("@/components/home/FAQ"), {
   loading: () => <div className="min-h-[200px]" aria-hidden />,
 });
-const ComingSoon = dynamic(() => import("@/components/home/ComingSoon"), {
-  loading: () => <div className="min-h-[80px]" aria-hidden />,
-});
 const AutoPosting = dynamic(() => import("@/components/home/AutoPosting"), {
   loading: () => <div className="min-h-[200px]" aria-hidden />,
 });
@@ -95,18 +92,17 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <ProblemPain />
         <StatsBar />
+        <ProblemPain />
         <ProblemSolution />
-        <HowItWorks />
         <AutoPosting />
-        <ProductPreview />
+        <HowItWorks />
         <Features />
+        <ProductPreview />
         <Niches />
         <Languages />
-        <ComingSoon />
-        <FinalCTA />
         <FAQ />
+        <FinalCTA />
       </main>
       <Footer />
     </>
