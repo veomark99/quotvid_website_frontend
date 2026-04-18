@@ -12,22 +12,22 @@ const steps = [
     num: "02",
     title: "Set Your Style",
     desc: "Choose a video template, font, background, accent colors, and watermark. Upload your logo. Your brand. Your look. Saved permanently to your profile.",
-    img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Setting brand style in AI video studio",
+    img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Creative layout and brand style mood board",
   },
   {
     num: "03",
     title: "Connect Your Platforms",
     desc: "Link Pinterest, YouTube, Instagram, TikTok, and Facebook with one click each. Secure OAuth login — we never see your password. Disconnect any platform instantly from your dashboard.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Connecting social media platforms securely",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Dashboard and analytics representing connected accounts",
   },
   {
     num: "04",
     title: "Set Your Schedule and Walk Away",
     desc: "QuotVid generates your videos with AI and posts them automatically at your chosen time, in your timezone, every day. YouTube at 9am. TikTok at 6pm. Pinterest at 10am. You don't touch anything.",
-    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Setting automated posting schedule by platform",
+    img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Clock and time representing scheduled automatic posting",
   },
 ];
 

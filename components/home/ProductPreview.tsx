@@ -1,33 +1,122 @@
-import Image from "next/image";
+"use client";
 
-const examples = [
+import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+/** Local MP4s in /public/videos — swap filenames or add your own 1080×1920 exports */
+const slides = [
   {
-    img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&q=80&auto=format&fit=crop",
-    imgAlt: "Content creator filming vertical video on phone",
-    label: "Discipline & Focus",
+    label: "Stoic & mindset quotes",
+    src: "/videos/preview-short-a.mp4",
+    poster:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=540&q=80&auto=format&fit=crop",
+    alt: "Vertical quote-style video preview — stoic mindset niche",
   },
   {
-    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80&auto=format&fit=crop",
-    imgAlt: "Hands showing social media video on phone",
-    label: "Stoic Philosophy",
+    label: "Business & success",
+    src: "/videos/preview-short-b.mp4",
+    poster:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=540&q=80&auto=format&fit=crop",
+    alt: "Vertical quote-style video preview — business niche",
   },
   {
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80&auto=format&fit=crop",
-    imgAlt: "Young creator sharing content from phone",
-    label: "Business & Success",
+    label: "Poetry & inspiration",
+    src: "/videos/preview-short-a.mp4",
+    poster:
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=540&q=80&auto=format&fit=crop",
+    alt: "Vertical quote-style video preview — poetry inspiration niche",
   },
   {
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80&auto=format&fit=crop",
-    imgAlt: "Creator recording motivational content",
-    label: "Growth Mindset",
+    label: "Daily motivation",
+    src: "/videos/preview-short-b.mp4",
+    poster:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=540&q=80&auto=format&fit=crop",
+    alt: "Vertical quote-style video preview — daily motivation niche",
   },
 ];
 
 export default function ProductPreview() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [index, setIndex] = useState(0);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const fn = () => setReducedMotion(mq.matches);
+    mq.addEventListener("change", fn);
+    return () => mq.removeEventListener("change", fn);
+  }, []);
+
+  const syncVideos = useCallback(
+    (active: number) => {
+      videoRefs.current.forEach((v, i) => {
+        if (!v) return;
+        if (i === active && !reducedMotion) {
+          v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      });
+    },
+    [reducedMotion]
+  );
+
+  useEffect(() => {
+    syncVideos(index);
+  }, [index, syncVideos]);
+
+  const scrollToIndex = useCallback((i: number) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const clamped = Math.max(0, Math.min(i, slides.length - 1));
+    const child = el.children[clamped] as HTMLElement | undefined;
+    if (!child) return;
+    const target = child.offsetLeft - (el.clientWidth - child.offsetWidth) / 2;
+    el.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+    setIndex(clamped);
+  }, []);
+
+  const updateFromScroll = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const center = el.scrollLeft + el.clientWidth / 2;
+    let best = 0;
+    let bestDist = Infinity;
+    for (let i = 0; i < el.children.length; i++) {
+      const c = el.children[i] as HTMLElement;
+      const mid = c.offsetLeft + c.offsetWidth / 2;
+      const d = Math.abs(mid - center);
+      if (d < bestDist) {
+        bestDist = d;
+        best = i;
+      }
+    }
+    setIndex(best);
+    setCanPrev(best > 0);
+    setCanNext(best < slides.length - 1);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    updateFromScroll();
+    el.addEventListener("scroll", updateFromScroll, { passive: true });
+    window.addEventListener("resize", updateFromScroll);
+    return () => {
+      el.removeEventListener("scroll", updateFromScroll);
+      window.removeEventListener("resize", updateFromScroll);
+    };
+  }, [updateFromScroll]);
+
   return (
     <section className="bg-section-dark py-14 sm:py-20 md:py-28 overflow-hidden">
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-10 sm:mb-16">
+        <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
           <h2 className="mb-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl">
             Real Videos. Real Creators.{" "}
             <span className="text-gradient-gold">Real Results.</span>
@@ -37,33 +126,99 @@ export default function ProductPreview() {
           </p>
         </div>
 
-        {/* Creator photo strip */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-4 mb-10 sm:mb-16">
-          {examples.map((ex) => (
-            <div key={ex.label} className="group relative overflow-hidden rounded-2xl aspect-[9/16] shadow-lg border border-primary/20">
-              <Image
-                src={ex.img}
-                alt={ex.imgAlt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 50vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-0 right-0 text-center">
-                <span className="inline-block rounded-full bg-primary/80 px-3 py-1 text-[10px] font-bold text-primary-foreground backdrop-blur-sm">
-                  {ex.label}
-                </span>
+        <div
+          className="relative mb-10 sm:mb-16"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Quote video previews"
+        >
+          <button
+            type="button"
+            onClick={() => scrollToIndex(index - 1)}
+            disabled={!canPrev}
+            className="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-primary/30 bg-background/90 p-2.5 text-foreground shadow-lg backdrop-blur-sm transition-opacity hover:bg-primary/10 disabled:pointer-events-none disabled:opacity-30 sm:left-1 md:left-2"
+            aria-label="Previous video"
+          >
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToIndex(index + 1)}
+            disabled={!canNext}
+            className="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-primary/30 bg-background/90 p-2.5 text-foreground shadow-lg backdrop-blur-sm transition-opacity hover:bg-primary/10 disabled:pointer-events-none disabled:opacity-30 sm:right-1 md:right-2"
+            aria-label="Next video"
+          >
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+          </button>
+
+          <div
+            ref={scrollerRef}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-10 py-2 sm:px-14 sm:gap-5 md:px-16 md:gap-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                scrollToIndex(index - 1);
+              } else if (e.key === "ArrowRight") {
+                e.preventDefault();
+                scrollToIndex(index + 1);
+              }
+            }}
+          >
+            {slides.map((s, i) => (
+              <div
+                key={`${s.label}-${i}`}
+                data-slide
+                className="snap-center shrink-0 w-[min(100%,17.5rem)] sm:w-[min(100%,19rem)] md:w-[min(100%,20rem)]"
+              >
+                <div className="group relative overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-[9/16] bg-black">
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[i] = el;
+                    }}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    src={s.src}
+                    poster={s.poster}
+                    muted
+                    playsInline
+                    loop
+                    preload="metadata"
+                    aria-label={s.alt}
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-0 right-0 px-3 text-center">
+                    <span className="inline-block rounded-full bg-primary/85 px-3 py-1 text-[10px] font-bold text-primary-foreground backdrop-blur-sm sm:text-xs">
+                      {s.label}
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="mt-4 flex justify-center gap-2" role="tablist" aria-label="Slide indicators">
+            {slides.map((s, i) => (
+              <button
+                key={`dot-${s.label}-${i}`}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Show slide ${i + 1}: ${s.label}`}
+                onClick={() => scrollToIndex(i)}
+                className={`h-2 rounded-full transition-all ${
+                  i === index ? "w-7 bg-primary" : "w-2 bg-primary/30 hover:bg-primary/50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Wide creator lifestyle image */}
+        {/* Wide lifestyle block — image matches “runs in the background” copy */}
         <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-xl">
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80&auto=format&fit=crop"
-              alt="Content creator team working on social media strategy"
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&auto=format&fit=crop"
+              alt="Creator working remotely while content runs automatically in the background"
               fill
               className="object-cover"
               sizes="100vw"

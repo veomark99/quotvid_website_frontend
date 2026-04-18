@@ -12,22 +12,22 @@ const features = [
     icon: "📲",
     title: "Auto-Post to 5 Platforms",
     desc: "Pinterest, YouTube Shorts, Instagram Reels, TikTok, and Facebook Pages. Set a different posting time per platform. Your timezone. Your rules. Posts go live while you sleep.",
-    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Auto posting to 5 social media platforms",
+    img: "https://images.unsplash.com/photo-1611162616305-c69b3fa7f119?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Phone showing multiple social apps for auto-posting",
   },
   {
     icon: "🎨",
     title: "Custom Studio + Live Phone Preview",
     desc: "Write your own quote. Upload your background. Add your logo. Every change updates a live phone mockup instantly. See exactly what your video looks like before generating a single frame.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Custom video studio with live phone preview",
+    img: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Design workspace and creative tools for branded video",
   },
   {
     icon: "🌍",
     title: "12 Languages + Full RTL Support",
     desc: "English, Arabic, Urdu, Hindi, Spanish, French, Persian, Russian, Chinese, Japanese, and more. Arabic, Urdu, and Persian render right-to-left automatically with correct fonts.",
-    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Multilingual quote video generation",
+    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&auto=format&fit=crop",
+    imgAlt: "Diverse group representing global languages and audiences",
   },
 ];
 
