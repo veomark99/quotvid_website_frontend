@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/home/Hero";
+import ProblemPain from "@/components/home/ProblemPain";
 import { WebsiteJsonLd, HomeFaqJsonLd } from "@/components/JsonLd";
 import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
@@ -94,6 +95,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <ProblemPain />
         <StatsBar />
         <ProblemSolution />
         <HowItWorks />

@@ -11,13 +11,11 @@ export default function Hero() {
               ⚡ AI-Powered · 20 Categories · 10+ Video Styles · Custom Studio · Live Preview
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-              Your AI Quote Video{" "}
-              <span className="text-gradient-gold">Studio.</span>
-              <br />
-              See It Before You Generate It.
+              Post Quote Videos to Pinterest & YouTube.{" "}
+              <span className="text-gradient-gold">Automatically. Every Day.</span>
             </h1>
             <p className="mb-6 sm:mb-8 text-sm sm:text-lg leading-relaxed text-muted-foreground">
-              Turn quotes into video — then post them automatically. QuotVid generates professional 1080×1920 clips for TikTok, Instagram Reels, YouTube Shorts, Pinterest, and Facebook Pages. Set your schedule once. Wake up to posted content every morning.
+              QuotVid generates professional AI quote videos in 1080×1920 and posts them to Pinterest, YouTube Shorts, Instagram Reels, TikTok, and Facebook — on your schedule, in your timezone. Set it up once. Wake up to published content.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
