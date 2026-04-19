@@ -277,9 +277,9 @@ export default function FeaturesPage() {
                   <tr className="border-b border-primary/20">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
                     <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$9.99/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$79.99/yr</span></th>
-                    <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$199</span></th>
+                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$10/mo</span></th>
+                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$99/yr</span></th>
+                    <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/10">
