@@ -48,10 +48,10 @@ export default function ContactPage() {
                 { label: "Support Inquiries", desc: "Account issues, billing, or technical problems", email: "support@quotvid.com" },
                 { label: "General & Partnerships", desc: "Press, partnerships, or general questions", email: "hello@quotvid.com" },
               ].map((c) => (
-                <div key={c.email} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-8">
+                <div key={c.email} className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-8 transition-colors hover:border-[#374151]">
                   <h3 className="mb-2 text-base sm:text-lg font-bold text-light-heading">{c.label}</h3>
                   <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-light-body">{c.desc}</p>
-                  <a href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-primary hover:underline break-all">
+                  <a href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#e2a128] hover:text-[#f0b94a] hover:underline break-all">
                     ✉ {c.email}
                   </a>
                 </div>

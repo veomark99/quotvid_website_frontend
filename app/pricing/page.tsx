@@ -152,14 +152,14 @@ export default function PricingPage() {
               {plans.map((plan) => (
                 <div
                   key={plan.name}
-                  className={`relative rounded-2xl p-6 sm:p-8 flex flex-col ${
+                  className={`relative rounded-[14px] p-6 sm:p-8 flex flex-col transition-[border-color,box-shadow] duration-200 ${
                     plan.highlight
-                      ? "border-2 border-primary bg-card shadow-[0_0_40px_hsl(39_76%_52%/0.15)]"
-                      : "border border-primary/20 bg-card"
+                      ? "border-2 border-[#e2a128] bg-card shadow-[0_0_40px_rgba(226,161,40,0.18)]"
+                      : "border border-[#1F2937] bg-card hover:border-[#374151]"
                   }`}
                 >
                   {plan.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-gold px-4 py-1 text-xs font-bold text-primary-foreground">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-gold px-4 py-1 text-xs font-bold text-white">
                       Most Popular
                     </div>
                   )}
@@ -177,10 +177,10 @@ export default function PricingPage() {
 
                   <a
                     href={plan.ctaHref}
-                    className={`mb-6 block rounded-xl px-6 py-3 text-center text-sm font-bold transition-transform hover:scale-105 ${
+                    className={`mb-6 block rounded-[10px] px-6 py-3 text-center text-sm font-bold transition-all duration-200 hover:scale-[1.02] ${
                       plan.highlight
-                        ? "bg-gradient-gold text-primary-foreground"
-                        : "border border-primary/30 text-foreground hover:bg-primary/10"
+                        ? "bg-gradient-gold text-white hover:brightness-90 shadow-[var(--shadow-brand)]"
+                        : "border border-[#374151] text-[#E5E7EB] hover:bg-[#1F2937] hover:border-[#4B5563]"
                     }`}
                   >
                     {plan.cta}
@@ -189,7 +189,7 @@ export default function PricingPage() {
                   <ul className="space-y-2.5 flex-1">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                        <span className="text-primary font-bold shrink-0 mt-0.5">✓</span> {f}
+                        <span className="text-[#e2a128] font-bold shrink-0 mt-0.5">✓</span> {f}
                       </li>
                     ))}
                   </ul>
@@ -214,7 +214,7 @@ export default function PricingPage() {
                 { metric: "~$0.02", label: "Approx. cost per video on the monthly plan" },
                 { metric: "0 minutes", label: "Production time once your persona is set" },
               ].map((item) => (
-                <div key={item.metric} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 text-center">
+                <div key={item.metric} className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 text-center">
                   <p className="text-xl sm:text-2xl font-extrabold text-gradient-gold mb-1">{item.metric}</p>
                   <p className="text-xs sm:text-sm text-light-body">{item.label}</p>
                 </div>
@@ -246,7 +246,7 @@ export default function PricingPage() {
             <h2 className="mb-8 text-center text-xl sm:text-2xl font-bold">Pricing FAQ</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
-                <div key={f.q} className="rounded-xl border border-primary/20 bg-card p-4 sm:p-6">
+                <div key={f.q} className="rounded-[12px] border border-[#1F2937] bg-card p-4 sm:p-6 transition-colors hover:border-[#374151]">
                   <p className="mb-2 text-sm font-semibold text-foreground">{f.q}</p>
                   <p className="text-xs sm:text-sm text-muted-foreground">{f.a}</p>
                 </div>

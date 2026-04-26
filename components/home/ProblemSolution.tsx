@@ -32,7 +32,7 @@ export default function ProblemSolution() {
           <div className="space-y-4 sm:space-y-5">
             {solutions.map((s) => (
               <div key={s} className="flex items-start gap-2.5 sm:gap-3">
-                <span className="mt-0.5 text-primary font-bold text-sm shrink-0">✓</span>
+                <span className="mt-0.5 text-[#e2a128] font-bold text-sm shrink-0">✓</span>
                 <p className="text-sm sm:text-base text-light-body">{s}</p>
               </div>
             ))}

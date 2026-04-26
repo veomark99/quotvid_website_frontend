@@ -60,7 +60,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="bg-section-dark pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 text-center md:px-8">
-            <p className="mb-4 text-xs sm:text-sm font-semibold uppercase tracking-widest text-primary/70">
+            <p className="mb-4 text-xs sm:text-sm font-semibold uppercase tracking-widest text-[rgba(226,161,40,0.70)]">
               Our Story
             </p>
             <h1 className="mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight md:text-5xl">
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
               {/* Visual — development / creator imagery */}
               <div className="space-y-4">
-                <div className="relative overflow-hidden rounded-2xl border border-primary/20 aspect-[4/3]">
+                <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
                   <Image
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80&auto=format&fit=crop"
                     alt="Developer writing code — building a content automation tool"
@@ -116,19 +116,19 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
+                  <div className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.03)] p-4 sm:p-5">
                     <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">20</p>
                     <p className="mt-1 text-xs sm:text-sm text-light-body">Days to build v1 from scratch</p>
                   </div>
-                  <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
+                  <div className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.03)] p-4 sm:p-5">
                     <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">20</p>
                     <p className="mt-1 text-xs sm:text-sm text-light-body">Languages supported at launch</p>
                   </div>
-                  <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
+                  <div className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.03)] p-4 sm:p-5">
                     <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">1000+</p>
                     <p className="mt-1 text-xs sm:text-sm text-light-body">Video platforms for background sourcing via yt-dlp</p>
                   </div>
-                  <div className="rounded-xl border border-primary/20 bg-foreground/[0.03] p-4 sm:p-5">
+                  <div className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.03)] p-4 sm:p-5">
                     <p className="text-2xl sm:text-3xl font-extrabold text-gradient-gold">$0</p>
                     <p className="mt-1 text-xs sm:text-sm text-light-body">To start — no card required</p>
                   </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
               {values.map((v) => (
                 <div
                   key={v.title}
-                  className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-6 sm:p-7"
+                  className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-6 sm:p-7 transition-colors hover:border-[#374151]"
                 >
                   <h3 className="mb-3 text-sm sm:text-base font-bold text-light-heading">{v.title}</h3>
                   <p className="text-xs sm:text-sm text-light-body leading-relaxed">{v.desc}</p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
                   like Urdu — not broken Latin characters trying to impersonate it.
                 </p>
               </div>
-              <div className="relative overflow-hidden rounded-2xl border border-primary/20 aspect-[4/3]">
+              <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
                 <Image
                   src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&q=80&auto=format&fit=crop"
                   alt="Multilingual content creation — Arabic and Urdu text on screen"
@@ -214,7 +214,7 @@ export default function AboutPage() {
         </section>
 
         {/* Trust signals */}
-        <section className="bg-section-light py-14 sm:py-20 border-t border-primary/5">
+        <section className="bg-section-light py-14 sm:py-20 border-t border-[rgba(226,161,40,0.08)]">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8 text-center">
             <h2 className="mb-4 text-xl sm:text-2xl font-bold text-light-heading">Built to Last</h2>
             <p className="mb-10 text-sm sm:text-base text-light-body leading-relaxed max-w-xl mx-auto">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                 { stat: "No card", label: "Free plan requires zero payment info" },
                 { stat: "Daily", label: "New features shipped continuously" },
               ].map((t) => (
-                <div key={t.stat} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6">
+                <div key={t.stat} className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-6">
                   <p className="text-xl sm:text-2xl font-extrabold text-gradient-gold mb-1">{t.stat}</p>
                   <p className="text-xs sm:text-sm text-light-body">{t.label}</p>
                 </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
             </p>
             <a
               href="https://app.quotvid.com/auth/signup"
-              className="inline-block rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+              className="inline-block rounded-[10px] bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
             >
               Start Free — No Credit Card
             </a>

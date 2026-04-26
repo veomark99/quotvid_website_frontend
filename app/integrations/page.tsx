@@ -146,7 +146,7 @@ export default function IntegrationsPage() {
               {["YouTube", "Instagram", "TikTok", "Pinterest", "Facebook"].map((name) => (
                 <span
                   key={name}
-                  className="rounded-full border border-primary/25 bg-secondary px-4 py-2 text-xs sm:text-sm font-medium text-foreground"
+                  className="rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.06)] px-4 py-2 text-xs sm:text-sm font-medium text-[#E5E7EB]"
                 >
                   {name}
                 </span>
@@ -162,10 +162,10 @@ export default function IntegrationsPage() {
               <div
                 key={p.id}
                 id={p.id}
-                className="scroll-mt-28 rounded-2xl border border-primary/20 bg-foreground/[0.02] p-6 sm:p-8"
+                className="scroll-mt-28 rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-6 sm:p-8 transition-colors hover:border-[#374151]"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl font-bold text-primary" aria-hidden>
+                  <span className="text-2xl font-bold text-[#e2a128]" aria-hidden>
                     {p.icon}
                   </span>
                   <h2 className="text-xl sm:text-2xl font-bold text-light-heading">{p.title}</h2>
@@ -185,7 +185,7 @@ export default function IntegrationsPage() {
                 <ul className="mb-3 space-y-1 pl-1">
                   {p.permissions.map((perm) => (
                     <li key={perm} className="flex items-start gap-2 text-xs sm:text-sm text-light-body">
-                      <span className="text-primary font-bold mt-0.5">✓</span>
+                      <span className="text-[#e2a128] font-bold mt-0.5">✓</span>
                       <span>{perm}</span>
                     </li>
                   ))}
@@ -213,7 +213,7 @@ export default function IntegrationsPage() {
             <ul className="space-y-4">
               {securityPoints.map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground">
-                  <span className="text-primary font-bold text-lg leading-none mt-0.5">✓</span>
+                  <span className="text-[#e2a128] font-bold text-lg leading-none mt-0.5">✓</span>
                   <span>{point}</span>
                 </li>
               ))}
@@ -233,13 +233,13 @@ export default function IntegrationsPage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="https://app.quotvid.com/auth/signup"
-                className="rounded-xl bg-gradient-gold px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-105 text-center"
+                className="rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)] text-center"
               >
                 Start Free — No Credit Card →
               </a>
               <Link
                 href="/features"
-                className="rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10 text-center"
+                className="rounded-[10px] border border-[#374151] px-6 py-3 text-sm font-semibold text-[#E5E7EB] transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563] text-center"
               >
                 See all features
               </Link>

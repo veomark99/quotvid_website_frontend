@@ -15,13 +15,13 @@ export default function Languages() {
         {[row1, row2].map((row, i) => (
           <div key={i} className="mb-3 sm:mb-4 flex flex-wrap justify-center gap-2 sm:gap-3">
             {row.map((lang) => (
-              <span key={lang} className="rounded-lg border border-primary/20 bg-foreground/[0.03] px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-sm font-medium text-light-heading">
+              <span key={lang} className="rounded-lg border border-[#1F2937] bg-[rgba(255,255,255,0.03)] px-2.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-sm font-medium text-[#E5E7EB]">
                 {lang}
               </span>
             ))}
           </div>
         ))}
-        <div className="mx-auto mt-6 sm:mt-8 max-w-md rounded-xl border border-primary/20 bg-primary/5 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-light-body">
+        <div className="mx-auto mt-6 sm:mt-8 max-w-md rounded-[12px] border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.06)] px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-[#9CA3AF]">
           ✦ Arabic, Urdu & Persian text flows naturally right-to-left — no manual formatting required. Verified and tested.
         </div>
       </div>

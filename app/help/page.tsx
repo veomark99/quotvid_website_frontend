@@ -33,7 +33,7 @@ export default function HelpPage() {
             </p>
             <Link
               href="/contact"
-              className="mx-auto flex max-w-lg items-center gap-3 rounded-xl border border-primary/30 bg-secondary px-4 py-3 text-sm text-muted-foreground hover:border-primary/60 transition-colors"
+              className="mx-auto flex max-w-lg items-center gap-3 rounded-[10px] border border-[#374151] bg-[rgba(255,255,255,0.03)] px-4 py-3 text-sm text-muted-foreground hover:border-[rgba(226,161,40,0.40)] transition-colors"
             >
               <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
@@ -44,7 +44,7 @@ export default function HelpPage() {
         </section>
 
         {/* Jump links */}
-        <section className="bg-section-light border-b border-primary/10 py-8">
+        <section className="bg-section-light border-b border-[rgba(226,161,40,0.10)] py-8">
           <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8">
             <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-light-muted">Jump to a topic</p>
             <nav className="flex flex-wrap gap-2" aria-label="Help topics">
@@ -52,7 +52,7 @@ export default function HelpPage() {
                 <a
                   key={cat.id}
                   href={`#${cat.id}`}
-                  className="rounded-full border border-primary/25 bg-foreground/[0.03] px-3 py-1.5 text-xs font-medium text-light-heading hover:border-primary/50 hover:bg-primary/5 transition-colors"
+                  className="rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(255,255,255,0.03)] px-3 py-1.5 text-xs font-medium text-[#E5E7EB] hover:border-[rgba(226,161,40,0.55)] hover:bg-[rgba(226,161,40,0.08)] transition-colors"
                 >
                   {cat.title}
                 </a>
@@ -80,19 +80,19 @@ export default function HelpPage() {
                     <details
                       key={article.slug}
                       id={article.slug}
-                      className="group rounded-xl border border-primary/20 bg-foreground/[0.02] px-4 py-3 transition-colors open:border-primary/35 open:bg-foreground/[0.04]"
+                      className="group rounded-[12px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] px-4 py-3 transition-colors open:border-[rgba(226,161,40,0.35)] open:bg-[rgba(255,255,255,0.04)]"
                     >
                       <summary className="cursor-pointer list-none font-medium text-light-heading text-sm sm:text-base [&::-webkit-details-marker]:hidden flex items-start justify-between gap-2">
                         <span>{article.title}</span>
-                        <span className="text-primary/60 text-lg leading-none shrink-0 group-open:rotate-180 transition-transform">
+                        <span className="text-[rgba(226,161,40,0.60)] text-lg leading-none shrink-0 group-open:rotate-180 transition-transform">
                           ▾
                         </span>
                       </summary>
-                      <p className="mt-3 text-xs sm:text-sm text-light-body leading-relaxed border-t border-primary/10 pt-3">
+                      <p className="mt-3 text-xs sm:text-sm text-light-body leading-relaxed border-t border-[rgba(226,161,40,0.10)] pt-3">
                         {article.body}
                       </p>
                       <p className="mt-2 text-[10px] text-light-muted">
-                        <a href={`#${article.slug}`} className="text-primary hover:underline">
+                        <a href={`#${article.slug}`} className="text-[#e2a128] hover:underline">
                           Link to this answer
                         </a>
                       </p>
@@ -113,13 +113,13 @@ export default function HelpPage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="rounded-xl bg-gradient-gold px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-105 text-center"
+                className="rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)] text-center"
               >
                 Contact support
               </Link>
               <a
                 href="mailto:support@quotvid.com"
-                className="rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10 text-center"
+                className="rounded-[10px] border border-[#374151] px-6 py-3 text-sm font-semibold text-[#E5E7EB] transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563] text-center"
               >
                 support@quotvid.com
               </a>

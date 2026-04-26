@@ -41,7 +41,7 @@ export default function Features() {
         </h2>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
-            <div key={f.title} className="overflow-hidden rounded-xl border border-primary/20 bg-foreground/[0.02] transition-all hover:border-primary/30 hover:shadow-lg">
+            <div key={f.title} className="overflow-hidden rounded-[14px] border border-[#1F2937] bg-card shadow-[var(--shadow-card)] transition-all duration-200 hover:border-[#374151] hover:shadow-[var(--shadow-md)] hover:-translate-y-0.5">
               <div className="relative h-44 w-full overflow-hidden">
                 <Image
                   src={f.img}

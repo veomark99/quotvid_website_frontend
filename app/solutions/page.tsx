@@ -47,11 +47,11 @@ export default function SolutionsIndexPage() {
               <Link
                 key={p.slug}
                 href={solutionPath(p.slug)}
-                className="block rounded-xl border border-primary/20 bg-foreground/[0.02] p-6 transition-all hover:border-primary/40 hover:shadow-lg"
+                className="block rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-6 transition-all hover:border-[#374151] hover:shadow-[var(--shadow-md)]"
               >
                 <h2 className="mb-2 text-lg font-bold text-light-heading">{p.h1}</h2>
                 <p className="text-sm text-light-body line-clamp-2">{p.description}</p>
-                <span className="mt-3 inline-block text-sm font-semibold text-primary">Read guide →</span>
+                <span className="mt-3 inline-block text-sm font-semibold text-[#e2a128]">Read guide →</span>
               </Link>
             ))}
           </div>

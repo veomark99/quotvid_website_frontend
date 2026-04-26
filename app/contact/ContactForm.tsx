@@ -25,14 +25,14 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl border border-primary/20 bg-primary/5 p-8 sm:p-12 text-center">
+      <div className="rounded-[14px] border border-[rgba(226,161,40,0.30)] bg-[rgba(226,161,40,0.06)] p-8 sm:p-12 text-center">
         <p className="text-base sm:text-lg font-semibold text-light-heading">Thanks for reaching out!</p>
         <p className="mt-2 text-sm text-light-body">We&apos;ll get back to you within 24–48 hours.</p>
       </div>
     );
   }
 
-  const inputClass = "w-full rounded-lg border border-primary/20 bg-foreground/[0.02] px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-light-heading outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/20";
+  const inputClass = "w-full rounded-[8px] border border-[#1F2937] bg-[rgba(255,255,255,0.03)] px-3 sm:px-4 py-2.5 sm:py-3 text-sm text-[#E5E7EB] outline-none focus:border-[rgba(226,161,40,0.50)] focus:ring-1 focus:ring-[rgba(226,161,40,0.20)] transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
@@ -62,7 +62,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full sm:w-auto rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:scale-105 disabled:opacity-60"
+        className="w-full sm:w-auto rounded-[10px] bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)] disabled:opacity-60"
       >
         {status === "loading" ? "Sending..." : "Send Message →"}
       </button>

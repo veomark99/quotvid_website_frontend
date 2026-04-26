@@ -43,7 +43,7 @@ export default function AutoPosting() {
             {platforms.map((p) => (
               <div
                 key={p.name}
-                className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-4 sm:p-5"
+                className="rounded-[14px] border border-[#1F2937] bg-card p-5 sm:p-6 shadow-[var(--shadow-card)] transition-all duration-200 hover:border-[#374151] hover:shadow-[var(--shadow-md)]"
               >
                 <h3 className="font-semibold text-light-heading text-sm sm:text-base mb-1">
                   {p.name}
@@ -59,7 +59,7 @@ export default function AutoPosting() {
           <div className="text-center">
             <Link
               href="/integrations"
-              className="inline-block rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold  transition-colors hover:bg-primary/10"
+              className="inline-block rounded-[10px] border border-[#374151] px-6 py-3 text-sm font-semibold text-[#E5E7EB] transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563]"
             >
               See all platform integrations →
             </Link>
@@ -68,7 +68,7 @@ export default function AutoPosting() {
       </section>
 
       {/* Platform strip */}
-      <section className="bg-section-dark py-10 sm:py-14 border-t border-primary/10">
+      <section className="bg-section-dark py-10 sm:py-14 border-t border-[rgba(226,161,40,0.10)]">
         <div className="container mx-auto px-3 sm:px-4 md:px-8 text-center">
           <p className="mb-6 text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             One video. Five platforms. Zero manual uploads.
@@ -77,7 +77,7 @@ export default function AutoPosting() {
             {["YouTube", "Instagram", "TikTok", "Pinterest", "Facebook"].map((name) => (
               <span
                 key={name}
-                className="rounded-full border border-primary/25 bg-secondary px-4 py-2 text-xs sm:text-sm font-medium text-foreground"
+                className="rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.08)] px-4 py-2 text-xs sm:text-sm font-medium text-[#E5E7EB] transition-all duration-150 hover:border-[rgba(226,161,40,0.50)] hover:text-[#f0b94a]"
               >
                 {name}
               </span>

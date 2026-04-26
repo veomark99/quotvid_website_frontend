@@ -49,13 +49,13 @@ export default function BlogPage() {
             ) : (
               <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6 transition-all hover:border-primary/30 hover:shadow-lg">
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-6 transition-all hover:border-[#374151] hover:shadow-[var(--shadow-md)]">
                     <div className="mb-3 flex flex-wrap gap-1.5">
                       {post.tags.slice(0, 2).map((tag) => (
-                        <span key={tag} className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium text-primary">{tag}</span>
+                        <span key={tag} className="rounded-full bg-[rgba(226,161,40,0.10)] px-2.5 py-0.5 text-[10px] font-medium text-[#e2a128]">{tag}</span>
                       ))}
                     </div>
-                    <h2 className="mb-2 text-sm sm:text-base font-bold text-light-heading group-hover:text-primary transition-colors">{post.title}</h2>
+                    <h2 className="mb-2 text-sm sm:text-base font-bold text-light-heading group-hover:text-[#e2a128] transition-colors">{post.title}</h2>
                     <p className="text-xs text-light-body line-clamp-3">{post.description}</p>
                     <p className="mt-3 text-[10px] text-light-muted">{new Date(post.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
                   </Link>

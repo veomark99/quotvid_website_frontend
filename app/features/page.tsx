@@ -193,9 +193,9 @@ const featureSections = [
 ];
 
 const badgeColor: Record<string, string> = {
-  Free: "bg-green-100 text-green-800",
-  Paid: "bg-primary/10 text-primary",
-  "Free + Paid": "bg-blue-100 text-blue-800",
+  Free: "bg-[rgba(74,222,128,0.12)] text-[#4ade80]",
+  Paid: "bg-[rgba(226,161,40,0.10)] text-[#e2a128]",
+  "Free + Paid": "bg-[rgba(96,165,250,0.10)] text-[#60a5fa]",
 };
 
 export default function FeaturesPage() {
@@ -237,22 +237,22 @@ export default function FeaturesPage() {
                   <ul className="space-y-2">
                     {f.points.map((p) => (
                       <li key={p} className="flex items-center gap-2 text-xs sm:text-sm text-light-body">
-                        <span className="text-primary font-bold">✓</span> {p}
+                        <span className="text-[#e2a128] font-bold">✓</span> {p}
                       </li>
                     ))}
                   </ul>
                   {i === 0 && (
                     <div className="mt-6 flex flex-wrap gap-3">
-                      <Link href="/integrations" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10">
+                      <Link href="/integrations" className="rounded-[8px] border border-[#374151] px-4 py-2 text-xs sm:text-sm font-semibold text-[#E5E7EB] transition-colors hover:bg-[#1F2937] hover:border-[#4B5563]">
                         Learn how each integration works →
                       </Link>
-                      <Link href="/pricing" className="rounded-lg border border-primary/30 px-4 py-2 text-xs sm:text-sm font-semibold text-light-heading transition-colors hover:bg-primary/10">
+                      <Link href="/pricing" className="rounded-[8px] border border-[#374151] px-4 py-2 text-xs sm:text-sm font-semibold text-[#E5E7EB] transition-colors hover:bg-[#1F2937] hover:border-[#4B5563]">
                         View pricing plans →
                       </Link>
                     </div>
                   )}
                 </div>
-                <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-[4/3]">
+                <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] shadow-[var(--shadow-md)] aspect-[4/3]">
                   <Image
                     src={f.img}
                     alt={f.imgAlt}
@@ -260,7 +260,7 @@ export default function FeaturesPage() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[rgba(226,161,40,0.05)] to-transparent" />
                 </div>
               </div>
             ))}
@@ -274,15 +274,15 @@ export default function FeaturesPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-xs sm:text-sm">
                 <thead>
-                  <tr className="border-b border-primary/20">
+                  <tr className="border-b border-[rgba(226,161,40,0.20)]">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
                     <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-primary text-xs">$10/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-primary">Annual<br /><span className="text-xs">$99/yr</span></th>
+                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-[#e2a128] text-xs">$10/mo</span></th>
+                    <th className="py-3 text-center font-semibold text-[#e2a128]">Annual<br /><span className="text-xs">$99/yr</span></th>
                     <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-primary/10">
+                <tbody className="divide-y divide-[rgba(226,161,40,0.10)]">
                   {[
                     ["Videos", "5 total", "20/day", "20/day", "20/day"],
                     ["AI quote generation", "✓", "✓", "✓", "✓"],
@@ -309,7 +309,7 @@ export default function FeaturesPage() {
                       <td className="py-3 text-muted-foreground">{feature}</td>
                       <td className="py-3 text-center">{free}</td>
                       <td className="py-3 text-center">{monthly}</td>
-                      <td className="py-3 text-center text-primary font-medium">{annual}</td>
+                      <td className="py-3 text-center text-[#e2a128] font-medium">{annual}</td>
                       <td className="py-3 text-center">{lifetime}</td>
                     </tr>
                   ))}
@@ -319,7 +319,7 @@ export default function FeaturesPage() {
             <div className="mt-8 text-center">
               <a
                 href="/pricing"
-                className="inline-block rounded-xl border border-primary/30 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-primary/10"
+                className="inline-block rounded-[10px] border border-[#374151] px-6 py-3 text-sm font-semibold text-[#E5E7EB] transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563]"
               >
                 View Full Pricing →
               </a>
@@ -358,7 +358,7 @@ export default function FeaturesPage() {
                   desc: "You want to launch a new quote page but are not sure which niche will resonate. The free plan gives you 5 videos to test across different categories before committing.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-primary/20 bg-foreground/[0.02] p-5 sm:p-6">
+                <div key={item.title} className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-6 transition-colors hover:border-[#374151]">
                   <h3 className="mb-2 text-sm sm:text-base font-bold text-light-heading">{item.title}</h3>
                   <p className="text-xs sm:text-sm text-light-body leading-relaxed">{item.desc}</p>
                 </div>
@@ -377,15 +377,15 @@ export default function FeaturesPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-xs sm:text-sm">
                 <thead>
-                  <tr className="border-b border-primary/20">
+                  <tr className="border-b border-[rgba(226,161,40,0.20)]">
                     <th className="py-3 text-left text-muted-foreground font-medium">Capability</th>
-                    <th className="py-3 text-center font-semibold text-primary">QuotVid</th>
+                    <th className="py-3 text-center font-semibold text-[#e2a128]">QuotVid</th>
                     <th className="py-3 text-center font-semibold">Canva</th>
                     <th className="py-3 text-center font-semibold">CapCut</th>
                     <th className="py-3 text-center font-semibold">Manual</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-primary/10">
+                <tbody className="divide-y divide-[rgba(226,161,40,0.10)]">
                   {[
                     ["AI writes the quote", "✓", "—", "—", "—"],
                     ["YouTube video as background", "✓ (paid)", "—", "Manual", "—"],
@@ -403,7 +403,7 @@ export default function FeaturesPage() {
                   ].map(([feature, quotvid, canva, capcut, manual]) => (
                     <tr key={feature}>
                       <td className="py-3 text-muted-foreground">{feature}</td>
-                      <td className="py-3 text-center text-primary font-semibold">{quotvid}</td>
+                      <td className="py-3 text-center text-[#e2a128] font-semibold">{quotvid}</td>
                       <td className="py-3 text-center">{canva}</td>
                       <td className="py-3 text-center">{capcut}</td>
                       <td className="py-3 text-center">{manual}</td>

@@ -44,7 +44,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        scrolled
+          ? "bg-[rgba(11,15,25,0.85)] backdrop-blur-[12px] border-b border-[#1F2937] shadow-[var(--shadow-md)]"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-3 sm:px-4 py-3 sm:py-4 md:px-8">
@@ -64,7 +66,7 @@ export default function Navbar() {
           </a>
           <a
             href="https://app.quotvid.com/auth/signup"
-            className="rounded-lg bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+            className="rounded-[10px] bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
           >
             Get Started Free
           </a>
@@ -94,7 +96,7 @@ export default function Navbar() {
             </a>
             <a
               href="https://app.quotvid.com/auth/signup"
-              className="block rounded-lg bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-primary-foreground min-h-[44px] flex items-center justify-center"
+              className="block rounded-[10px] bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-white min-h-[44px] flex items-center justify-center shadow-[var(--shadow-brand)]"
               onClick={() => setMobileOpen(false)}
             >
               Get Started Free

@@ -33,7 +33,7 @@ export default function Niches() {
         </p>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           {niches.map((n) => (
-            <div key={n.label} className="rounded-full border border-primary/20 bg-secondary px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium text-foreground transition-all hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_20px_hsl(39_76%_52%/0.15)]">
+            <div key={n.label} className="rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.06)] px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium text-[#E5E7EB] transition-all hover:border-[rgba(226,161,40,0.55)] hover:bg-[rgba(226,161,40,0.12)] hover:text-[#f0b94a] hover:shadow-[0_0_20px_rgba(226,161,40,0.15)]">
               {n.icon} {n.label}
             </div>
           ))}

@@ -41,7 +41,7 @@ export default function HowItWorks() {
         </h2>
         <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
-            <div key={s.num} className="overflow-hidden rounded-xl border border-primary/20 bg-foreground/[0.02] transition-shadow hover:shadow-lg">
+            <div key={s.num} className="overflow-hidden rounded-[14px] border border-[#1F2937] bg-card shadow-[var(--shadow-card)] transition-all duration-200 hover:border-[#374151] hover:shadow-[var(--shadow-md)] hover:-translate-y-0.5">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src={s.img}
@@ -63,7 +63,7 @@ export default function HowItWorks() {
         <div className="mt-10 sm:mt-12 text-center">
           <a
             href="https://app.quotvid.com/auth/signup"
-            className="inline-block rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+            className="inline-block rounded-[10px] bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
           >
             Generate My First Video →
           </a>

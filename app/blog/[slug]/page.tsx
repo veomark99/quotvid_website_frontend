@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
             <div className="mb-4 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">{tag}</span>
+                <span key={tag} className="rounded-full bg-[rgba(226,161,40,0.15)] px-3 py-1 text-xs font-medium text-[#e2a128]">{tag}</span>
               ))}
             </div>
             <h1 className="mb-4 text-2xl sm:text-3xl font-extrabold tracking-tight md:text-4xl">{post.title}</h1>
@@ -69,16 +69,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <section className="bg-section-light py-12 sm:py-16">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
-            <article className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-primary prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold">
+            <article className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold">
               <MDXRemote source={post.content} />
             </article>
 
-            <div className="mt-12 rounded-xl border border-primary/20 bg-primary/5 p-6 sm:p-8 text-center">
+            <div className="mt-12 rounded-[14px] border border-[rgba(226,161,40,0.30)] bg-[rgba(226,161,40,0.06)] p-6 sm:p-8 text-center">
               <p className="mb-2 text-sm font-bold text-light-heading">Ready to start creating daily videos?</p>
               <p className="mb-4 text-xs text-light-body">Join QuotVid — free trial, no credit card required.</p>
               <a
                 href="https://app.quotvid.com/auth/signup"
-                className="inline-block rounded-xl bg-gradient-gold px-6 py-3 text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+                className="inline-block rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start Free →
               </a>

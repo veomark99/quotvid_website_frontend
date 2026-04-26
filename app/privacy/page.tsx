@@ -88,7 +88,7 @@ export default function PrivacyPage() {
                 {"link" in s && s.link && (
                   <Link
                     href={s.link.href}
-                    className="mt-3 inline-block text-xs sm:text-sm text-primary hover:underline"
+                    className="mt-3 inline-block text-xs sm:text-sm text-[#e2a128] hover:underline"
                   >
                     {s.link.text}
                   </Link>

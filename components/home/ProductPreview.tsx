@@ -214,7 +214,7 @@ export default function ProductPreview() {
             type="button"
             onClick={() => scrollToIndex(index - 1)}
             disabled={!canPrev}
-            className="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-primary/30 bg-background/90 p-2.5 text-foreground shadow-lg backdrop-blur-sm transition-opacity hover:bg-primary/10 disabled:pointer-events-none disabled:opacity-30 sm:left-1 md:left-2"
+            className="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[rgba(226,161,40,0.30)] bg-[rgba(11,15,25,0.85)] p-2.5 text-[#E5E7EB] shadow-lg backdrop-blur-sm transition-all hover:bg-[rgba(226,161,40,0.10)] hover:border-[rgba(226,161,40,0.55)] disabled:pointer-events-none disabled:opacity-30 sm:left-1 md:left-2"
             aria-label="Previous video"
           >
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
@@ -223,7 +223,7 @@ export default function ProductPreview() {
             type="button"
             onClick={() => scrollToIndex(index + 1)}
             disabled={!canNext}
-            className="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-primary/30 bg-background/90 p-2.5 text-foreground shadow-lg backdrop-blur-sm transition-opacity hover:bg-primary/10 disabled:pointer-events-none disabled:opacity-30 sm:right-1 md:right-2"
+            className="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[rgba(226,161,40,0.30)] bg-[rgba(11,15,25,0.85)] p-2.5 text-[#E5E7EB] shadow-lg backdrop-blur-sm transition-all hover:bg-[rgba(226,161,40,0.10)] hover:border-[rgba(226,161,40,0.55)] disabled:pointer-events-none disabled:opacity-30 sm:right-1 md:right-2"
             aria-label="Next video"
           >
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
@@ -250,7 +250,7 @@ export default function ProductPreview() {
                 data-slide
                 className="shrink-0 w-[min(100%,17.5rem)] snap-center sm:w-[min(100%,19rem)] md:w-[min(100%,20rem)]"
               >
-                <div className="group relative overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-[9/16] bg-black">
+                <div className="group relative overflow-hidden rounded-2xl border border-[#1F2937] shadow-lg aspect-[9/16] bg-black">
                   <video
                     ref={(el) => {
                       videoRefs.current[i] = el;
@@ -266,7 +266,7 @@ export default function ProductPreview() {
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-0 right-0 px-3 text-center">
-                    <span className="inline-block rounded-full bg-primary/85 px-3 py-1 text-[10px] font-bold text-primary-foreground backdrop-blur-sm sm:text-xs">
+                    <span className="inline-block rounded-full bg-[rgba(226,161,40,0.85)] px-3 py-1 text-[10px] font-bold text-white backdrop-blur-sm sm:text-xs">
                       {s.label}
                     </span>
                   </div>
@@ -285,14 +285,14 @@ export default function ProductPreview() {
                 aria-label={`Show slide ${i + 1}: ${s.label}`}
                 onClick={() => scrollToIndex(i)}
                 className={`h-2 rounded-full transition-all ${
-                  i === index ? "w-7 bg-primary" : "w-2 bg-primary/30 hover:bg-primary/50"
+                  i === index ? "w-7 bg-[#e2a128]" : "w-2 bg-[rgba(226,161,40,0.30)] hover:bg-[rgba(226,161,40,0.55)]"
                 }`}
               />
             ))}
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl border border-primary/20 shadow-xl">
+        <div className="relative overflow-hidden rounded-2xl border border-[#1F2937] shadow-xl">
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
               src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&auto=format&fit=crop"
@@ -305,7 +305,7 @@ export default function ProductPreview() {
           </div>
           <div className="absolute inset-0 flex items-center px-6 sm:px-12 md:px-16">
             <div className="max-w-lg">
-              <p className="mb-4 text-xs sm:text-sm font-semibold uppercase tracking-widest text-primary">
+              <p className="mb-4 text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#e2a128]">
                 Built for Daily Creators
               </p>
               <h3 className="mb-4 text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight">
@@ -316,7 +316,7 @@ export default function ProductPreview() {
               </p>
               <a
                 href="https://app.quotvid.com/auth/signup"
-                className="inline-block rounded-xl bg-gradient-gold px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-primary-foreground transition-transform hover:scale-105"
+                className="inline-block rounded-[10px] bg-gradient-gold px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start Free Trial — No Card →
               </a>

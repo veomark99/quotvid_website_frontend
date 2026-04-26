@@ -1,6 +1,6 @@
 export default function ComingSoon() {
   return (
-    <section className="bg-section-dark py-14 sm:py-20 md:py-28 border-t border-primary/20">
+    <section className="bg-section-dark py-14 sm:py-20 md:py-28 border-t border-[rgba(226,161,40,0.15)]">
       <div className="container mx-auto px-3 sm:px-4 md:px-8 max-w-4xl">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="mt-4 text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl">
@@ -11,8 +11,8 @@ export default function ComingSoon() {
           </p>
         </div>
         <ul className="space-y-4">
-          <li className="rounded-xl border border-primary/20 bg-card p-4 sm:p-6 flex flex-col sm:flex-row sm:items-start gap-3">
-            <span className="shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-lg" aria-hidden>
+          <li className="rounded-[14px] border border-[#1F2937] bg-card p-4 sm:p-6 flex flex-col sm:flex-row sm:items-start gap-3 transition-colors hover:border-[#374151]">
+            <span className="shrink-0 w-9 h-9 rounded-lg bg-[rgba(226,161,40,0.10)] flex items-center justify-center text-lg" aria-hidden>
               📤
             </span>
             <div>

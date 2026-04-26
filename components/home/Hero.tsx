@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-section-dark relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(39_76%_52%/0.08),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(226,161,40,0.08),transparent_70%)]" />
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
-            <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-primary/20 bg-secondary px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-muted-foreground">
+            <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.10)] px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-[#f0b94a]">
               ⚡ YouTube-Verified · 5 Platforms · 20 Categories · Auto-Posting · Free Trial
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
@@ -20,13 +20,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
                 href="https://app.quotvid.com/auth/signup"
-                className="animate-pulse-soft rounded-xl bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-primary-foreground text-center transition-transform hover:scale-105"
+                className="animate-pulse-soft rounded-[10px] bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-white text-center transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start Free Trial — No Credit Card →
               </a>
               <a
                 href="#how-it-works"
-                className="rounded-xl border border-primary/30 px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-semibold text-foreground text-center transition-colors hover:bg-primary/10"
+                className="rounded-[10px] border border-[#374151] px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-semibold text-[#E5E7EB] text-center transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563]"
               >
                 See How It Works ↓
               </a>

@@ -4,7 +4,7 @@ import { SiTiktok } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bg-section-dark border-t border-primary/20">
+    <footer className="bg-section-dark border-t border-[#1F2937]">
       <div className="container mx-auto px-3 sm:px-4 py-12 sm:py-16 md:px-8">
         <div className="grid gap-8 sm:gap-12 sm:grid-cols-2 md:grid-cols-3 items-start">
           {/* Brand */}
@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mt-2 mb-3">
               AI-powered quote videos for content creators worldwide.
             </p>
-            <a href="mailto:hello@quotvid.com" className="block text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors mb-2">
+            <a href="mailto:hello@quotvid.com" className="block text-xs sm:text-sm text-muted-foreground hover:text-[#e2a128] transition-colors mb-2">
               hello@quotvid.com
             </a>
             <div className="mt-4 sm:mt-6 flex gap-3">
@@ -49,7 +49,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-[#e2a128] transition-colors"
                   aria-label={s.label}
                 >
                   {s.icon}
@@ -60,32 +60,32 @@ export default function Footer() {
 
           {/* Product */}
           <div className="flex flex-col">
-            <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-semibold uppercase tracking-wider text-foreground">Product</h4>
+            <h4 className="mb-3 sm:mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-white">Product</h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <li><Link href="/features" className="text-muted-foreground hover:text-primary transition-colors">Features</Link></li>
-              <li><Link href="/solutions" className="text-muted-foreground hover:text-primary transition-colors">Solutions</Link></li>
-              <li><Link href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/features" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Features</Link></li>
+              <li><Link href="/solutions" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Solutions</Link></li>
+              <li><Link href="/pricing" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Pricing</Link></li>
+              <li><Link href="/blog" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Blog</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-[#e2a128] transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div className="flex flex-col">
-            <h4 className="mb-3 sm:mb-4 text-xs sm:text-sm font-semibold uppercase tracking-wider text-foreground">Support</h4>
+            <h4 className="mb-3 sm:mb-4 text-xs font-semibold uppercase tracking-[0.08em] text-white">Support</h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <li><Link href="/help" className="text-muted-foreground hover:text-primary transition-colors">Help Center</Link></li>
-              <li><Link href="/sitemap-page" className="text-muted-foreground hover:text-primary transition-colors">Sitemap</Link></li>
-              <li><a href="https://app.quotvid.com/auth/signup" className="text-muted-foreground hover:text-primary transition-colors">Sign up</a></li>
-              <li><Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/help" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Help Center</Link></li>
+              <li><Link href="/sitemap-page" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Sitemap</Link></li>
+              <li><a href="https://app.quotvid.com/auth/signup" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Sign up</a></li>
+              <li><Link href="/privacy" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
         </div>
 
-        <div className="mt-8 sm:mt-12 border-t border-primary/20 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
+        <div className="mt-8 sm:mt-12 border-t border-[rgba(226,161,40,0.20)] pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
           © 2026 QuotVid. All rights reserved. · Made for creators worldwide
         </div>
       </div>

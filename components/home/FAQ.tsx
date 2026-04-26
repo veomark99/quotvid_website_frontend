@@ -52,17 +52,17 @@ export default function FAQ() {
         </h2>
         <div className="space-y-3">
           {faqs.map((f, i) => (
-            <div key={i} className="rounded-xl border border-primary/20 bg-foreground/[0.02] px-4 sm:px-6">
+            <div key={i} className="rounded-[12px] border border-[#1F2937] bg-card px-4 sm:px-6 transition-colors duration-150 hover:border-[#374151]">
               <button
-                className="flex w-full items-center justify-between py-4 text-left text-xs sm:text-sm font-semibold text-light-heading"
+                className="flex w-full items-center justify-between py-4 text-left text-sm font-medium text-[#E5E7EB] transition-colors duration-150 hover:text-white"
                 onClick={() => setOpen(open === i ? null : i)}
                 aria-expanded={open === i}
               >
                 <span>{f.q}</span>
-                <span className="ml-4 shrink-0 text-primary">{open === i ? "−" : "+"}</span>
+                <span className={`ml-4 shrink-0 transition-colors duration-150 ${open === i ? 'text-[#e2a128]' : 'text-[#6B7280]'}`}>{open === i ? "−" : "+"}</span>
               </button>
               {open === i && (
-                <div className="pb-4 text-xs sm:text-sm leading-relaxed text-light-body">{f.a}</div>
+                <div className="pb-5 text-sm leading-relaxed text-[#9CA3AF]">{f.a}</div>
               )}
             </div>
           ))}
