@@ -3,7 +3,16 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { SocialPlatformIcon } from "@/components/marketing/SocialPlatformIcon";
 import { SITE_URL } from "@/lib/site";
+
+const HERO_PLATFORMS: { id: string; label: string }[] = [
+  { id: "youtube", label: "YouTube" },
+  { id: "instagram", label: "Instagram" },
+  { id: "tiktok", label: "TikTok" },
+  { id: "pinterest", label: "Pinterest" },
+  { id: "facebook", label: "Facebook" },
+];
 
 export const metadata: Metadata = {
   title: "Social Media Integrations — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
@@ -28,7 +37,6 @@ export const metadata: Metadata = {
 const platforms = [
   {
     id: "youtube",
-    icon: "▶",
     title: "YouTube Shorts Auto-Posting",
     whatWePost: "Short-form vertical video (1080×1920), custom title and description, posted as YouTube Shorts.",
     howWeConnect: "Google OAuth 2.0. Two permissions only:",
@@ -40,7 +48,6 @@ const platforms = [
   },
   {
     id: "instagram",
-    icon: "📷",
     title: "Instagram Reels Auto-Posting",
     whatWePost: "Vertical video (1080×1920) published as an Instagram Reel, caption from Persona settings.",
     requirements: "Professional account (Creator or Business), linked to a Facebook Page.",
@@ -54,7 +61,6 @@ const platforms = [
   },
   {
     id: "tiktok",
-    icon: "♪",
     title: "TikTok Auto-Posting",
     whatWePost: "Vertical video (1080×1920), caption from Persona or Custom Studio settings.",
     howWeConnect: "TikTok OAuth 2.0 with PKCE security. Two permissions:",
@@ -66,7 +72,6 @@ const platforms = [
   },
   {
     id: "pinterest",
-    icon: "📌",
     title: "Pinterest Video Pin Auto-Posting",
     whatWePost: "Video Pin on chosen board, title and description from Persona/custom settings.",
     howWeConnect: "Pinterest OAuth 2.0. Permissions:",
@@ -79,7 +84,6 @@ const platforms = [
   },
   {
     id: "facebook",
-    icon: "f",
     title: "Facebook Pages Auto-Posting",
     requirements: "Must be an admin of at least one Facebook Page.",
     whatWePost: "Video post on selected Page, caption from Persona/custom text.",
@@ -143,12 +147,13 @@ export default function IntegrationsPage() {
               QuotVid integrates with YouTube, Instagram, TikTok, Pinterest, and Facebook using each platform&apos;s official login system. Your credentials are never stored. Connect once. Post forever.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {["YouTube", "Instagram", "TikTok", "Pinterest", "Facebook"].map((name) => (
+              {HERO_PLATFORMS.map(({ id, label }) => (
                 <span
-                  key={name}
-                  className="rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.06)] px-4 py-2 text-xs sm:text-sm font-medium text-[#E5E7EB]"
+                  key={id}
+                  className="inline-flex items-center gap-2 rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.06)] px-4 py-2 text-xs sm:text-sm font-medium text-[#E5E7EB]"
                 >
-                  {name}
+                  <SocialPlatformIcon platform={id} size={22} className="rounded-md" />
+                  {label}
                 </span>
               ))}
             </div>
@@ -165,9 +170,7 @@ export default function IntegrationsPage() {
                 className="scroll-mt-28 rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-6 sm:p-8 transition-colors hover:border-[#374151]"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl font-bold text-[#e2a128]" aria-hidden>
-                    {p.icon}
-                  </span>
+                  <SocialPlatformIcon platform={p.id} size={32} className="rounded-lg" />
                   <h2 className="text-xl sm:text-2xl font-bold text-light-heading">{p.title}</h2>
                 </div>
 
