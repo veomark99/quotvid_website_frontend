@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "What is the free trial?",
-    a: "7 days free. 5 videos per day. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
+    a: "5-day free trial. Up to 5 videos per day during the trial. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
   },
   {
     q: "Can I cancel anytime?",

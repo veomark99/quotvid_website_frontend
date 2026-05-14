@@ -32,7 +32,7 @@ export default function Hero() {
               </a>
             </div>
             <p className="mt-4 sm:mt-6 text-xs text-muted-foreground">
-              7-day free trial · 5 platforms · Takes 4 minutes to set up ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team
+              5-day free trial · 5 platforms · Takes 4 minutes to set up ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team
             </p>
           </div>
 

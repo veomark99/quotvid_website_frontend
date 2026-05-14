@@ -127,7 +127,7 @@ export function HomeFaqJsonLd() {
     },
     {
       q: "What is the free trial?",
-      a: "7 days free. 5 videos per day. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
+      a: "5-day free trial. Up to 5 videos per day during the trial. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
     },
     {
       q: "Can I cancel anytime?",
@@ -219,7 +219,7 @@ export function PricingFaqJsonLd() {
     { q: "What platforms are the videos made for?", a: "TikTok, Instagram Reels, and YouTube Shorts. All videos are 1080×1920 vertical format." },
     { q: "Can I use my own logo and branding?", a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. All paid plans include full branding control." },
     { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. Watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically." },
-    { q: "Is there a free trial?", a: "Yes — the free plan lets you generate your first 5 videos with no credit card needed. The full pipeline runs: AI quote writing, video render, music, MP4 export." },
+    { q: "Is there a free trial?", a: "Yes — depending on how you sign up you can get a 5-day automation trial (funnel signups) or start on the free plan with limited videos. No credit card required where we advertise that. The full pipeline runs: AI quote writing, video render, music, MP4 export." },
     { q: "Can I cancel anytime?", a: "Yes. Monthly plans cancel anytime from your billing settings. Annual plans include a 7-day money-back guarantee." },
     { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
   ];

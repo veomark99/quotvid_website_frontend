@@ -17,7 +17,7 @@ export default function FinalCTA() {
           Start Your Free Trial — No Credit Card Required →
         </a>
         <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-muted-foreground">
-          ✓ 7 days free · ✓ 5 platforms · ✓ Cancel anytime
+          ✓ 5 days free · ✓ 5 platforms · ✓ Cancel anytime
         </p>
       </div>
     </section>
