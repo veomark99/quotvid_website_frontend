@@ -29,7 +29,7 @@ export default function HelpPage() {
               Help <span className="text-gradient-gold">Center</span>
             </h1>
             <p className="mb-8 text-sm sm:text-lg text-muted-foreground">
-              Six topic areas below. Open any question to read a short answer. Video walkthroughs can be added later; written guides stay here for quick scanning.
+              Browse six topic areas below. Each article includes detailed, step-by-step instructions for using QuotVid at app.quotvid.com—from your first video through billing, publishing, and branding.
             </p>
             <Link
               href="/contact"
@@ -88,9 +88,9 @@ export default function HelpPage() {
                           ▾
                         </span>
                       </summary>
-                      <p className="mt-3 text-xs sm:text-sm text-light-body leading-relaxed border-t border-[rgba(226,161,40,0.10)] pt-3">
+                      <div className="mt-3 text-xs sm:text-sm text-light-body leading-relaxed border-t border-[rgba(226,161,40,0.10)] pt-3 whitespace-pre-line">
                         {article.body}
-                      </p>
+                      </div>
                       <p className="mt-2 text-[10px] text-light-muted">
                         <a href={`#${article.slug}`} className="text-[#e2a128] hover:underline">
                           Link to this answer
