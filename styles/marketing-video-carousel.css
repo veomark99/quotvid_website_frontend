@@ -1,0 +1,203 @@
+/* Embla carousel + Pinterest pin cards — adapted from quotvid_funnels */
+
+.qv-video-carousel {
+  --qv-carousel-gap: clamp(10px, 1.4vw, 16px);
+  display: block;
+  width: 100%;
+}
+
+.qv-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y pinch-zoom;
+}
+
+.qv-carousel-container {
+  display: flex;
+  gap: var(--qv-carousel-gap);
+}
+
+.qv-carousel-slide {
+  flex: 0 0 calc((100% - 3 * var(--qv-carousel-gap)) / 4);
+  min-width: 0;
+  box-sizing: border-box;
+  container-type: inline-size;
+}
+
+.qv-carousel-slide .qv-pin {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.qv-pin {
+  border-radius: 10px;
+  overflow: visible;
+  background: transparent;
+}
+
+.qv-pin-img {
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(10px, 3cqi, 15px);
+  background: #0d1117;
+}
+
+.qv-pin-img--video {
+  padding: 0;
+  isolation: isolate;
+  container-type: inline-size;
+}
+
+.qv-pin-img--video .qv-pin-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.qv-pin-video-chrome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 8px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.qv-pin-video-chrome-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 0.8em;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.12);
+}
+
+.qv-pin-save-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #e60023;
+  color: #fff;
+  font-size: clamp(12px, 3.5cqi, 16px);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 10px rgba(230, 0, 35, 0.35);
+  border: none;
+}
+
+.qv-pin-img-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-height: 100%;
+  width: 100%;
+  padding: 10px;
+  gap: 4px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to top,
+    rgba(13, 17, 23, 0.76) 0%,
+    rgba(13, 17, 23, 0.22) 48%,
+    transparent 74%
+  );
+}
+
+.qv-pin-auto {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(226, 161, 40, 0.18);
+  border: 1px solid rgba(226, 161, 40, 0.35);
+  color: #f0b94a;
+  font-size: clamp(10px, 3cqi, 13px);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 4px;
+}
+
+.qv-pin-label {
+  font-size: clamp(12px, 3cqi, 16px);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.qv-pin-footer {
+  border-top: none;
+  background: transparent;
+  padding: 9px 0 0;
+}
+
+.qv-pin-stat {
+  font-size: clamp(11px, 2.8cqi, 15px);
+  color: #9ca3af;
+  margin: 0;
+}
+
+.qv-carousel-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-bottom: 4px;
+}
+
+.qv-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(226, 161, 40, 0.3);
+  transition: background 0.25s, width 0.25s;
+}
+
+.qv-dot--active {
+  background: #e2a128;
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .qv-carousel-container {
+    gap: clamp(8px, 3vw, 14px);
+  }
+
+  .qv-carousel-slide {
+    flex: 0 0 76%;
+  }
+
+  .qv-carousel-dots {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .qv-carousel-slide {
+    flex: 0 0 85%;
+  }
+}
