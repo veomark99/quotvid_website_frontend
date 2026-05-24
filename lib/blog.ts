@@ -11,6 +11,8 @@ export interface BlogPost {
   publishedAt: string;
   author: string;
   tags: string[];
+  lang: string;
+  translationOf?: string;
   content: string;
 }
 
@@ -28,6 +30,8 @@ export function getAllPosts(): BlogPost[] {
         publishedAt: data.publishedAt as string,
         author: data.author as string,
         tags: (data.tags as string[]) ?? [],
+        lang: (data.lang as string) ?? "en",
+        translationOf: data.translationOf as string | undefined,
         content,
       };
     })
@@ -46,6 +50,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     publishedAt: data.publishedAt as string,
     author: data.author as string,
     tags: (data.tags as string[]) ?? [],
+    lang: (data.lang as string) ?? "en",
+    translationOf: data.translationOf as string | undefined,
     content,
   };
 }

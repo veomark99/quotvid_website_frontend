@@ -51,6 +51,9 @@ export default function BlogPage() {
                 {posts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-6 transition-all hover:border-[#374151] hover:shadow-[var(--shadow-md)]">
                     <div className="mb-3 flex flex-wrap gap-1.5">
+                      {post.lang !== "en" && (
+                        <span className="rounded-full bg-[rgba(96,165,250,0.12)] px-2.5 py-0.5 text-[10px] font-medium uppercase text-[#60A5FA]">{post.lang}</span>
+                      )}
                       {post.tags.slice(0, 2).map((tag) => (
                         <span key={tag} className="rounded-full bg-[rgba(226,161,40,0.10)] px-2.5 py-0.5 text-[10px] font-medium text-[#e2a128]">{tag}</span>
                       ))}

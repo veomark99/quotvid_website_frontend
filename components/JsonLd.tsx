@@ -39,7 +39,12 @@ export function WebsiteJsonLd() {
                 "@type": "ContactPoint",
                 email: "hello@quotvid.com",
                 contactType: "customer service",
-                availableLanguage: ["English", "Urdu", "Arabic"],
+                availableLanguage: [
+                  "English", "Spanish", "French", "German", "Portuguese", "Italian",
+                  "Turkish", "Dutch", "Polish", "Vietnamese", "Indonesian", "Thai",
+                  "Chinese", "Japanese", "Korean", "Hindi", "Bengali", "Urdu",
+                  "Arabic", "Persian", "Tamil", "Russian",
+                ],
               },
             },
             {
@@ -248,12 +253,15 @@ export function ArticleJsonLd({
   description,
   publishedAt,
   slug,
+  lang = "en",
 }: {
   title: string;
   description: string;
   publishedAt: string;
   slug: string;
+  lang?: string;
 }) {
+  const inLanguage = lang === "zh" ? "zh-Hans" : lang === "pt" ? "pt-BR" : lang;
   return (
     <script
       type="application/ld+json"
@@ -265,7 +273,7 @@ export function ArticleJsonLd({
           description,
           datePublished: publishedAt,
           dateModified: publishedAt,
-          inLanguage: "en-US",
+          inLanguage,
           author: {
             "@type": "Organization",
             name: "QuotVid",

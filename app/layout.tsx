@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | QuotVid",
   },
   description:
-    "Turn quotes into viral short-form videos daily. AI-powered quote video generator for TikTok, Instagram Reels, and YouTube Shorts. 20 languages. No editing required.",
+    "Turn quotes into viral short-form videos daily. AI-powered quote video generator for TikTok, Instagram Reels, and YouTube Shorts. 25 languages. No editing required.",
   keywords: [
     "quote video generator",
     "AI video maker",

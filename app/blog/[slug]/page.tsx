@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import BlogLanguageSwitcher from "@/components/BlogLanguageSwitcher";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getBlogHreflangAlternates } from "@/lib/blog-i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -21,14 +23,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     keywords: post.tags,
     path: `/blog/${post.slug}`,
   });
+  const hreflang = getBlogHreflangAlternates(params.slug);
+  const canonical = `${SITE_URL}/blog/${params.slug}`;
+
   return {
     ...base,
+    alternates: {
+      canonical,
+      languages: Object.keys(hreflang).length > 0 ? hreflang : undefined,
+    },
     openGraph: {
       ...base.openGraph,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.publishedAt,
-      url: `${SITE_URL}/blog/${post.slug}`,
+      url: canonical,
+      locale: post.lang === "en" ? "en_US" : undefined,
     },
     twitter: {
       ...base.twitter,
@@ -43,7 +53,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} />
+      <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} lang={post.lang} />
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: SITE_URL },
@@ -69,9 +79,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <section className="bg-section-light py-12 sm:py-16">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
-            <article className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold">
+            <article lang={post.lang} className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold" dir={["ar", "ur", "fa"].includes(post.lang) ? "rtl" : undefined}>
               <MDXRemote source={post.content} />
             </article>
+
+            <BlogLanguageSwitcher slug={post.slug} />
 
             <div className="mt-12 rounded-[14px] border border-[rgba(226,161,40,0.30)] bg-[rgba(226,161,40,0.06)] p-6 sm:p-8 text-center">
               <p className="mb-2 text-sm font-bold text-light-heading">Ready to start creating daily videos?</p>
