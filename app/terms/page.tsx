@@ -44,7 +44,7 @@ const sections = [
   },
   {
     title: "8. Payment Terms",
-    content: `Payments are processed by Lemon Squeezy LLC, our payment processor.\n\nFree Trial: A 5-day free trial is available to new users (quota and features as shown in the app at sign-up). No credit card is required to start.\n\nSubscriptions: Monthly and annual subscriptions renew automatically until cancelled. You may cancel at any time from your billing settings.\n\nLifetime Deal: One-time payment plans grant lifetime access to the plan features at time of purchase.\n\nRefund Policy: We offer a 7-day money-back guarantee on paid plans. Contact us at hello@quotvid.com within 7 days of your payment.`,
+    content: `Payments are processed by Lemon Squeezy LLC, our payment processor.\n\nLifetime Deal: QuotVid is offered as a single $10 one-time payment plan. Pay once and receive lifetime access to the features available at time of purchase, including all future feature updates.\n\nFree Trial: A 5-day free trial may be available to new users via select sign-up flows (quota and features as shown in the app). No credit card is required to start a trial where advertised.\n\nLegacy Subscriptions: Some existing customers may still be on legacy monthly or annual subscriptions until they cancel or migrate.\n\nRefund Policy: We offer a 7-day money-back guarantee on the lifetime plan. Contact us at hello@quotvid.com within 7 days of your payment.`,
   },
   {
     title: "9. Video Retention",

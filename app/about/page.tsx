@@ -42,7 +42,7 @@ const values = [
   },
   {
     title: "Honest pricing",
-    desc: "Free is actually free — no trial countdown, no card required. Paid plans reflect real value: daily automation, no watermark, social posting. No dark patterns. No surprise charges.",
+    desc: "5-day YouTube or Pinterest trial — no card required. After that, one $10 lifetime payment. No subscriptions, no surprise charges.",
   },
 ];
 
@@ -242,7 +242,7 @@ export default function AboutPage() {
           <div className="container mx-auto max-w-2xl px-3 sm:px-4 text-center md:px-8">
             <h2 className="mb-4 text-xl sm:text-2xl font-bold">Try It for Free</h2>
             <p className="mb-8 text-sm sm:text-base text-muted-foreground">
-              Generate your first 5 videos for free. No credit card. No setup complexity. See the output
+              Start a 5-day YouTube or Pinterest trial for free. No credit card. No setup complexity. See the output
               before you decide anything.
             </p>
             <a

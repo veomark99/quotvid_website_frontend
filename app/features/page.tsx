@@ -270,47 +270,30 @@ export default function FeaturesPage() {
         {/* Comparison table */}
         <section className="bg-section-dark py-14 sm:py-20">
           <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8">
-            <h2 className="mb-10 text-center text-2xl sm:text-3xl font-bold">Free vs Monthly vs Annual vs Lifetime</h2>
+            <h2 className="mb-10 text-center text-2xl sm:text-3xl font-bold">Trial vs Lifetime</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-xs sm:text-sm">
                 <thead>
                   <tr className="border-b border-[rgba(226,161,40,0.20)]">
                     <th className="py-3 text-left text-muted-foreground font-medium">Feature</th>
-                    <th className="py-3 text-center font-semibold">Free</th>
-                    <th className="py-3 text-center font-semibold">Monthly<br /><span className="text-[#e2a128] text-xs">$10/mo</span></th>
-                    <th className="py-3 text-center font-semibold text-[#e2a128]">Annual<br /><span className="text-xs">$99/yr</span></th>
-                    <th className="py-3 text-center font-semibold">Lifetime<br /><span className="text-xs">$269</span></th>
+                    <th className="py-3 text-center font-semibold">5-Day Trial<br /><span className="text-[#e2a128] text-xs">YouTube or Pinterest</span></th>
+                    <th className="py-3 text-center font-semibold text-[#e2a128]">Lifetime<br /><span className="text-xs">$10 one-time</span></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[rgba(226,161,40,0.10)]">
                   {[
-                    ["Videos", "5 total", "20/day", "20/day", "20/day"],
-                    ["AI quote generation", "✓", "✓", "✓", "✓"],
-                    ["20 categories · 10+ video styles", "✓", "✓", "✓", "✓"],
-                    ["25 languages + RTL", "✓", "✓", "✓", "✓"],
-                    ["Download MP4 with custom name", "✓", "✓", "✓", "✓"],
-                    ["Watermark", "QuotVid", "None", "None", "None"],
-                    ["Custom Studio + live preview", "—", "✓", "✓", "✓"],
-                    ["YouTube background picker", "—", "✓", "✓", "✓"],
-                    ["Background library", "—", "✓", "✓", "✓"],
-                    ["Upload own backgrounds", "—", "✓", "✓", "✓"],
-                    ["Custom accent colors + font size", "—", "✓", "✓", "✓"],
-                    ["Upload own music", "—", "✓", "✓", "✓"],
-                    ["Logo watermark + channel name badge", "—", "✓", "✓", "✓"],
-                    ["Cloud video storage", "—", "✓", "✓", "✓"],
-                    ["Social auto-posting (5 platforms: YouTube, Instagram, TikTok, Pinterest, Facebook)", "—", "✓", "✓", "✓"],
-                    ["Per-platform posting schedule", "—", "✓", "✓", "✓"],
-                    ["Timezone scheduling", "—", "✓", "✓", "✓"],
-                    ["AI video retention", "7 days", "7 days", "7 days", "7 days"],
-                    ["Studio video retention", "—", "Forever", "Forever", "Forever"],
-                    ["Priority support", "—", "—", "✓", "✓"],
-                  ].map(([feature, free, monthly, annual, lifetime]) => (
+                    ["Videos", "1/day auto-generated", "Unlimited/day"],
+                    ["Trial length", "5 days", "Forever"],
+                    ["Platforms", "1 (your trial platform)", "All 5 unlocked"],
+                    ["Auto-posting", "Trial platform only", "All platforms"],
+                    ["Custom Studio", "—", "✓"],
+                    ["No watermark", "—", "✓"],
+                    ["Credit card required", "No", "At upgrade"],
+                  ].map(([feature, trial, lifetime]) => (
                     <tr key={feature}>
                       <td className="py-3 text-muted-foreground">{feature}</td>
-                      <td className="py-3 text-center">{free}</td>
-                      <td className="py-3 text-center">{monthly}</td>
-                      <td className="py-3 text-center text-[#e2a128] font-medium">{annual}</td>
-                      <td className="py-3 text-center">{lifetime}</td>
+                      <td className="py-3 text-center">{trial}</td>
+                      <td className="py-3 text-center text-[#e2a128] font-medium">{lifetime}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -355,7 +338,7 @@ export default function FeaturesPage() {
                 },
                 {
                   title: "Creators Testing a New Niche",
-                  desc: "You want to launch a new quote page but are not sure which niche will resonate. The free plan gives you 5 videos to test across different categories before committing.",
+                  desc: "You want to launch a new quote page but are not sure which niche will resonate. Start a 5-day YouTube or Pinterest trial to test automation before upgrading to lifetime.",
                 },
               ].map((item) => (
                 <div key={item.title} className="rounded-[14px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] p-5 sm:p-6 transition-colors hover:border-[#374151]">
