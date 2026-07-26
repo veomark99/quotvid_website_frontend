@@ -189,7 +189,7 @@ export default function AboutPage() {
                   Nastaliq fonts are not included. Persian creators use workarounds that corrupt on mobile.
                 </p>
                 <p>
-                  Urdu poetry channels on Instagram and TikTok routinely hit millions of followers. Pakistani,
+                  Urdu poetry channels on YouTube Shorts and Pinterest routinely hit millions of followers. Pakistani,
                   Indian, and Middle Eastern creators represent some of the fastest-growing audiences on short-form
                   platforms — and they are consistently underserved by the tools available to them.
                 </p>

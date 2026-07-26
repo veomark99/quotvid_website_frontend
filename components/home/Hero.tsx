@@ -8,14 +8,14 @@ export default function Hero() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-1.5 sm:gap-2 rounded-full border border-[rgba(226,161,40,0.25)] bg-[rgba(226,161,40,0.10)] px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-medium text-[#f0b94a]">
-              ⚡ YouTube-Verified · 5 Platforms · 20 Categories · Auto-Posting · Free Trial
+              ⚡ YouTube-Verified · YouTube & Pinterest · 20 Categories · Auto-Posting · Free Trial
             </div>
             <h1 className="mb-4 sm:mb-6 text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
               Post Quote Videos to Pinterest & YouTube.{" "}
               <span className="text-gradient-gold">Automatically. Every Day.</span>
             </h1>
             <p className="mb-6 sm:mb-8 text-sm sm:text-lg leading-relaxed text-muted-foreground">
-              QuotVid generates professional AI quote videos in 1080×1920 and posts them to Pinterest, YouTube Shorts, Instagram Reels, TikTok, and Facebook — on your schedule, in your timezone. Set it up once. Wake up to published content.
+              QuotVid generates professional AI quote videos in 1080×1920 and posts them to Pinterest and YouTube Shorts — on your schedule, in your timezone. Set it up once. Wake up to published content.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
@@ -32,7 +32,7 @@ export default function Hero() {
               </a>
             </div>
             <p className="mt-4 sm:mt-6 text-xs text-muted-foreground">
-              5-day free trial · 5 platforms · Takes 4 minutes to set up ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team
+              5-day free trial · YouTube &amp; Pinterest · Takes 4 minutes to set up ✓ YouTube integration verified by Google&apos;s Third Party Data Safety Team
             </p>
           </div>
 

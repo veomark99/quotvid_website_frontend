@@ -1,5 +1,5 @@
 const stats = [
-  { icon: "📲", label: "5 Platforms — Auto-Posting" },
+  { icon: "📲", label: "YouTube & Pinterest — Auto-Posting" },
   { icon: "🌍", label: "12 Languages + RTL" },
   { icon: "⚡", label: "4-Minute Setup" },
   { icon: "🎯", label: "20 Categories · 17 Video Styles" },

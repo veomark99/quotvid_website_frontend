@@ -27,7 +27,7 @@ export const helpCategories: HelpCategory[] = [
       {
         slug: "how-quotvid-works",
         title: "How QuotVid works",
-        body: `QuotVid is an AI-powered platform that turns short quotes into ready-to-publish vertical videos. Every export is delivered as an MP4 file at 1080×1920 pixels (9:16 aspect ratio), formatted for TikTok, Instagram Reels, YouTube Shorts, Pinterest, and similar channels.
+        body: `QuotVid is an AI-powered platform that turns short quotes into ready-to-publish vertical videos. Every export is delivered as an MP4 file at 1080×1920 pixels (9:16 aspect ratio), formatted for YouTube Shorts, Pinterest, Pinterest, and similar channels.
 
 What QuotVid does for you
 The platform handles quote writing (in AI mode), visual layout, background selection, typography, background music, rendering, and—when your plan and integrations allow—scheduling posts to connected social accounts. You focus on strategy and distribution; QuotVid handles production.
@@ -545,7 +545,7 @@ Typical duration: Approximately 30–45 seconds, depending on quote length, temp
 
 Audio
 Codec: AAC.
-Sample rate: 48 kHz (suitable for Instagram Reels and similar platforms).
+Sample rate: 48 kHz (suitable for YouTube Shorts and Pinterest).
 Background music mixed at configured volume with fades.
 
 Delivery
@@ -553,7 +553,7 @@ Files are available for download from the app and may be uploaded to R2-backed s
 “Fast start” moov atom placement supports quicker playback in browsers.
 
 Platform notes
-TikTok, Instagram Reels, YouTube Shorts, and Pinterest Pins accept vertical MP4 within platform size limits. If a network rejects a file, check its current maximum file size and duration policies.`,
+YouTube Shorts and Pinterest Pins accept vertical MP4 within platform size limits. If a network rejects a file, check its current maximum file size and duration policies.`,
       },
       {
         slug: "generation-stuck",
@@ -606,17 +606,14 @@ Platform marked “active” in Integrations (some networks may show “Coming S
 
 Connection steps
 1. Sign in and open Integrations in the sidebar.
-2. Locate the platform card (Pinterest, TikTok, Instagram, YouTube, Facebook).
+2. Locate the platform card (YouTube or Pinterest).
 3. Click Connect.
 4. You are redirected to the official OAuth login for that network. Sign in and approve the requested permissions.
 5. After success, you return to QuotVid and the connected account or channel name appears on the card.
 
 Permissions (summary)
 YouTube — Upload videos and read channel information for labeling.
-Instagram — Publish content and read account/Page data as required by Meta.
-TikTok — Upload and publish video content; read display name.
 Pinterest — Read boards, create pins, read username.
-Facebook — List managed Pages and post to the Page you authorize.
 
 Disconnecting
 Click Disconnect on the platform card. QuotVid deletes your access token immediately and cannot post until you connect again.
@@ -647,28 +644,28 @@ Content format
 Videos are vertical MP4s suitable for video pins. Titles and descriptions may be derived from quote metadata and persona settings.`,
       },
       {
-        slug: "connect-tiktok-instagram-youtube",
-        title: "Connect TikTok, Instagram, and YouTube",
-        body: `QuotVid supports multiple short-form networks. Availability depends on rollout status in Integrations.
+        slug: "connect-youtube",
+        title: "Connect YouTube",
+        body: `YouTube Shorts is a primary integration for QuotVid automation.
 
-TikTok
-Connect via OAuth when the TikTok card is active.
-Permissions include video upload and publish capabilities for your authorized account.
-Posting times are configured per platform under AI Persona.
+Connection steps
+1. Open Integrations.
+2. Click Connect on the YouTube card.
+3. Sign in with the Google account that owns the channel you want to publish to.
+4. Approve upload and channel-read permissions.
+5. Confirm your channel name appears on the card.
 
-Instagram (Reels)
-Typically requires a Meta business or creator setup as described in-app.
-Permissions cover publishing and account insights needed for Reels delivery.
-Reels require vertical video; QuotVid exports 9:16 MP4 by default.
+After connecting
+Open AI Persona → Posting Preferences.
+Set your timezone and the daily time you want Shorts to go live.
+Ensure auto-post is enabled for YouTube if you want hands-free publishing.
 
-YouTube (Shorts)
-Connect your Google account and authorize the YouTube channel you manage.
-Uploaded videos are Shorts-compatible vertical MP4 files.
-You may always download and upload manually via YouTube Studio if preferred.
+Funnel trial users
+If you signed up via a YouTube funnel, connecting YouTube starts your five-day trial countdown.
 
-If a platform shows “Coming Soon”
-Use Download from Generated videos and upload natively until Connect is enabled for your account.
-Watch product updates or the Integrations page for status changes.`,
+Content format
+Uploaded videos are Shorts-compatible vertical MP4 files (1080×1920).
+You may always download and upload manually via YouTube Studio if preferred.`,
       },
       {
         slug: "posting-schedule",
@@ -949,9 +946,8 @@ Fix
 6. Allow the next generation cycle to create fresh posting jobs.
 
 Platform-specific notes
-Instagram may require Business/Creator account type.
 YouTube requires channel ownership on the authorized Google account.
-TikTok may require creator account eligibility per TikTok policies.`,
+Pinterest requires board access for the boards you select.`,
       },
       {
         slug: "contact-support",
@@ -974,7 +970,7 @@ For billing: order ID or receipt from Lemon Squeezy.
 
 What we cannot do via email
 Reset social network passwords (use each platform’s recovery).
-Guarantee posting during third-party outages (Meta, TikTok, Google, Pinterest).
+Guarantee posting during third-party outages (Google, Pinterest).
 
 We read every message and will guide you to resolution or escalate internally when needed.`,
       },

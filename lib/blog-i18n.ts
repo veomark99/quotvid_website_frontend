@@ -30,10 +30,8 @@ export const BLOG_TRANSLATION_LANGS = [
 export const TRANSLATED_BLOG_SOURCES = new Set([
   "how-to-make-motivational-quote-videos-for-youtube-shorts",
   "how-to-automate-quote-videos-on-pinterest",
-  "how-to-start-an-instagram-quote-page-from-zero",
   "text-to-video-quote-generator-complete-guide",
   "faceless-youtube-channel-with-quote-videos",
-  "stoic-quote-videos-tiktok-instagram-strategy",
 ]);
 
 const HREFLANG_MAP: Record<string, string> = {

@@ -1,13 +1,13 @@
 const pains = [
   "Creating videos manually takes 30–60 minutes every single day",
-  "Then you upload to Pinterest. Then YouTube. Then TikTok. Separately.",
+  "Then you upload to Pinterest. Then YouTube. Separately.",
   "You miss a day. Then three days. The algorithm forgets you.",
   "Competitors who post consistently are growing. You are not.",
 ];
 
 const solutions = [
   "QuotVid generates your videos automatically — fresh every day",
-  "Connects to Pinterest, YouTube, Instagram, TikTok, and Facebook",
+  "Connects to Pinterest and YouTube",
   "Posts automatically on your schedule, in your timezone",
   "You do nothing. You wake up to published content.",
 ];

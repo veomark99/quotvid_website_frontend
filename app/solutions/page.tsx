@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Solutions — Quote to Video, Text to Video & Motivation | QuotVid",
   description:
-    "Browse QuotVid solution guides: quote to video, text to video quotes, and motivational quote video maker. AI-powered 1080×1920 shorts for TikTok, Reels, and YouTube Shorts.",
+    "Browse QuotVid solution guides: quote to video, text to video quotes, and motivational quote video maker. AI-powered 1080×1920 shorts for YouTube Shorts and Pinterest.",
   keywords: [
     "quote to video",
     "text to video quotes",

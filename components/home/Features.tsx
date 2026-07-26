@@ -10,10 +10,10 @@ const features = [
   },
   {
     icon: "📲",
-    title: "Auto-Post to 5 Platforms",
-    desc: "Pinterest, YouTube Shorts, Instagram Reels, TikTok, and Facebook Pages. Set a different posting time per platform. Your timezone. Your rules. Posts go live while you sleep.",
+    title: "Auto-Post to YouTube & Pinterest",
+    desc: "Pinterest and YouTube Shorts. Set a different posting time per platform. Your timezone. Your rules. Posts go live while you sleep.",
     img: "https://images.unsplash.com/photo-1611162616305-c69b3fa7f119?w=600&q=80&auto=format&fit=crop",
-    imgAlt: "Phone showing multiple social apps for auto-posting",
+    imgAlt: "Phone showing social apps for auto-posting",
   },
   {
     icon: "🎨",

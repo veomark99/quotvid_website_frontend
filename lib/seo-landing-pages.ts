@@ -15,9 +15,9 @@ export type SeoLandingPage = {
 export const SEO_LANDING_PAGES: SeoLandingPage[] = [
   {
     slug: "quote-to-video",
-    title: "Quote to Video — Turn Any Quote Into TikTok & Reels Videos | QuotVid",
+    title: "Quote to Video — Turn Any Quote Into YouTube Shorts & Pinterest Videos | QuotVid",
     description:
-      "Quote to video in minutes: AI writes the line, adds music & motion, and exports 1080×1920 MP4 for TikTok, Instagram Reels, and YouTube Shorts. Start free on QuotVid.",
+      "Quote to video in minutes: AI writes the line, adds music & motion, and exports 1080×1920 MP4 for YouTube Shorts and Pinterest. Start free on QuotVid.",
     keywords: [
       "quote to video",
       "turn quotes into videos",
@@ -27,7 +27,7 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
     ],
     h1: "Quote to Video, Without Editing Software",
     intro:
-      "If you searched “quote to video,” you want a repeatable way to turn text into vertical clips that look intentional on TikTok, Instagram Reels, and YouTube Shorts. QuotVid is built for that workflow: AI drafts the quote, applies your category and style, and renders a finished MP4 you can post the same day—no timeline, no keyframes, no After Effects.",
+      "If you searched “quote to video,” you want a repeatable way to turn text into vertical clips that look intentional on YouTube Shorts and Pinterest. QuotVid is built for that workflow: AI drafts the quote, applies your category and style, and renders a finished MP4 you can post the same day—no timeline, no keyframes, no After Effects.",
     sections: [
       {
         heading: "Why “quote to video” is a full workflow, not a single template",
@@ -56,7 +56,7 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
       },
       {
         q: "What format are quote videos exported in?",
-        a: "1080×1920 vertical MP4—ready for TikTok, Instagram Reels, and YouTube Shorts.",
+        a: "1080×1920 vertical MP4—ready for YouTube Shorts and Pinterest.",
       },
     ],
   },
@@ -109,7 +109,7 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
   },
   {
     slug: "motivational-quote-video-maker",
-    title: "Motivational Quote Video Maker — Daily Clips for TikTok & Reels | QuotVid",
+    title: "Motivational Quote Video Maker — Daily Clips for YouTube Shorts & Pinterest | QuotVid",
     description:
       "Motivational quote video maker with AI personas, 20 categories, 10+ styles, and 1080×1920 export. Automate daily motivational shorts—start free on QuotVid.",
     keywords: [
@@ -118,6 +118,8 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
       "motivation video maker",
       "daily motivation videos",
       "motivational reels maker",
+      "YouTube Shorts motivation",
+      "Pinterest motivational videos",
     ],
     h1: "Motivational Quote Video Maker for Daily Posting",
     intro:

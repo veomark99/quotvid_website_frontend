@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sitemap — QuotVid",
-  description: "Browse all pages on QuotVid — the AI quote video generator for TikTok, Reels, and YouTube Shorts.",
+  description: "Browse all pages on QuotVid — the AI quote video generator for YouTube Shorts and Pinterest.",
   alternates: { canonical: `${SITE_URL}/sitemap-page` },
 };
 
@@ -49,7 +49,8 @@ const sections = [
       { label: "Setting Up Your Content Persona", href: "/help#setup-persona" },
       { label: "What the Free Plan Includes", href: "/help#free-plan" },
       { label: "RTL Languages (Arabic, Persian, and similar)", href: "/help#rtl-languages" },
-      { label: "Connecting TikTok", href: "/help#connect-tiktok" },
+      { label: "Connect YouTube", href: "/help#connect-youtube" },
+      { label: "Connect Pinterest", href: "/help#connect-pinterest" },
       { label: "Daily Auto-Schedule", href: "/help#auto-schedule" },
     ],
   },

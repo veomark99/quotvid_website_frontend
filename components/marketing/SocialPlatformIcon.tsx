@@ -4,19 +4,13 @@
  */
 import type { ComponentType } from 'react';
 import {
-  SiFacebook,
-  SiInstagram,
   SiPinterest,
-  SiTiktok,
   SiYoutube,
 } from 'react-icons/si';
 
 const BRAND_COLOR: Record<string, string> = {
   youtube: '#FF0000',
-  instagram: '#E4405F',
-  tiktok: '#000000',
   pinterest: '#BD081C',
-  facebook: '#0866FF',
 };
 
 type IconComponent = ComponentType<{
@@ -46,14 +40,8 @@ export function SocialPlatformIcon({
   switch (p) {
     case 'youtube':
       return renderIcon(SiYoutube);
-    case 'instagram':
-      return renderIcon(SiInstagram);
-    case 'tiktok':
-      return renderIcon(SiTiktok);
     case 'pinterest':
       return renderIcon(SiPinterest);
-    case 'facebook':
-      return renderIcon(SiFacebook);
     default:
       return (
         <span

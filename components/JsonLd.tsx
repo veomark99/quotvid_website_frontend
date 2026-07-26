@@ -31,8 +31,6 @@ export function WebsiteJsonLd() {
                 height: 45,
               },
               sameAs: [
-                "https://tiktok.com/@quotvid",
-                "https://instagram.com/quotvid",
                 "https://youtube.com/@quotvid",
               ],
               contactPoint: {
@@ -54,16 +52,13 @@ export function WebsiteJsonLd() {
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Web",
               description:
-                "AI-powered quote video generator with auto-posting to YouTube, Instagram, TikTok, Pinterest, and Facebook. Two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size control, 25 languages with RTL support, 20 categories, 10+ video styles, and cloud video storage.",
+                "AI-powered quote video generator with auto-posting to YouTube and Pinterest. Two persona modes, Custom Studio with live phone preview, YouTube background picker, background library, accent colors, font size control, 25 languages with RTL support, 20 categories, 10+ video styles, and cloud video storage.",
               url: SITE_URL,
               screenshot: absoluteUrl("/hero-phones.png"),
               featureList: [
                 "AI quote video generation",
                 "YouTube Shorts auto-posting",
-                "Instagram Reels auto-posting",
-                "TikTok auto-posting",
                 "Pinterest Video Pin auto-posting",
-                "Facebook Pages auto-posting",
                 "Custom Studio with live preview",
                 "20 content categories",
                 "25 languages including RTL",
@@ -74,7 +69,7 @@ export function WebsiteJsonLd() {
                 "Font Size Control: Auto, Small, Medium, Large, X-Large",
                 "Logo Watermark: position, size, opacity control",
                 "Background Music Library + Custom Audio Upload",
-                "1080×1920 Vertical Format for TikTok, Reels, Shorts",
+                "1080×1920 Vertical Format for YouTube Shorts and Pinterest",
                 "Download MP4 with Custom File Name",
                 "Cloudflare R2 Cloud Video Storage",
               ],
@@ -103,7 +98,7 @@ export function HomeFaqJsonLd() {
   const faqs = [
     {
       q: "Which platforms can QuotVid post to?",
-      a: "QuotVid auto-posts to YouTube Shorts, Instagram Reels, TikTok, Pinterest Video Pins, and Facebook Pages. Connect each platform once via secure OAuth login. Auto-posting is available on all paid plans.",
+      a: "QuotVid auto-posts to YouTube Shorts and Pinterest Video Pins. Connect each platform once via secure OAuth login. Auto-posting is available on all paid plans.",
     },
     {
       q: "Is it safe to connect my social media accounts?",
@@ -111,11 +106,11 @@ export function HomeFaqJsonLd() {
     },
     {
       q: "Can I post to different platforms at different times?",
-      a: "Yes. Set a separate posting time per platform in your local timezone. YouTube at 9am, TikTok at 6pm, Pinterest at 10am — QuotVid converts everything to UTC and handles the rest automatically.",
+      a: "Yes. Set a separate posting time per platform in your local timezone. YouTube at 9am, Pinterest at 10am — QuotVid converts everything to UTC and handles the rest automatically.",
     },
     {
       q: "What type of videos does QuotVid create?",
-      a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for Pinterest, TikTok, Instagram Reels, and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template.",
+      a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for Pinterest and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template.",
     },
     {
       q: "Do I need video editing skills?",
@@ -168,7 +163,7 @@ export function PricingJsonLd() {
           "@type": "Product",
           name: "QuotVid",
           description:
-            "AI quote video studio for TikTok, Instagram Reels, and YouTube Shorts. Two persona modes, live phone preview, YouTube background picker, 25 languages, 20 categories, 10+ video styles, accent colors, background library, and cloud storage.",
+            "AI quote video studio for YouTube Shorts and Pinterest. Two persona modes, live phone preview, YouTube background picker, 25 languages, 20 categories, 10+ video styles, accent colors, background library, and cloud storage.",
           url: SITE_URL,
           image: absoluteUrl("/hero-phones.png"),
           brand: { "@type": "Brand", name: "QuotVid" },
@@ -211,11 +206,11 @@ export function PricingJsonLd() {
 export function PricingFaqJsonLd() {
   const faqs = [
     { q: "Do I need video editing skills?", a: "No. QuotVid handles everything automatically. Set your persona once and videos are generated and ready to download." },
-    { q: "What platforms are the videos made for?", a: "TikTok, Instagram Reels, and YouTube Shorts. All videos are 1080×1920 vertical format." },
+    { q: "What platforms are the videos made for?", a: "YouTube Shorts and Pinterest Video Pins. All videos are 1080×1920 vertical format." },
     { q: "Can I use my own logo and branding?", a: "Yes. Upload your logo, choose its corner position, adjust size and opacity, and add your channel name badge. All paid plans include full branding control." },
     { q: "What is the YouTube background feature?", a: "Paste any YouTube URL into the Custom Studio. Watch it, pick your favourite 30-second clip, and QuotVid extracts and uses it as your video background automatically." },
     { q: "Is the trial really free?", a: "Yes. Pick YouTube or Pinterest and connect your account. You get 5 days of automated daily videos. No credit card required." },
-    { q: "What happens after 5 days?", a: "Your trial ends. Upgrade to the $10 lifetime plan to keep automation running and unlock all platforms." },
+    { q: "What happens after 5 days?", a: "Your trial ends. Upgrade to the $10 lifetime plan to keep automation running and unlock both platforms." },
     { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
     { q: "Is there a refund policy?", a: "We offer a 7-day money-back guarantee. Contact hello@quotvid.com within 7 days of your payment." },
   ];

@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Which platforms can QuotVid post to?",
-    a: "QuotVid auto-posts to YouTube Shorts, Instagram Reels, TikTok, Pinterest Video Pins, and Facebook Pages. Connect each platform once via secure OAuth login. Auto-posting is available on all paid plans.",
+    a: "QuotVid auto-posts to YouTube Shorts and Pinterest Video Pins. Connect each platform once via secure OAuth login. Auto-posting is available on all paid plans.",
   },
   {
     q: "Is it safe to connect my social media accounts?",
@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "Can I post to different platforms at different times?",
-    a: "Yes. Set a separate posting time per platform in your local timezone. YouTube at 9am, TikTok at 6pm, Pinterest at 10am — QuotVid converts everything to UTC and handles the rest automatically.",
+    a: "Yes. Set a separate posting time per platform in your local timezone. YouTube at 9am, Pinterest at 10am — QuotVid converts everything to UTC and handles the rest automatically.",
   },
   {
     q: "What type of videos does QuotVid create?",
-    a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for Pinterest, TikTok, Instagram Reels, and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template.",
+    a: "QuotVid creates vertical 1080×1920 quote videos — the standard format for Pinterest and YouTube Shorts. Each video includes an AI-written quote, professional typography, background music, and your chosen visual template.",
   },
   {
     q: "Do I need video editing skills?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "What is the free trial?",
-    a: "5-day free trial. Up to 5 videos per day during the trial. All 5 platforms. Full auto-posting included. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
+    a: "5-day free trial on YouTube or Pinterest. One video auto-generated and posted per day on your chosen platform. No credit card required. You see exactly what QuotVid produces for your niche before deciding anything.",
   },
   {
     q: "Can I cancel anytime?",

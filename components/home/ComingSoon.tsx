@@ -17,7 +17,7 @@ export default function ComingSoon() {
             </span>
             <div>
               <h3 className="font-semibold text-foreground">
-                Auto-Post to YouTube, TikTok, Instagram, Pinterest &amp; Facebook
+                Auto-Post to YouTube &amp; Pinterest
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Post your quote videos automatically. We use a secure OAuth connection to your accounts — your credentials are never stored. Set your schedule, pick your timezone, and wake up to published content. Available on all paid plans.

@@ -71,7 +71,7 @@ const lifetimePlan = {
   compareAt: "$269",
   features: [
     "Unlimited videos per day",
-    "All 5 platforms unlocked",
+    "YouTube & Pinterest unlocked",
     "Custom Studio + live preview",
     "No watermark",
     "Never pay again",
@@ -81,8 +81,8 @@ const lifetimePlan = {
 const faqs = [
   { q: "Is the trial really free?", a: "Yes. Pick YouTube or Pinterest, create your account, and connect your platform. You get 5 days of automated daily video generation and posting. No credit card required." },
   { q: "When does the 5-day clock start?", a: "The trial clock starts when you connect your chosen platform (YouTube or Pinterest) via OAuth — not when you sign up. Your first video begins generating as soon as your account is created." },
-  { q: "Can I switch platforms during the trial?", a: "Each trial is locked to one platform — YouTube or Pinterest. Upgrade to the $10 lifetime plan to unlock all five platforms." },
-  { q: "What happens after 5 days?", a: "Your trial ends and automation stops. Upgrade to the $10 lifetime plan to keep auto-generating and posting, unlock all platforms, and get unlimited daily videos." },
+  { q: "Can I switch platforms during the trial?", a: "Each trial is locked to one platform — YouTube or Pinterest. Upgrade to the $10 lifetime plan to unlock both platforms." },
+  { q: "What happens after 5 days?", a: "Your trial ends and automation stops. Upgrade to the $10 lifetime plan to keep auto-generating and posting, unlock both platforms, and get unlimited daily videos." },
   { q: "What payment methods do you accept for lifetime?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
   { q: "Is there a refund policy?", a: "We offer a 7-day money-back guarantee on the lifetime plan. Contact hello@quotvid.com within 7 days of your payment." },
 ];

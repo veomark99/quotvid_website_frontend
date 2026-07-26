@@ -11,7 +11,7 @@ export async function GET() {
   const lines: string[] = [
     "# QuotVid — full site reference for AI assistants",
     "",
-    "> QuotVid: AI quote video generator. Vertical 1080×1920 MP4. 25 languages. TikTok, Reels, Shorts, Pinterest.",
+    "> QuotVid: AI quote video generator. Vertical 1080×1920 MP4. 25 languages. YouTube Shorts, Pinterest.",
     "",
     "## App",
     `- Sign up: ${APP_URL}/auth/signup`,

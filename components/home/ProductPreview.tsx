@@ -13,7 +13,7 @@ export default function ProductPreview() {
             <span className="text-gradient-gold">Real Results.</span>
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground">
-            Every video is 1080×1920 — the standard format for Pinterest, TikTok, Instagram Reels, and YouTube Shorts. Ready to post the moment it renders.
+            Every video is 1080×1920 — the standard format for Pinterest and YouTube Shorts. Ready to post the moment it renders.
           </p>
         </div>
 

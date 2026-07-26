@@ -41,28 +41,25 @@ const AutoPosting = dynamic(() => import("@/components/home/AutoPosting"), {
 export const metadata: Metadata = {
   title: {
     absolute:
-      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+      "AI Quote Video Generator — Auto-Post to YouTube & Pinterest | QuotVid",
   },
   description:
-    "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Set your schedule once. 20 categories. 25 languages. Free trial.",
+    "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts and Pinterest Video Pins. Set your schedule once. 20 categories. 25 languages. Free trial.",
   keywords: [
     "AI quote video generator",
     "auto-post quote videos",
     "quote video studio",
     "YouTube Shorts auto-posting",
-    "Instagram Reels automation",
-    "TikTok auto-posting",
     "Pinterest video pins automation",
-    "Facebook Pages video posting",
     "automated quote videos",
     "quote video templates",
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     title:
-      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+      "AI Quote Video Generator — Auto-Post to YouTube & Pinterest | QuotVid",
     description:
-      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Free to start.",
+      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts and Pinterest Video Pins. Free to start.",
     url: SITE_URL,
     images: [
       {
@@ -77,9 +74,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@quotvid",
     title:
-      "AI Quote Video Generator — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+      "AI Quote Video Generator — Auto-Post to YouTube & Pinterest | QuotVid",
     description:
-      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts, Instagram Reels, TikTok, Pinterest, and Facebook Pages. Free to start.",
+      "QuotVid generates branded AI quote videos in 1080×1920 and auto-posts them to YouTube Shorts and Pinterest Video Pins. Free to start.",
     images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };

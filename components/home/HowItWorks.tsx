@@ -18,14 +18,14 @@ const steps = [
   {
     num: "03",
     title: "Connect Your Platforms",
-    desc: "Link Pinterest, YouTube, Instagram, TikTok, and Facebook with one click each. Secure OAuth login — we never see your password. Disconnect any platform instantly from your dashboard.",
+    desc: "Link Pinterest and YouTube with one click each. Secure OAuth login — we never see your password. Disconnect any platform instantly from your dashboard.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Dashboard and analytics representing connected accounts",
   },
   {
     num: "04",
     title: "Set Your Schedule and Walk Away",
-    desc: "QuotVid generates your videos with AI and posts them automatically at your chosen time, in your timezone, every day. YouTube at 9am. TikTok at 6pm. Pinterest at 10am. You don't touch anything.",
+    desc: "QuotVid generates your videos with AI and posts them automatically at your chosen time, in your timezone, every day. YouTube at 9am. Pinterest at 10am. You don't touch anything.",
     img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format&fit=crop",
     imgAlt: "Clock and time representing scheduled automatic posting",
   },

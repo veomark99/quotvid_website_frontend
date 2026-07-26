@@ -20,7 +20,7 @@ export default function ProblemPain() {
             But creating quote videos manually takes 30–60 minutes.
           </p>
           <p className="border-l-4 border-[#e2a128] pl-4 text-lg leading-relaxed text-[#F9FAFB] sm:text-xl">
-            Then you have to upload to Pinterest. Then YouTube. Then TikTok.
+            Then you have to upload to Pinterest. Then YouTube.
           </p>
           <p className="border-l-4 border-[rgba(226,161,40,0.45)] pl-4 text-base leading-relaxed text-[#6B7280] sm:text-[1.05rem]">
             Then you skip a day. Then three days. Then a week.

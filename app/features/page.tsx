@@ -8,17 +8,14 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
+  title: "Features — AI Video Generation, 2-Platform Auto-Posting & Scheduling | QuotVid",
   description:
-    "QuotVid features: AI quote generation in 20 categories, 10+ video styles, auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook, per-platform scheduling, Custom Studio, brand kit, and bulk generation.",
+    "QuotVid features: AI quote generation in 20 categories, 10+ video styles, auto-posting to YouTube and Pinterest, per-platform scheduling, Custom Studio, brand kit, and bulk generation.",
   keywords: [
     "AI quote video generator features",
     "social media auto-posting",
     "YouTube Shorts auto-post",
-    "Instagram Reels automation",
-    "TikTok auto-posting",
     "Pinterest video pins",
-    "Facebook pages video posting",
     "custom quote video studio",
     "live video preview",
     "YouTube background picker",
@@ -26,18 +23,18 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/features` },
   openGraph: {
-    title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
+    title: "Features — AI Video Generation, 2-Platform Auto-Posting & Scheduling | QuotVid",
     description:
-      "Auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
+      "Auto-posting to YouTube and Pinterest. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
     url: `${SITE_URL}/features`,
     images: [{ url: absoluteUrl(OG_IMAGE_PATH), width: 1200, height: 630, alt: "QuotVid Features" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@quotvid",
-    title: "Features — AI Video Generation, 5-Platform Auto-Posting & Scheduling | QuotVid",
+    title: "Features — AI Video Generation, 2-Platform Auto-Posting & Scheduling | QuotVid",
     description:
-      "Auto-posting to YouTube, Instagram, TikTok, Pinterest and Facebook. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
+      "Auto-posting to YouTube and Pinterest. Two persona modes, live phone preview, YouTube background picker, 25 languages, 10+ video styles, and more.",
     images: [absoluteUrl(OG_IMAGE_PATH)],
   },
 };
@@ -46,23 +43,20 @@ const featureSections = [
   {
     icon: "📲",
     badge: "Paid",
-    title: "Social Media Auto-Posting — 5 Platforms, One Dashboard",
-    desc: "Connect your YouTube, Instagram, TikTok, Pinterest, and Facebook accounts to QuotVid and post directly — without ever leaving the app. Your video goes live on schedule, on every platform you choose, automatically. Connect each platform once using a secure login. Set your posting schedule — daily, three times a week, or five days a week. Set a posting time per platform in your local timezone. QuotVid handles everything else.",
+    title: "Social Media Auto-Posting — 2 Platforms, One Dashboard",
+    desc: "Connect your YouTube and Pinterest accounts to QuotVid and post directly — without ever leaving the app. Your video goes live on schedule, on every platform you choose, automatically. Connect each platform once using a secure login. Set your posting schedule — daily, three times a week, or five days a week. Set a posting time per platform in your local timezone. QuotVid handles everything else.",
     points: [
       "YouTube Shorts — uploaded with custom title, description, and hashtags to your YouTube channel",
-      "Instagram Reels — published directly to your Creator or Business account",
-      "TikTok — posted to your TikTok profile via TikTok's official publishing API",
       "Pinterest Video Pins — pinned to any board you manage, with custom description",
-      "Facebook Pages — posted to any Facebook Page you manage",
-      "Post to all 5 platforms in one click, or choose per video which platforms to post to",
+      "Post to both platforms in one click, or choose per video which platforms to post to",
       "Cancel any scheduled post before it goes live from the Scheduled tab",
-      "Custom posting time per platform (e.g. YouTube at 9 AM, TikTok at 6 PM)",
+      "Custom posting time per platform (e.g. YouTube at 9 AM, Pinterest at 10 AM)",
       "Your timezone — QuotVid converts to UTC so posts land at your local time",
       "Generation schedules: Daily, 3×/week (Mon-Wed-Fri), 5×/week (Mon-Fri)",
       "Zero manual steps — wake up to published content",
     ],
     img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=80&auto=format&fit=crop",
-    imgAlt: "Social media auto-posting dashboard showing YouTube, Instagram, TikTok, Pinterest and Facebook",
+    imgAlt: "Social media auto-posting dashboard showing YouTube and Pinterest",
   },
   {
     icon: "🔀",
@@ -217,7 +211,7 @@ export default function FeaturesPage() {
               <span className="text-gradient-gold">Create, Brand, and Automate</span>
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
-              Two persona modes. Live phone preview. YouTube background picker. Background library. Accent colors. 25 languages. 20 categories. 10+ video styles. Custom audio. Cloud storage. Everything built into one quote video studio for TikTok, Instagram Reels, and YouTube Shorts.
+              Two persona modes. Live phone preview. YouTube background picker. Background library. Accent colors. 25 languages. 20 categories. 10+ video styles. Custom audio. Cloud storage. Everything built into one quote video studio for YouTube Shorts and Pinterest.
             </p>
           </div>
         </section>
@@ -318,7 +312,7 @@ export default function FeaturesPage() {
               {[
                 {
                   title: "Daily Quote Page Owners",
-                  desc: "You run a TikTok or Instagram page in stoic, discipline, mindset, sigma, or motivational content. You need a new high-quality video every day. QuotVid generates it automatically.",
+                  desc: "You run a YouTube Shorts or Pinterest page in stoic, discipline, mindset, sigma, or motivational content. You need a new high-quality video every day. QuotVid generates it automatically.",
                 },
                 {
                   title: "Urdu & Arabic Creators",
@@ -375,7 +369,7 @@ export default function FeaturesPage() {
                     ["Live phone preview before generate", "✓", "—", "—", "—"],
                     ["1080×1920 video output", "✓", "✓", "✓", "✓"],
                     ["Daily automation", "✓", "—", "—", "—"],
-                    ["Social auto-posting (5 platforms)", "✓ (paid)", "—", "—", "—"],
+                    ["Social auto-posting (YouTube & Pinterest)", "✓ (paid)", "—", "—", "—"],
                     ["25 languages + RTL", "✓", "Partial", "Partial", "Manual"],
                     ["Custom accent colors", "✓ (paid)", "✓", "Limited", "Manual"],
                     ["Background library", "✓ (paid)", "—", "—", "—"],

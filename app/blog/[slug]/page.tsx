@@ -4,14 +4,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import BlogLanguageSwitcher from "@/components/BlogLanguageSwitcher";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAllPostsIncludingUnpublished, getPostBySlug } from "@/lib/blog";
 import { getBlogHreflangAlternates } from "@/lib/blog-i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
+  // Include unpublished posts so legacy Instagram/TikTok URLs do not 404.
+  return getAllPostsIncludingUnpublished().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

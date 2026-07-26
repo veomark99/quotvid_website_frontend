@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "QuotVid — AI Quote Video Generator for TikTok, Reels & YouTube Shorts";
+export const alt = "QuotVid — AI Quote Video Generator for YouTube Shorts & Pinterest";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -58,7 +58,7 @@ export default function OgImage() {
             marginBottom: 44,
           }}
         >
-          AI Quote Video Generator for TikTok, Instagram Reels &amp; YouTube Shorts
+          AI Quote Video Generator for YouTube Shorts &amp; Pinterest
         </div>
 
         {/* CTA pill */}

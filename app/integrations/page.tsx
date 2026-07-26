@@ -8,29 +8,26 @@ import { SITE_URL } from "@/lib/site";
 
 const HERO_PLATFORMS: { id: string; label: string }[] = [
   { id: "youtube", label: "YouTube" },
-  { id: "instagram", label: "Instagram" },
-  { id: "tiktok", label: "TikTok" },
   { id: "pinterest", label: "Pinterest" },
-  { id: "facebook", label: "Facebook" },
 ];
 
 export const metadata: Metadata = {
-  title: "Social Media Integrations — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+  title: "Social Media Integrations — Auto-Post to YouTube & Pinterest | QuotVid",
   description:
-    "Connect QuotVid to YouTube, Instagram, TikTok, Pinterest, and Facebook. Auto-post your AI quote videos to 5 platforms automatically. Secure OAuth 2.0 connection. AES-256 encrypted tokens. No password stored.",
+    "Connect QuotVid to YouTube and Pinterest. Auto-post your AI quote videos to both platforms automatically. Secure OAuth 2.0 connection. AES-256 encrypted tokens. No password stored.",
   alternates: { canonical: `${SITE_URL}/integrations` },
   openGraph: {
-    title: "Social Media Integrations — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+    title: "Social Media Integrations — Auto-Post to YouTube & Pinterest | QuotVid",
     description:
-      "Connect QuotVid to YouTube, Instagram, TikTok, Pinterest, and Facebook. Secure OAuth 2.0. AES-256 encrypted tokens. Auto-post on your schedule.",
+      "Connect QuotVid to YouTube and Pinterest. Secure OAuth 2.0. AES-256 encrypted tokens. Auto-post on your schedule.",
     url: `${SITE_URL}/integrations`,
   },
   twitter: {
     card: "summary_large_image",
     site: "@quotvid",
-    title: "Social Media Integrations — Auto-Post to YouTube, TikTok, Instagram, Pinterest & Facebook | QuotVid",
+    title: "Social Media Integrations — Auto-Post to YouTube & Pinterest | QuotVid",
     description:
-      "Connect QuotVid to YouTube, Instagram, TikTok, Pinterest, and Facebook. Secure OAuth 2.0. AES-256 encrypted tokens.",
+      "Connect QuotVid to YouTube and Pinterest. Secure OAuth 2.0. AES-256 encrypted tokens.",
   },
 };
 
@@ -47,30 +44,6 @@ const platforms = [
     neverAccess: "We never access: subscribers, video library, playlists, analytics.",
   },
   {
-    id: "instagram",
-    title: "Instagram Reels Auto-Posting",
-    whatWePost: "Vertical video (1080×1920) published as an Instagram Reel, caption from Persona settings.",
-    requirements: "Professional account (Creator or Business), linked to a Facebook Page.",
-    howWeConnect: "Meta's Facebook Login. Three permissions:",
-    permissions: [
-      "Access Instagram account info (ig_user_id)",
-      "Publish content on behalf of user",
-      "Read Page info (required by Meta's API)",
-    ],
-    neverAccess: "We do not access: DMs, followers, stories, post performance data.",
-  },
-  {
-    id: "tiktok",
-    title: "TikTok Auto-Posting",
-    whatWePost: "Vertical video (1080×1920), caption from Persona or Custom Studio settings.",
-    howWeConnect: "TikTok OAuth 2.0 with PKCE security. Two permissions:",
-    permissions: [
-      "Upload and publish videos on behalf of user",
-      "Read display name (dashboard display only)",
-    ],
-    neverAccess: "We never access: followers, video history, messages, analytics.",
-  },
-  {
     id: "pinterest",
     title: "Pinterest Video Pin Auto-Posting",
     whatWePost: "Video Pin on chosen board, title and description from Persona/custom settings.",
@@ -82,19 +55,6 @@ const platforms = [
     ],
     neverAccess: "",
   },
-  {
-    id: "facebook",
-    title: "Facebook Pages Auto-Posting",
-    requirements: "Must be an admin of at least one Facebook Page.",
-    whatWePost: "Video post on selected Page, caption from Persona/custom text.",
-    howWeConnect: "Meta Facebook Login. Permissions:",
-    permissions: [
-      "List managed Pages (page selector UI)",
-      "Post videos and content to selected Page",
-    ],
-    neverAccess:
-      "We never access: personal profile posts, friend lists, messages, Page analytics.",
-  },
 ];
 
 const securityPoints = [
@@ -102,7 +62,7 @@ const securityPoints = [
   "All tokens are encrypted with AES-256-GCM before being stored. They are never shown in logs or API responses.",
   "We only request the minimum permissions needed to post your videos. Nothing more.",
   "You can disconnect any platform at any time from your Integrations screen. We immediately delete your token.",
-  "You can also revoke access directly from each platform's security settings (Google, Meta, TikTok, or Pinterest).",
+  "You can also revoke access directly from each platform's security settings (Google or Pinterest).",
   "We never post without your permission. Posting only happens when you enable auto-posting on your Persona, or when you manually click \"Share Now\".",
 ];
 
@@ -119,10 +79,7 @@ export default function IntegrationsPage() {
             description: "Social media platforms supported by QuotVid auto-posting",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "YouTube Shorts", url: `${SITE_URL}/integrations#youtube` },
-              { "@type": "ListItem", position: 2, name: "Instagram Reels", url: `${SITE_URL}/integrations#instagram` },
-              { "@type": "ListItem", position: 3, name: "TikTok", url: `${SITE_URL}/integrations#tiktok` },
-              { "@type": "ListItem", position: 4, name: "Pinterest Video Pins", url: `${SITE_URL}/integrations#pinterest` },
-              { "@type": "ListItem", position: 5, name: "Facebook Pages", url: `${SITE_URL}/integrations#facebook` },
+              { "@type": "ListItem", position: 2, name: "Pinterest Video Pins", url: `${SITE_URL}/integrations#pinterest` },
             ],
           }),
         }}
@@ -144,7 +101,7 @@ export default function IntegrationsPage() {
               Automatically.
             </h1>
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              QuotVid integrates with YouTube, Instagram, TikTok, Pinterest, and Facebook using each platform&apos;s official login system. Your credentials are never stored. Connect once. Post forever.
+              QuotVid integrates with YouTube and Pinterest using each platform&apos;s official login system. Your credentials are never stored. Connect once. Post forever.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {HERO_PLATFORMS.map(({ id, label }) => (
@@ -173,12 +130,6 @@ export default function IntegrationsPage() {
                   <SocialPlatformIcon platform={p.id} size={32} className="rounded-lg" />
                   <h2 className="text-xl sm:text-2xl font-bold text-light-heading">{p.title}</h2>
                 </div>
-
-                {p.requirements && (
-                  <p className="mb-3 text-xs sm:text-sm text-light-body">
-                    <span className="font-semibold text-light-heading">Requirements:</span> {p.requirements}
-                  </p>
-                )}
 
                 <p className="mb-3 text-xs sm:text-sm text-light-body">
                   <span className="font-semibold text-light-heading">What we post:</span> {p.whatWePost}

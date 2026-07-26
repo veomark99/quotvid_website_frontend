@@ -13,36 +13,12 @@ export interface BlogPost {
   tags: string[];
   lang: string;
   translationOf?: string;
+  /** When false, hidden from indexes/sitemaps but still reachable by URL. */
+  published: boolean;
   content: string;
 }
 
-export function getAllPosts(): BlogPost[] {
-  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
-  return files
-    .map((file) => {
-      const slug = file.replace(".mdx", "");
-      const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8");
-      const { data, content } = matter(raw);
-      return {
-        slug,
-        title: data.title as string,
-        description: data.description as string,
-        publishedAt: data.publishedAt as string,
-        author: data.author as string,
-        tags: (data.tags as string[]) ?? [],
-        lang: (data.lang as string) ?? "en",
-        translationOf: data.translationOf as string | undefined,
-        content,
-      };
-    })
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
-}
-
-export function getPostBySlug(slug: string): BlogPost | null {
-  const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(raw);
+function mapPost(slug: string, data: Record<string, unknown>, content: string): BlogPost {
   return {
     slug,
     title: data.title as string,
@@ -52,6 +28,42 @@ export function getPostBySlug(slug: string): BlogPost | null {
     tags: (data.tags as string[]) ?? [],
     lang: (data.lang as string) ?? "en",
     translationOf: data.translationOf as string | undefined,
+    published: data.published !== false,
     content,
   };
+}
+
+/** Published posts only — use for blog index, sitemap, and LLM listings. */
+export function getAllPosts(): BlogPost[] {
+  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
+  return files
+    .map((file) => {
+      const slug = file.replace(".mdx", "");
+      const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8");
+      const { data, content } = matter(raw);
+      return mapPost(slug, data as Record<string, unknown>, content);
+    })
+    .filter((p) => p.published)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+}
+
+/** All posts including unpublished — use for static path generation so old URLs keep working. */
+export function getAllPostsIncludingUnpublished(): BlogPost[] {
+  const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
+  return files
+    .map((file) => {
+      const slug = file.replace(".mdx", "");
+      const raw = fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8");
+      const { data, content } = matter(raw);
+      return mapPost(slug, data as Record<string, unknown>, content);
+    })
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+}
+
+export function getPostBySlug(slug: string): BlogPost | null {
+  const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
+  return mapPost(slug, data as Record<string, unknown>, content);
 }
