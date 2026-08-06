@@ -3,9 +3,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import "./globals.css";
 import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
+import { getAdSenseClient } from "@/lib/adsense";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import AdSenseScript from "@/components/ads/AdSenseScript";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const adsenseClient = getAdSenseClient();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -67,6 +70,9 @@ export const metadata: Metadata = {
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
     : {}),
+  ...(adsenseClient
+    ? { other: { "google-adsense-account": adsenseClient } }
+    : {}),
   alternates: {
     canonical: SITE_URL,
   },
@@ -76,6 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang="en">
+      <head>
+        {/* AdSense verification script — must be discoverable in <head> */}
+        <AdSenseScript />
+      </head>
       <body>
         {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
           <Script

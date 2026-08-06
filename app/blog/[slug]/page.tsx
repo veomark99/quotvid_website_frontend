@@ -8,6 +8,8 @@ import { getAllPostsIncludingUnpublished, getPostBySlug } from "@/lib/blog";
 import { getBlogHreflangAlternates } from "@/lib/blog-i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
+import { getBlogBottomSlot, getBlogInArticleSlot } from "@/lib/adsense";
+import BlogAd from "@/components/ads/BlogAd";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
@@ -52,6 +54,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const inArticleSlot = getBlogInArticleSlot();
+  const bottomSlot = getBlogBottomSlot();
+
   return (
     <>
       <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} lang={post.lang} />
@@ -80,9 +85,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <section className="bg-section-light py-12 sm:py-16">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
+            {inArticleSlot && <BlogAd slot={inArticleSlot} />}
+
             <article lang={post.lang} className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold" dir={["ar", "ur", "fa"].includes(post.lang) ? "rtl" : undefined}>
               <MDXRemote source={post.content} />
             </article>
+
+            {bottomSlot && <BlogAd slot={bottomSlot} />}
 
             <BlogLanguageSwitcher slug={post.slug} />
 

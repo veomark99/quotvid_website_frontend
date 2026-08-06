@@ -23,7 +23,7 @@ const sections = [
   },
   {
     title: "3. How We Use Your Information",
-    content: `We use your information to:\n- Create and manage your QuotVid account\n- Generate AI quote videos based on your persona settings\n- Post videos to connected social media platforms on your behalf and on your schedule\n- Send transactional emails (account verification, password reset, billing receipts)\n- Improve our AI models and video generation quality\n- Respond to support requests\n- Comply with legal obligations\n\nWe do not sell your personal data to third parties. We do not use your data for advertising purposes.`,
+    content: `We use your information to:\n- Create and manage your QuotVid account\n- Generate AI quote videos based on your persona settings\n- Post videos to connected social media platforms on your behalf and on your schedule\n- Send transactional emails (account verification, password reset, billing receipts)\n- Improve our AI models and video generation quality\n- Respond to support requests\n- Measure site usage and improve the marketing website (analytics)\n- Display advertising on selected marketing pages (for example blog posts) via Google AdSense\n- Comply with legal obligations\n\nWe do not sell your personal data to third parties. Advertising partners may use cookies and similar technologies as described in the Cookies section below.`,
   },
   {
     title: "4. Social Media Platform Integrations",
@@ -32,7 +32,7 @@ const sections = [
   },
   {
     title: "5. Third-Party Services",
-    content: `QuotVid uses the following third-party services that may process your data:\n\nLemon Squeezy — Payment processing and subscription management.\n\nCloudflare R2 — Secure cloud storage and CDN for your generated videos, uploaded backgrounds, and audio files.\n\nOpenAI / Anthropic — AI language model APIs used to generate quote content. Only prompt text (category, language, style) is sent — no personal data is included.\n\nRailway — Cloud hosting provider where our application and database are hosted.\n\nResend — Transactional email delivery.\n\nYouTube / Pinterest APIs — Used only when you have connected those platforms. No data is sent to these APIs beyond what is required to post your video.\n\nNo data is sold to advertisers or data brokers.`,
+    content: `QuotVid uses the following third-party services that may process your data:\n\nLemon Squeezy — Payment processing and subscription management.\n\nCloudflare R2 — Secure cloud storage and CDN for your generated videos, uploaded backgrounds, and audio files.\n\nOpenAI / Anthropic — AI language model APIs used to generate quote content. Only prompt text (category, language, style) is sent — no personal data is included.\n\nRailway — Cloud hosting provider where our application and database are hosted.\n\nResend — Transactional email delivery.\n\nYouTube / Pinterest APIs — Used only when you have connected those platforms. No data is sent to these APIs beyond what is required to post your video.\n\nGoogle Analytics — Website traffic analytics on quotvid.com.\n\nPostHog — Product and website analytics (page views, feature usage).\n\nMicrosoft Clarity — Session analytics and heatmaps on the marketing site.\n\nGoogle AdSense — Displays ads on selected marketing pages (blog posts). Google and its partners may use cookies or similar technologies to serve and measure ads. See Google's Advertising policies and how Google uses data: https://policies.google.com/technologies/ads\n\nNo data is sold to data brokers.`,
   },
   {
     title: "6. Data Storage & Security",
@@ -51,8 +51,8 @@ const sections = [
     content: `Depending on your location, you may have the following rights:\n- Access: Request a copy of your personal data\n- Correction: Request correction of inaccurate data\n- Deletion: Request deletion of your account and data\n- Portability: Request your data in a portable format\n- Objection: Object to certain types of data processing\n- Withdraw consent: Disconnect any social platform at any time\n\nTo exercise any of these rights, email us at: hello@quotvid.com`,
   },
   {
-    title: "10. Cookies",
-    content: `QuotVid uses JWT-based authentication stored in browser memory. We do not use persistent session cookies for authentication.\n\nWe do not use advertising cookies, tracking pixels, or third-party analytics cookies. Only strictly necessary functional tokens are used.`,
+    title: "10. Cookies and Similar Technologies",
+    content: `QuotVid uses JWT-based authentication for the app (stored in browser memory). We do not use persistent session cookies for app authentication.\n\nOn the marketing website (quotvid.com), we may use cookies and similar technologies for:\n- Essential functionality (security, load balancing, consent preferences where applicable)\n- Analytics (Google Analytics, PostHog, Microsoft Clarity) to understand traffic and improve the site\n- Advertising (Google AdSense) on blog pages and other pages where ads are enabled\n\nGoogle AdSense may use cookies or device identifiers to show relevant ads, limit how often you see an ad, and measure ad performance. You can learn more and manage ad personalization at https://adssettings.google.com and review Google's use of data at https://policies.google.com/technologies/ads\n\nYou can also control cookies through your browser settings. Blocking some cookies may affect site features or ad relevance.`,
   },
   {
     title: "11. Children's Privacy",
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
         <section className="bg-section-dark pt-28 pb-10 sm:pt-32 sm:pb-12 md:pt-40">
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight md:text-4xl">Privacy Policy</h1>
-            <p className="mt-3 text-sm text-muted-foreground">Last Updated: April 2026</p>
+            <p className="mt-3 text-sm text-muted-foreground">Last Updated: August 2026</p>
           </div>
         </section>
         <section className="bg-section-light py-12 sm:py-16">
