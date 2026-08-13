@@ -130,7 +130,7 @@ export function HomeFaqJsonLd() {
     },
     {
       q: "Can I cancel anytime?",
-      a: "Yes. Cancel from your billing settings in one click. You keep access until your current period ends. 7-day money-back guarantee on all paid plans — no questions asked. Email hello@quotvid.com.",
+      a: "Yes. Cancel from your billing settings in one click. You keep access until your current period ends.",
     },
   ];
 
@@ -212,7 +212,7 @@ export function PricingFaqJsonLd() {
     { q: "Is the trial really free?", a: "Yes. Pick YouTube or Pinterest and connect your account. You get 5 days of automated daily videos. No credit card required." },
     { q: "What happens after 5 days?", a: "Your trial ends. Upgrade to the $10 lifetime plan to keep automation running and unlock both platforms." },
     { q: "What payment methods do you accept?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
-    { q: "Is there a refund policy?", a: "We offer a 7-day money-back guarantee. Contact hello@quotvid.com within 7 days of your payment." },
+    { q: "Is there a refund policy?", a: "All sales are final. The $10 lifetime plan is non-refundable. Use the free 5-day trial to evaluate QuotVid before purchasing." },
   ];
 
   return (

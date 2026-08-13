@@ -84,7 +84,7 @@ const faqs = [
   { q: "Can I switch platforms during the trial?", a: "Each trial is locked to one platform — YouTube or Pinterest. Upgrade to the $10 lifetime plan to unlock both platforms." },
   { q: "What happens after 5 days?", a: "Your trial ends and automation stops. Upgrade to the $10 lifetime plan to keep auto-generating and posting, unlock both platforms, and get unlimited daily videos." },
   { q: "What payment methods do you accept for lifetime?", a: "All major credit cards (Visa, Mastercard, Amex) and PayPal via Lemon Squeezy." },
-  { q: "Is there a refund policy?", a: "We offer a 7-day money-back guarantee on the lifetime plan. Contact hello@quotvid.com within 7 days of your payment." },
+  { q: "Is there a refund policy?", a: "All sales are final. The $10 lifetime plan is non-refundable. Use the free 5-day trial to evaluate QuotVid before purchasing." },
 ];
 
 export default function PricingPage() {

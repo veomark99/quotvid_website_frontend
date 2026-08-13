@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. Cancel from your billing settings in one click. You keep access until your current period ends. 7-day money-back guarantee on all paid plans — no questions asked. Email hello@quotvid.com.",
+    a: "Yes. Cancel from your billing settings in one click. You keep access until your current period ends.",
   },
 ];
 

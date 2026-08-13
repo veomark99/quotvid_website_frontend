@@ -229,7 +229,7 @@ Exported files use H.264 video and AAC audio for broad compatibility. If a downl
     id: "account-billing",
     icon: "💳",
     title: "Account and billing",
-    desc: "Plans, trials, usage limits, payments, refunds, and subscription management.",
+    desc: "Plans, trials, usage limits, payments, and subscription management.",
     articles: [
       {
         slug: "free-plan",
@@ -355,29 +355,20 @@ You may subscribe again at any time from Billing; previous personas and settings
       },
       {
         slug: "refund-policy",
-        title: "Refunds",
-        body: `QuotVid offers a customer-friendly refund policy for eligible purchases.
+        title: "Refund policy",
+        body: `All sales are final. QuotVid does not offer refunds on paid plans, including the $10 lifetime deal.
 
-Seven-day money-back guarantee
-If you are not satisfied with a qualifying purchase, email support@quotvid.com within seven (7) days of payment. Include:
-Your QuotVid account email.
-Date and approximate time of purchase.
-Receipt or order ID from Lemon Squeezy (if available).
-A brief description of the issue.
+Try before you buy
+Use the free 5-day YouTube or Pinterest trial to evaluate QuotVid before purchasing. No credit card is required to start a trial where advertised.
 
-Our team will review your request against current policy and respond with next steps.
+Legacy subscriptions
+If you are on a legacy monthly or annual subscription, you may cancel before the renewal date to avoid future charges. Cancellation does not refund the current billing period.
 
-Monthly subscriptions
-You may cancel before the renewal date to avoid future charges. Refunds for partial months are handled case by case according to policy at the time of request.
-
-Annual subscriptions
-May be eligible for refund within the published money-back window. See checkout and pricing pages for the exact terms displayed at purchase.
-
-Chargebacks
-We encourage contacting support before initiating a chargeback so we can resolve issues directly.
+Billing issues
+If you were charged in error (for example, a duplicate charge), contact hello@quotvid.com with your account email and Lemon Squeezy receipt so we can investigate.
 
 Policy updates
-The authoritative wording appears on the pricing and checkout pages at the time you pay. This help article is a summary, not a legal contract.`,
+The authoritative wording appears on the pricing, checkout, and Terms of Service pages at the time you pay. This help article is a summary, not a legal contract.`,
       },
       {
         slug: "payment-methods",
