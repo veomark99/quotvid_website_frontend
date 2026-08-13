@@ -1,5 +1,8 @@
 import { getAllPosts, getPostBySlug, type BlogPost } from "@/lib/blog";
+import { langLabel } from "@/lib/blog-lang";
 import { SITE_URL } from "@/lib/site";
+
+export { langLabel } from "@/lib/blog-lang";
 
 /** ISO 639-1 codes with full blog translation sets (English source + these). */
 export const BLOG_TRANSLATION_LANGS = [
@@ -59,37 +62,8 @@ const HREFLANG_MAP: Record<string, string> = {
   ru: "ru",
 };
 
-const LANG_LABELS: Record<string, string> = {
-  en: "English",
-  es: "Español",
-  fr: "Français",
-  de: "Deutsch",
-  pt: "Português",
-  it: "Italiano",
-  tr: "Türkçe",
-  nl: "Nederlands",
-  pl: "Polski",
-  vi: "Tiếng Việt",
-  id: "Bahasa Indonesia",
-  th: "ไทย",
-  zh: "中文",
-  ja: "日本語",
-  ko: "한국어",
-  hi: "हिन्दी",
-  bn: "বাংলা",
-  ur: "اردو",
-  ar: "العربية",
-  fa: "فارسی",
-  ta: "தமிழ்",
-  ru: "Русский",
-};
-
 export function langToHreflang(lang: string): string {
   return HREFLANG_MAP[lang] ?? lang;
-}
-
-export function langLabel(lang: string): string {
-  return LANG_LABELS[lang] ?? lang.toUpperCase();
 }
 
 function blogUrl(slug: string): string {
