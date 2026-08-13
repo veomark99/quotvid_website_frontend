@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import BlogLanguageFilter from "@/components/blog/BlogLanguageFilter";
 import { getBlogLanguagesInUse, langLabel } from "@/lib/blog-lang";
 
 export type BlogPostPreview = {
@@ -74,24 +75,12 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
           </div>
         </div>
 
-        <div className="sm:w-56">
-          <label htmlFor="blog-language" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-light-muted">
-            Language
-          </label>
-          <select
-            id="blog-language"
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-            className="w-full rounded-[10px] border border-[#1F2937] bg-[rgba(255,255,255,0.02)] px-3 py-2.5 text-sm text-light-heading focus:border-[#e2a128] focus:outline-none focus:ring-1 focus:ring-[#e2a128]"
-          >
-            <option value="all">All languages ({posts.length})</option>
-            {languages.map((option) => (
-              <option key={option.lang} value={option.lang}>
-                {option.label} ({option.count})
-              </option>
-            ))}
-          </select>
-        </div>
+        <BlogLanguageFilter
+          languages={languages}
+          value={lang}
+          onChange={setLang}
+          totalPosts={posts.length}
+        />
       </div>
 
       <p className="mb-6 text-xs text-light-muted">
