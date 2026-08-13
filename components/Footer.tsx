@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li><Link href="/help" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Help Center</Link></li>
               <li><Link href="/sitemap-page" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Sitemap</Link></li>
-              <li><a href="https://app.quotvid.com/auth/signup" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Sign up</a></li>
+              <li><Link href="/pricing" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Get started</Link></li>
               <li><Link href="/privacy" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-muted-foreground hover:text-[#e2a128] transition-colors">Terms of Service</Link></li>
             </ul>

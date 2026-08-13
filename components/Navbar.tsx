@@ -64,12 +64,12 @@ export default function Navbar() {
           <a href="https://app.quotvid.com/auth/signin" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Sign In
           </a>
-          <a
-            href="https://app.quotvid.com/auth/signup"
+          <Link
+            href="/pricing"
             className="rounded-[10px] bg-gradient-gold px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
           >
             Get Started Free
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -94,13 +94,13 @@ export default function Navbar() {
             >
               Sign In
             </a>
-            <a
-              href="https://app.quotvid.com/auth/signup"
+            <Link
+              href="/pricing"
               className="block rounded-[10px] bg-gradient-gold px-5 py-3 text-center text-sm font-semibold text-white min-h-[44px] flex items-center justify-center shadow-[var(--shadow-brand)]"
               onClick={() => setMobileOpen(false)}
             >
               Get Started Free
-            </a>
+            </Link>
           </div>
         </div>
       )}

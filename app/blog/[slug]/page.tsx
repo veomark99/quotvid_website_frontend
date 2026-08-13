@@ -97,12 +97,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
             <div className="mt-12 rounded-[14px] border border-[rgba(226,161,40,0.30)] bg-[rgba(226,161,40,0.06)] p-6 sm:p-8 text-center">
               <p className="mb-2 text-sm font-bold text-light-heading">Ready to start creating daily videos?</p>
-              <p className="mb-4 text-xs text-light-body">Join QuotVid — free trial, no credit card required.</p>
+              <p className="mb-4 text-xs text-light-body">Pick YouTube trial, Pinterest trial, or $10 lifetime — then create your account.</p>
               <a
-                href="https://app.quotvid.com/auth/signup"
+                href="/pricing"
                 className="inline-block rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
-                Start Free →
+                View plans →
               </a>
             </div>
           </div>

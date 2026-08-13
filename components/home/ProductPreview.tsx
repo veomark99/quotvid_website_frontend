@@ -44,7 +44,7 @@ export default function ProductPreview() {
                 QuotVid runs in the background while you live your life. Every morning, a fresh professional video is waiting in your dashboard — already generated, already rendered, already posted to your platforms automatically.
               </p>
               <a
-                href="https://app.quotvid.com/auth/signup"
+                href="/pricing"
                 className="inline-block rounded-[10px] bg-gradient-gold px-5 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start Free Trial — No Card →

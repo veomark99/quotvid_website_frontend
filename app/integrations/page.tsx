@@ -186,7 +186,7 @@ export default function IntegrationsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://app.quotvid.com/auth/signup"
+                href="/pricing"
                 className="rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)] text-center"
               >
                 Start Free — No Credit Card →

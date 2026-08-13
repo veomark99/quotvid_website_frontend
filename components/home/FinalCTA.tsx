@@ -11,7 +11,7 @@ export default function FinalCTA() {
           Stop uploading manually. Stop missing days. Stop watching consistent creators grow while you fall behind. QuotVid generates, renders, and posts your videos automatically — while you focus on everything else.
         </p>
         <a
-          href="https://app.quotvid.com/auth/signup"
+          href="/pricing"
           className="animate-pulse-soft inline-block rounded-[10px] bg-gradient-gold px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
         >
           Start Your Free Trial — No Credit Card Required →

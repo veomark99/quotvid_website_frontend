@@ -11,7 +11,7 @@ import {
   solutionPath,
   solutionAbsoluteUrl,
 } from "@/lib/seo-landing-pages";
-import { APP_URL, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export async function generateStaticParams() {
   return getAllSeoLandingSlugs().map((slug) => ({ slug }));
@@ -60,12 +60,12 @@ export default function SolutionLandingPage({ params }: { params: { slug: string
             <h1 className="mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight md:text-5xl">{page.h1}</h1>
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">{page.intro}</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
-                href={`${APP_URL}/auth/signup`}
+              <Link
+                href="/pricing"
                 className="inline-flex justify-center rounded-[10px] bg-gradient-gold px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start free — no card
-              </a>
+              </Link>
               <Link
                 href="/features"
                 className="inline-flex justify-center rounded-[10px] border border-[#374151] px-6 py-3 text-sm font-semibold text-[#E5E7EB] transition-all duration-200 hover:bg-[#1F2937] hover:border-[#4B5563]"
@@ -134,12 +134,12 @@ export default function SolutionLandingPage({ params }: { params: { slug: string
         <section className="bg-section-dark py-14 sm:py-20">
           <div className="container mx-auto max-w-xl px-3 text-center">
             <p className="mb-4 text-sm text-muted-foreground">Ready to automate quote videos?</p>
-            <a
-              href={`${APP_URL}/auth/signup`}
+            <Link
+              href="/pricing"
               className="inline-block rounded-[10px] bg-gradient-gold px-8 py-3 text-sm font-bold text-white transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
             >
-              Create your free account
-            </a>
+              Choose your plan
+            </Link>
           </div>
         </section>
       </main>

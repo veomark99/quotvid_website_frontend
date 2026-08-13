@@ -13,6 +13,9 @@ export const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "https://app.quotvid.
 
 export const OG_IMAGE_PATH = "/og-image.png";
 
+/** Marketing CTAs — users pick a plan before app signup. */
+export const PRICING_PATH = "/pricing";
+
 export function absoluteUrl(path = ""): string {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${p}`;

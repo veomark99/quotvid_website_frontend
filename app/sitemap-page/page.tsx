@@ -65,7 +65,7 @@ const sections = [
     title: "App",
     links: [
       { label: "Sign In", href: "https://app.quotvid.com/auth/signin", external: true },
-      { label: "Create Account (Free)", href: "https://app.quotvid.com/auth/signup", external: true },
+      { label: "Choose a plan", href: "/pricing" },
     ],
   },
 ];

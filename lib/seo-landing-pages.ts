@@ -152,7 +152,7 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
       },
       {
         q: "Where do I start?",
-        a: `Create a free account at ${APP_URL}/auth/signup, pick a motivation-friendly category, and generate your first clips in minutes.`,
+        a: `Choose a plan at ${SITE_URL}/pricing — YouTube trial, Pinterest trial, or $10 lifetime — then create your account and generate your first clips in minutes.`,
       },
     ],
   },

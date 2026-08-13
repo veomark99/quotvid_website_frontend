@@ -19,7 +19,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <a
-                href="https://app.quotvid.com/auth/signup"
+                href="/pricing"
                 className="animate-pulse-soft rounded-[10px] bg-gradient-gold px-6 sm:px-8 py-3 sm:py-3.5 text-sm font-bold text-white text-center transition-all duration-200 hover:brightness-90 hover:scale-[1.02] shadow-[var(--shadow-brand)]"
               >
                 Start Free Trial — No Credit Card →

@@ -174,7 +174,7 @@ export function PricingJsonLd() {
               price: "0",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: `${APP_URL}/auth/signup?trial=youtube`,
+              url: `${SITE_URL}/pricing`,
               description: "5-day free automation trial for YouTube Shorts. Connect YouTube to start the clock. No credit card.",
             },
             {
@@ -183,7 +183,7 @@ export function PricingJsonLd() {
               price: "0",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
-              url: `${APP_URL}/auth/signup?trial=pinterest`,
+              url: `${SITE_URL}/pricing`,
               description: "5-day free automation trial for Pinterest Video Pins. Connect Pinterest to start the clock. No credit card.",
             },
             {
