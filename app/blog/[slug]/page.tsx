@@ -28,12 +28,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   });
   const hreflang = getBlogHreflangAlternates(params.slug);
   const canonical = `${SITE_URL}/blog/${params.slug}`;
+  const isPublished = post.published;
 
   return {
     ...base,
+    robots: isPublished
+      ? undefined
+      : { index: false, follow: false, googleBot: { index: false, follow: false, noimageindex: true } },
     alternates: {
       canonical,
-      languages: Object.keys(hreflang).length > 0 ? hreflang : undefined,
+      languages: isPublished && Object.keys(hreflang).length > 0 ? hreflang : undefined,
     },
     openGraph: {
       ...base.openGraph,
@@ -54,12 +58,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const inArticleSlot = getBlogInArticleSlot();
-  const bottomSlot = getBlogBottomSlot();
+  const showAds = post.published;
+  const inArticleSlot = showAds ? getBlogInArticleSlot() : null;
+  const bottomSlot = showAds ? getBlogBottomSlot() : null;
 
   return (
     <>
-      <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} lang={post.lang} />
+      {post.published && (
+        <ArticleJsonLd title={post.title} description={post.description} publishedAt={post.publishedAt} slug={post.slug} lang={post.lang} />
+      )}
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: SITE_URL },
@@ -87,13 +94,19 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
             {inArticleSlot && <BlogAd slot={inArticleSlot} />}
 
+            {!post.published && (
+              <p className="mb-8 rounded-[10px] border border-[#374151] bg-[#111827] px-4 py-3 text-xs text-light-muted">
+                This article is archived and no longer part of the live QuotVid blog.
+              </p>
+            )}
+
             <article lang={post.lang} className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold" dir={["ar", "ur", "fa"].includes(post.lang) ? "rtl" : undefined}>
               <MDXRemote source={post.content} />
             </article>
 
             {bottomSlot && <BlogAd slot={bottomSlot} />}
 
-            <BlogLanguageSwitcher slug={post.slug} />
+            {post.published && <BlogLanguageSwitcher slug={post.slug} />}
 
             <div className="mt-12 rounded-[14px] border border-[rgba(226,161,40,0.30)] bg-[rgba(226,161,40,0.06)] p-6 sm:p-8 text-center">
               <p className="mb-2 text-sm font-bold text-light-heading">Ready to start creating daily videos?</p>

@@ -65,6 +65,13 @@ export function getAllPostsIncludingUnpublished(): BlogPost[] {
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 }
 
+/** Slugs hidden from search/AdSense review — leftover Instagram/TikTok posts. */
+export function getUnpublishedPostSlugs(): string[] {
+  return getAllPostsIncludingUnpublished()
+    .filter((p) => !p.published)
+    .map((p) => p.slug);
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;

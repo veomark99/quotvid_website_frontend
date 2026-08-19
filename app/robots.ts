@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getUnpublishedPostSlugs } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 
 /** AI crawlers we explicitly allow to index and cite QuotVid (in addition to *). */
@@ -23,11 +24,11 @@ const AI_USER_AGENTS = [
 ] as const;
 
 export default function robots(): MetadataRoute.Robots {
+  const archivedBlogPaths = getUnpublishedPostSlugs().map((slug) => `/blog/${slug}`);
   const publicAllow = {
     allow: "/" as const,
-    disallow: ["/api/"] as string[],
+    disallow: ["/api/", ...archivedBlogPaths] as string[],
   };
-
   return {
     rules: [
       { userAgent: "*", ...publicAllow },
