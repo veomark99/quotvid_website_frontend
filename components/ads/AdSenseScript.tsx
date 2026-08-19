@@ -10,7 +10,7 @@ export default function AdSenseScript() {
     <Script
       id="google-adsense"
       async
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${client}`}
       crossOrigin="anonymous"
     />

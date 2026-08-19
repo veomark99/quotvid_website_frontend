@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { PostHogProvider as PHProvider, usePostHog } from 'posthog-js/react';
+import { getPostHogHost, getPostHogKey } from '@/lib/analytics';
 
 function PostHogPageview(): React.JSX.Element {
   const posthog = usePostHog();
@@ -10,7 +11,7 @@ function PostHogPageview(): React.JSX.Element {
   const searchParams = useSearchParams();
 
   React.useEffect(() => {
-    if (!pathname) return;
+    if (!pathname || !posthog) return;
     let url = window.origin + pathname;
     const q = searchParams?.toString();
     if (q) url += `?${q}`;
@@ -21,8 +22,8 @@ function PostHogPageview(): React.JSX.Element {
 }
 
 export function PostHogProvider({ children }: { children: React.ReactNode }): React.JSX.Element {
-  const apiKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-  const apiHost = process.env.NEXT_PUBLIC_POSTHOG_HOST;
+  const apiKey = getPostHogKey();
+  const apiHost = getPostHogHost();
 
   if (!apiKey || !apiHost) return <>{children}</>;
 
@@ -31,8 +32,10 @@ export function PostHogProvider({ children }: { children: React.ReactNode }): Re
       apiKey={apiKey}
       options={{
         api_host: apiHost,
+        person_profiles: 'always',
         capture_pageview: false,
         capture_pageleave: true,
+        persistence: 'localStorage+cookie',
       }}
     >
       <React.Suspense fallback={null}>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Script from "next/script";
 import "./globals.css";
 import { OG_IMAGE_PATH, SITE_URL, absoluteUrl } from "@/lib/site";
+import { getGaId } from "@/lib/analytics";
 import { getAdSenseClient } from "@/lib/adsense";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import AdSenseScript from "@/components/ads/AdSenseScript";
+import ClarityScript from "@/components/analytics/ClarityScript";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const adsenseClient = getAdSenseClient();
@@ -79,23 +80,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = getGaId();
   return (
     <html lang="en">
       <head>
-        {/* AdSense verification script — must be discoverable in <head> */}
+        {/* AdSense + analytics: afterInteractive so they coexist and Google still sees the ads snippet */}
         <AdSenseScript />
+        <ClarityScript />
       </head>
       <body>
-        {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
-          <Script
-            id="ms-clarity"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");`,
-            }}
-          />
-        )}
         <PostHogProvider>{children}</PostHogProvider>
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
