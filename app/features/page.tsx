@@ -55,7 +55,7 @@ const featureSections = [
       "Generation schedules: Daily, 3×/week (Mon-Wed-Fri), 5×/week (Mon-Fri)",
       "Zero manual steps — wake up to published content",
     ],
-    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-video-example-a.png",
     imgAlt: "Social media auto-posting dashboard showing YouTube and Pinterest",
   },
   {
@@ -69,7 +69,7 @@ const featureSections = [
       "Switch between modes at any time",
       "Separate brand profile per mode",
     ],
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&q=80&auto=format&fit=crop",
+    img: "/hero-phones.png",
     imgAlt: "Two persona modes in QuotVid AI quote video generator",
   },
   {
@@ -83,7 +83,7 @@ const featureSections = [
       "Control: background, watermark, colors, font, music, quote",
       "What you see is what you get",
     ],
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-video-example-b.png",
     imgAlt: "Custom video studio interface with live phone preview for quote videos",
   },
   {
@@ -97,7 +97,7 @@ const featureSections = [
       "One-click extraction — no external tools needed",
       "Saved permanently to your background library",
     ],
-    img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-home-hero.png",
     imgAlt: "YouTube video background picker for quote video maker",
   },
   {
@@ -111,7 +111,7 @@ const featureSections = [
       "Size control (5–30% of frame) + opacity (10–100%)",
       "Optional channel name text badge",
     ],
-    img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-video-example-a.png",
     imgAlt: "Logo watermark overlay on branded short-form video",
   },
   {
@@ -125,7 +125,7 @@ const featureSections = [
       "Stored in Cloudflare R2 — no expiry",
       "Thumbnail gallery for easy browsing",
     ],
-    img: "https://images.unsplash.com/photo-1536240478700-b869ad10e128?w=700&q=80&auto=format&fit=crop",
+    img: "/hero-phones.png",
     imgAlt: "Background video library for reusing clips in quote video maker",
   },
   {
@@ -139,7 +139,7 @@ const featureSections = [
       "Upload your own music (paid plans)",
       "Auto-mixed into final video at correct level",
     ],
-    img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-video-example-b.png",
     imgAlt: "Background music library and custom audio upload for quote videos",
   },
   {
@@ -153,7 +153,7 @@ const featureSections = [
       "Custom text shadow color for readability",
       "All settings previewed live",
     ],
-    img: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-home-hero.png",
     imgAlt: "Accent colors and font size control for branded quote videos",
   },
   {
@@ -167,7 +167,7 @@ const featureSections = [
       "Category → style matching built in",
       "Unique AI-generated quotes per category",
     ],
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80&auto=format&fit=crop",
+    img: "/screenshots/quotvid-video-example-a.png",
     imgAlt: "20 content categories and 10+ video styles in QuotVid",
   },
   {
@@ -181,7 +181,7 @@ const featureSections = [
       "Nastaliq and Naskh font support",
       "Download with custom file name",
     ],
-    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80&auto=format&fit=crop",
+    img: "/hero-phones.png",
     imgAlt: "Multilingual quote video generation in 25 languages with RTL support",
   },
 ];

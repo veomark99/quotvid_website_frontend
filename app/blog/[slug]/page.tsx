@@ -100,7 +100,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </p>
             )}
 
-            <article lang={post.lang} className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold" dir={["ar", "ur", "fa"].includes(post.lang) ? "rtl" : undefined}>
+            <article lang={post.lang} className="prose prose-sm sm:prose-base max-w-none text-light-body prose-headings:text-light-heading prose-strong:text-light-heading prose-a:text-[#e2a128] prose-a:no-underline hover:prose-a:underline prose-img:rounded-[12px] prose-img:border prose-img:border-[#1F2937] prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl prose-h2:font-bold prose-h2:scroll-mt-28 prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold" dir={["ar", "ur", "fa"].includes(post.lang) ? "rtl" : undefined}>
               <MDXRemote source={post.content} />
             </article>
 

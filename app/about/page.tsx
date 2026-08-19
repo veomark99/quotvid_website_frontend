@@ -107,7 +107,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
                   <Image
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80&auto=format&fit=crop"
+                    src="/hero-phones.png"
                     alt="Developer writing code — building a content automation tool"
                     fill
                     className="object-cover"
@@ -201,7 +201,7 @@ export default function AboutPage() {
               </div>
               <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&q=80&auto=format&fit=crop"
+                  src="/screenshots/quotvid-video-example-b.png"
                   alt="Multilingual content creation — Arabic and Urdu text on screen"
                   fill
                   className="object-cover"

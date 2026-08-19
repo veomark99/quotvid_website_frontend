@@ -1,0 +1,169 @@
+---
+title: "How to Make Urdu and Arabic Quote Videos That Render RTL Correctly"
+description: "Practical setup for right-to-left quote videos: language selection, fonts, line length, Pinterest and YouTube Shorts safe zones, and why English templates break Urdu, Arabic, and Persian."
+publishedAt: "2026-08-19"
+author: "QuotVid Team"
+tags: ["RTL", "Urdu", "Arabic", "Quote Videos", "YouTube Shorts"]
+---
+
+# How to Make Urdu and Arabic Quote Videos That Render RTL Correctly
+
+If you have ever pasted an Urdu couplet into an English video editor, you already know the failure mode: letters detach, dots float, the line starts on the wrong side, and the “quote” becomes unreadable in the first two seconds of a Short.
+
+That is not a “you need a better font” problem only. It is a **language + direction + layout** problem. QuotVid treats Urdu, Arabic, and Persian as first-class RTL languages — not as English templates with a fancy typeface dropped on top.
+
+This guide is the production checklist we give multilingual creators before they post to YouTube Shorts or Pinterest.
+
+![QuotVid interface used for multilingual quote video creation](/hero-phones.png)
+
+## Why English tools fail on RTL quotes
+
+Latin quote templates assume:
+
+- Left-to-right line start  
+- Spaces as word boundaries the way English uses them  
+- Punctuation on the right  
+- Fonts that do not contain Nastaliq or Naskh shaping
+
+Urdu poetry especially needs **correct joining**. A font that “has Arabic characters” can still break Nastaliq if the shaper and direction are wrong. Viewers swipe away faster on RTL pages because unreadable text feels like spam.
+
+## Step 1 — Set language before you write or generate
+
+In AI Persona or Custom Studio, select **Urdu**, **Arabic**, or **Persian** first. Then write or generate.
+
+Do not:
+
+- Generate in English and paste RTL later  
+- Mix a full English sentence and a couplet in the same frame unless you are doing it on purpose  
+- Use a “poetry” layout that is only enabled for the matching language (Urdu poetry templates are language-gated for a reason)
+
+Direction, alignment, and font choice all hang off this one setting.
+
+## Step 2 — Write for the phone, not the book
+
+A couplet that looks beautiful in a printed diwan can fail on 1080×1920.
+
+Rules that work in practice:
+
+- **One idea per screen line** (two lines max on screen at once)  
+- Shorter lines than you would use on Instagram carousels — Shorts UI eats the bottom  
+- Avoid tiny diacritics-only differences as the “hook”; the first readable phrase must land in 1 second  
+- Keep the quote block in the **center 80%** of the frame
+
+![Vertical quote video still — keep text in the mobile safe zone](/screenshots/quotvid-video-example-a.png)
+
+## Step 3 — Contrast beats decoration
+
+RTL scripts are denser. Busy cinematic B-roll behind a couplet is how you get “I can’t read it.”
+
+Use:
+
+- Darker or blurred backgrounds  
+- Strong text shadow if the clip has highlights  
+- Brand colors that still pass contrast on a bright clip  
+
+If you watermark, put the logo in a corner that does not collide with the last letter of the line. RTL last-letter position is the opposite of English — a bottom-right logo that was “safe” in English may sit on the text.
+
+## Step 4 — Platform notes (YouTube vs Pinterest)
+
+**YouTube Shorts**  
+Titles can be in the same language as the video. Mix of English SEO + native title is common (example: niche keyword in English, couplet language in the body). Retention still depends on readable on-screen text, not the title.
+
+**Pinterest**  
+Descriptions should include the **search language of your audience**. If people search in Urdu, write Urdu. If they search in English for “Urdu poetry video,” include both. Pin to a board named clearly (not “board 3”).
+
+Same MP4. Different metadata.
+
+## Step 5 — Poetry vs generic motivation
+
+Urdu poetry layouts exist because couplets have a visual rhythm English one-liners do not. If you are posting ghazal lines, use the poetry path. If you are posting modern motivation in Arabic, a standard RTL quote template is cleaner than forcing a poetry frame.
+
+Do not run 20 categories on one RTL persona. Pick **poetry** or **motivation** or **faith** and hold it for 30 days so the algorithm (and your audience) can learn the page.
+
+![Second quote-video example showing large, readable type](/screenshots/quotvid-video-example-b.png)
+
+## Quality control before you hit post
+
+Watch the preview on a **phone width**, not a desktop window.
+
+Ask:
+
+- Does the first line start on the correct side?  
+- Are letters joined?  
+- Can I read it at 50% brightness (night mode)?  
+- Does any UI overlay (YouTube subscribe, Pinterest save) cover the last line?
+
+If Custom Studio’s live phone mockup looks wrong, fix it there. Generating “to see” wastes quota and still trains you to ignore the preview.
+
+## FAQ
+
+**Can I post English and Urdu on the same channel?**  
+You can, but growth is slower. Two personas / two channels is cleaner.
+
+**Why does my text look like boxes?**  
+Language was probably still English. Set language, then regenerate.
+
+**Is RTL only Urdu and Arabic?**  
+Persian (Farsi) is included in the same direction group. Other languages stay LTR.
+
+If your page is RTL, treat language selection as part of the brand kit — equal to logo and color. Get that wrong and no amount of posting cadence will save the content.
+
+Compare plans on [QuotVid pricing](/pricing) when you are ready to run daily RTL videos on YouTube, Pinterest, or both.
+
+## Line-breaking without killing the couplet
+
+Urdu and Persian poetry often wants a **pause** in the middle of a line. On a phone, that pause should be a **new line**, not a smaller font.
+
+Good:
+
+- Line 1: first misra (complete)  
+- Line 2: second misra (complete)  
+- Hold both on screen at the end for 2 seconds  
+
+Bad:
+
+- One long ribbon of text that crawls  
+- Three stacked fragments that split a single word across lines  
+- English quotation marks wrapping RTL in a way that flips the start edge  
+
+If you are not sure, generate a test in Custom Studio and screenshot the phone mockup. If you cannot read your own test at 40% size, neither can the feed.
+
+## Hashtags and titles in mixed script
+
+A common pattern that works:
+
+- **On-screen:** 100% native RTL  
+- **YouTube title:** native + one English niche word if you want search from bilingual users  
+- **Pinterest description:** native search phrases first, English second  
+
+Do not fill the on-screen quote with hashtags. Hashtags belong in metadata. On-screen hashtags look like spam in every language; in RTL they also wreck alignment.
+
+## Fonts: what “native” means
+
+You want a font that:
+
+- Shapes Arabic script correctly (joining, marks)  
+- Has been tested at 1080×1920, not only in Word  
+- Matches the page (classical poetry vs modern sans)
+
+QuotVid selects fonts from the language pack when language is set. Fighting that by pasting a Latin-only “Arabic-looking” display font is how you get hollow letters.
+
+## Moderation and respect
+
+Quote pages in faith and poetry niches get reported when they look like mockery or stolen verses with no context. Keep:
+
+- No deceptive “celebrity said this” if they did not  
+- Care with religious lines — accuracy matters more than aesthetics  
+- Original or clearly public-domain text when in doubt  
+
+RTL done correctly still fails if the content is dishonest. The technical bar and the editorial bar are both required.
+
+## A 7-day RTL launch plan
+
+1. Language + template + dark background  
+2. Five test renders, none posted, until joining looks right  
+3. Connect YouTube or Pinterest  
+4. Post daily for a week without changing the kit  
+5. Only then consider a second persona for a second language  
+
+Do not launch English and Urdu in the same week on the same channel unless you already have an audience that expects both.

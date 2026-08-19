@@ -24,7 +24,7 @@ export default function ProductPreview() {
         <div className="relative overflow-hidden rounded-2xl border border-[#1F2937] shadow-xl">
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
-              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&auto=format&fit=crop"
+              src="/hero-phones.png"
               alt="Creator working remotely while content runs automatically in the background"
               fill
               className="object-cover"
