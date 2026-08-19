@@ -55,8 +55,8 @@ const featureSections = [
       "Generation schedules: Daily, 3×/week (Mon-Wed-Fri), 5×/week (Mon-Fri)",
       "Zero manual steps — wake up to published content",
     ],
-    img: "/screenshots/quotvid-video-example-a.png",
-    imgAlt: "Social media auto-posting dashboard showing YouTube and Pinterest",
+    img: "/screenshots/stills/still-04.png",
+    imgAlt: "Vertical quote video still — the format QuotVid auto-posts to YouTube and Pinterest",
   },
   {
     icon: "🔀",
@@ -69,8 +69,8 @@ const featureSections = [
       "Switch between modes at any time",
       "Separate brand profile per mode",
     ],
-    img: "/hero-phones.png",
-    imgAlt: "Two persona modes in QuotVid AI quote video generator",
+    img: "/screenshots/stills/still-10.png",
+    imgAlt: "Italian quote video still showing a finished branded frame from either persona mode",
   },
   {
     icon: "🎬",
@@ -83,8 +83,8 @@ const featureSections = [
       "Control: background, watermark, colors, font, music, quote",
       "What you see is what you get",
     ],
-    img: "/screenshots/quotvid-video-example-b.png",
-    imgAlt: "Custom video studio interface with live phone preview for quote videos",
+    img: "/screenshots/stills/still-13.png",
+    imgAlt: "Hindi quote video still — the kind of frame Custom Studio previews live",
   },
   {
     icon: "▶️",
@@ -97,8 +97,8 @@ const featureSections = [
       "One-click extraction — no external tools needed",
       "Saved permanently to your background library",
     ],
-    img: "/screenshots/quotvid-home-hero.png",
-    imgAlt: "YouTube video background picker for quote video maker",
+    img: "/screenshots/stills/still-14.png",
+    imgAlt: "Quote video still with a cinematic background clip under branded text",
   },
   {
     icon: "🏷️",
@@ -111,8 +111,6 @@ const featureSections = [
       "Size control (5–30% of frame) + opacity (10–100%)",
       "Optional channel name text badge",
     ],
-    img: "/screenshots/quotvid-video-example-a.png",
-    imgAlt: "Logo watermark overlay on branded short-form video",
   },
   {
     icon: "🗂️",
@@ -125,8 +123,6 @@ const featureSections = [
       "Stored in Cloudflare R2 — no expiry",
       "Thumbnail gallery for easy browsing",
     ],
-    img: "/hero-phones.png",
-    imgAlt: "Background video library for reusing clips in quote video maker",
   },
   {
     icon: "🎵",
@@ -139,8 +135,6 @@ const featureSections = [
       "Upload your own music (paid plans)",
       "Auto-mixed into final video at correct level",
     ],
-    img: "/screenshots/quotvid-video-example-b.png",
-    imgAlt: "Background music library and custom audio upload for quote videos",
   },
   {
     icon: "🎨",
@@ -153,8 +147,6 @@ const featureSections = [
       "Custom text shadow color for readability",
       "All settings previewed live",
     ],
-    img: "/screenshots/quotvid-home-hero.png",
-    imgAlt: "Accent colors and font size control for branded quote videos",
   },
   {
     icon: "📂",
@@ -167,8 +159,6 @@ const featureSections = [
       "Category → style matching built in",
       "Unique AI-generated quotes per category",
     ],
-    img: "/screenshots/quotvid-video-example-a.png",
-    imgAlt: "20 content categories and 10+ video styles in QuotVid",
   },
   {
     icon: "🌍",
@@ -181,8 +171,6 @@ const featureSections = [
       "Nastaliq and Naskh font support",
       "Download with custom file name",
     ],
-    img: "/hero-phones.png",
-    imgAlt: "Multilingual quote video generation in 25 languages with RTL support",
   },
 ];
 
@@ -220,7 +208,12 @@ export default function FeaturesPage() {
         <section className="bg-section-light py-14 sm:py-20">
           <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8 space-y-16 sm:space-y-24">
             {featureSections.map((f, i) => (
-              <div key={f.title} className={`grid gap-8 md:grid-cols-2 md:gap-16 items-center ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
+              <div
+                key={f.title}
+                className={`grid gap-8 items-center ${
+                  f.img ? `md:grid-cols-2 md:gap-16 ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}` : ""
+                }`}
+              >
                 <div>
                   <div className="mb-3 flex items-center gap-3">
                     <span className="text-3xl">{f.icon}</span>
@@ -246,16 +239,18 @@ export default function FeaturesPage() {
                     </div>
                   )}
                 </div>
-                <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] shadow-[var(--shadow-md)] aspect-[4/3]">
-                  <Image
-                    src={f.img}
-                    alt={f.imgAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[rgba(226,161,40,0.05)] to-transparent" />
-                </div>
+                {f.img && (
+                  <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] shadow-[var(--shadow-md)] aspect-[4/3]">
+                    <Image
+                      src={f.img}
+                      alt={f.imgAlt ?? ""}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[rgba(226,161,40,0.05)] to-transparent" />
+                  </div>
+                )}
               </div>
             ))}
           </div>

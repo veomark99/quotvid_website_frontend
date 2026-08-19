@@ -107,8 +107,8 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
                   <Image
-                    src="/hero-phones.png"
-                    alt="Developer writing code — building a content automation tool"
+                    src="/screenshots/stills/still-03.png"
+                    alt="QuotVid quote video still — the product built to replace daily manual editing"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -179,36 +179,24 @@ export default function AboutPage() {
 
         {/* Why multilingual */}
         <section className="bg-section-dark py-14 sm:py-20">
-          <div className="container mx-auto max-w-5xl px-3 sm:px-4 md:px-8">
-            <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
-              <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                <h2 className="text-xl sm:text-2xl font-bold text-foreground">Why Multilingual First?</h2>
-                <p>
-                  Most content tools are built for English creators and then retrofitted for other languages
-                  as an afterthought. The result: Arabic text renders left-to-right. Urdu ligatures break.
-                  Nastaliq fonts are not included. Persian creators use workarounds that corrupt on mobile.
-                </p>
-                <p>
-                  Urdu poetry channels on YouTube Shorts and Pinterest routinely hit millions of followers. Pakistani,
-                  Indian, and Middle Eastern creators represent some of the fastest-growing audiences on short-form
-                  platforms — and they are consistently underserved by the tools available to them.
-                </p>
-                <p>
-                  QuotVid was built with full RTL support, proper Nastaliq and Naskh font rendering, and
-                  language-aware layout from day one. Arabic flows right-to-left automatically. Urdu looks
-                  like Urdu — not broken Latin characters trying to impersonate it.
-                </p>
-              </div>
-              <div className="relative overflow-hidden rounded-[14px] border border-[#1F2937] aspect-[4/3]">
-                <Image
-                  src="/screenshots/quotvid-video-example-b.png"
-                  alt="Multilingual content creation — Arabic and Urdu text on screen"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              </div>
+          <div className="container mx-auto max-w-3xl px-3 sm:px-4 md:px-8">
+            <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground">Why Multilingual First?</h2>
+              <p>
+                Most content tools are built for English creators and then retrofitted for other languages
+                as an afterthought. The result: Arabic text renders left-to-right. Urdu ligatures break.
+                Nastaliq fonts are not included. Persian creators use workarounds that corrupt on mobile.
+              </p>
+              <p>
+                Urdu poetry channels on YouTube Shorts and Pinterest routinely hit millions of followers. Pakistani,
+                Indian, and Middle Eastern creators represent some of the fastest-growing audiences on short-form
+                platforms — and they are consistently underserved by the tools available to them.
+              </p>
+              <p>
+                QuotVid was built with full RTL support, proper Nastaliq and Naskh font rendering, and
+                language-aware layout from day one. Arabic flows right-to-left automatically. Urdu looks
+                like Urdu — not broken Latin characters trying to impersonate it.
+              </p>
             </div>
           </div>
         </section>

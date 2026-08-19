@@ -24,8 +24,8 @@ export default function ProductPreview() {
         <div className="relative overflow-hidden rounded-2xl border border-[#1F2937] shadow-xl">
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
-              src="/hero-phones.png"
-              alt="Creator working remotely while content runs automatically in the background"
+              src="/screenshots/stills/still-07.png"
+              alt="Finished QuotVid quote video frame in vertical 1080×1920 format"
               fill
               className="object-cover"
               sizes="100vw"
