@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Generate 42 MDX blog translation files from English sources."""
-from __future__ import annotations
+"""DEPRECATED: Creates near-duplicate translations via Google Translate.
+
+For AdSense-quality unique localized articles, use:
+  scripts/regenerate_unique_blog_localizations.py
+"""from __future__ import annotations
 
 import re
 import time

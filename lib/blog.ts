@@ -15,6 +15,9 @@ export interface BlogPost {
   translationOf?: string;
   /** When false, hidden from indexes/sitemaps but still reachable by URL. */
   published: boolean;
+  /** True when this lang edition was rewritten as original localized content (not a direct translation). */
+  localizedEdition?: boolean;
+  contentVersion?: number;
   content: string;
 }
 
@@ -29,6 +32,8 @@ function mapPost(slug: string, data: Record<string, unknown>, content: string): 
     lang: (data.lang as string) ?? "en",
     translationOf: data.translationOf as string | undefined,
     published: data.published !== false,
+    localizedEdition: data.localizedEdition as boolean | undefined,
+    contentVersion: data.contentVersion as number | undefined,
     content,
   };
 }
