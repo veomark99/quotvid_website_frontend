@@ -7,6 +7,7 @@ type FormState = { name: string; email: string; subject: string; message: string
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({ name: "", email: "", subject: "General Question", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("Something went wrong. Please email us directly at hello@quotvid.com");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,8 +18,19 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      setStatus(res.ok ? "success" : "error");
+      if (res.ok) {
+        setStatus("success");
+        return;
+      }
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      if (res.status === 429) {
+        setErrorMessage(data.error || "Too many messages. Try again in an hour.");
+      } else {
+        setErrorMessage(data.error || "Something went wrong. Please email us directly at hello@quotvid.com");
+      }
+      setStatus("error");
     } catch {
+      setErrorMessage("Something went wrong. Please email us directly at hello@quotvid.com");
       setStatus("error");
     }
   };
@@ -58,7 +70,7 @@ export default function ContactForm() {
         <label className="mb-2 block text-xs sm:text-sm font-medium text-light-heading">Message *</label>
         <textarea required minLength={20} rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className={inputClass} />
       </div>
-      {status === "error" && <p className="text-xs text-destructive">Something went wrong. Please email us directly at hello@quotvid.com</p>}
+      {status === "error" && <p className="text-xs text-destructive">{errorMessage}</p>}
       <button
         type="submit"
         disabled={status === "loading"}
